@@ -1,0 +1,121 @@
+.navigation-sec{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+.navi-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    /* background-color: blueviolet;
+    padding: 10px; */
+}
+.navi-container-top{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    background-color: rgb(0, 0, 0);
+    color: white;
+    padding: 10px 20px;
+}
+.track-order-sec{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  font-size: 20px;
+  font-weight: bolder;
+}
+.track-order-sec span{
+  font-size: 15px;
+  font-weight: bold;
+}
+.auth-sec{
+  padding: 0 10px;
+}
+.auth-btn{
+  border: none;
+  background: none;
+  color: white;
+  cursor: pointer;
+}
+.navi-container-bottom{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    /* background-color: rgb(255, 225, 0); */
+    color: black;
+    padding: 15px 20px;
+}
+.diveder{
+    color: aliceblue;
+    height: 100%;
+}
+.auth-sec{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.navig-container-left {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 30px; 
+    
+  }
+  
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex; /* Display the list items horizontally */
+  }
+  
+  li {
+    margin-right: 10px; 
+    border: none;
+    padding: 8px 15px ;
+    background-color: #ffffff;
+  }
+  li:hover{
+    background-color: #fffc33;
+  }
+  a {
+    text-decoration: none;
+    color: #000; /* Adjust the link color */
+    /* font-weight: bold; */
+  }
+  
+
+  .navig-container-right{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 15px; 
+
+  }
+  .ncr-icon{
+    height: 40px;
+    width: 40px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    cursor: pointer;
+  }
+  .ncr-icon:hover{
+    background-color: #fffc33;
+  }
