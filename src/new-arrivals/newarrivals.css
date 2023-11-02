@@ -1,6 +1,21 @@
 .new-arrival-section{
-    background-color: brown;
+    background-color: #ffffff;
     position: absolute;
-    top: 90px;
-    left: 65%;
+    top: 95%;
+    right: 25%;
+    width: 15%;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+.new-arrival-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    gap: 10px;
+}
+.new-arrival-container a:hover{
+    color: rgb(255, 247, 0);
+    font-weight: bolder;
 }

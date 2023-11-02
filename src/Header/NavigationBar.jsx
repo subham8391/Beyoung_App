@@ -5,17 +5,25 @@ import { SlLocationPin } from 'react-icons/sl';
 import MenDropdown from '../men/MenDropdown';
 import WomenDropdown from '../women/WomenDropdown';
 import NewArrivalDropdown from '../new-arrivals/NewArrivalDropdown';
+import SearchBar from './SearchBar';
 import './navigationbar.css';
 
 function NavigationBar() {
   const [isMenDropdownOpen, setMenDropdownOpen] = useState(false);
   const [isWomenDropdownOpen, setWomenDropdownOpen] = useState(false);
   const [isNewArrivalDropdownOpen, setNewArrivalDropdownOpen] = useState(false);
+  const [isSearchBarOpen, setIsSearchBarOpen] = useState(false);
 
   const handleMenDropdownToggle = () => setMenDropdownOpen(!isMenDropdownOpen);
   const handleWomenDropdownToggle = () => setWomenDropdownOpen(!isWomenDropdownOpen);
   const handleNewArrivalDropdownToggle = () => setNewArrivalDropdownOpen(!isNewArrivalDropdownOpen);
-
+  const handleSearchToggle = () => {
+    if (isSearchBarOpen) {
+      setIsSearchBarOpen(false);
+    } else {
+      setIsSearchBarOpen(true);
+    }
+  };
   return (
     <>
       <div className="navigation-sec">
@@ -64,12 +72,13 @@ function NavigationBar() {
               </nav>
             </div>
             <div className="navig-container-right">
-              <div className="ncr-icon"><AiOutlineSearch /></div>
+            <div className="ncr-icon" onClick={handleSearchToggle}><AiOutlineSearch /></div>
               <div className="ncr-icon"><AiOutlineHeart /></div>
               <div className="ncr-icon"><AiOutlineShoppingCart /></div>
             </div>
           </div>
         </div>
+        {isSearchBarOpen && <SearchBar />}
       </div>
     </>
   );

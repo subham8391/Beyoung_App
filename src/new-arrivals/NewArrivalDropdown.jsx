@@ -1,11 +1,14 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import {newArrivalDropdownData} from '../ConstentData'
 import './newarrivals.css'
 function NewArrivalDropdown() {
   return (
     <div className='new-arrival-section'>
       <div className="new-arrival-container">
-        <Link to='/'>go to home</Link>
+        {newArrivalDropdownData.map((data,index)=>(
+          <Link key={index} to={`/${data}`}>{data}</Link>
+        ))}
       </div>
     </div>
   )
