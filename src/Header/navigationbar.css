@@ -5,6 +5,7 @@
     align-items: center;
     width: 100%;
     background-color: #ffffff;
+    z-index: 7;
 }
 .navi-container{
     display: flex;

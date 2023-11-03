@@ -81,3 +81,29 @@ export const womenDropdownData = [
 
 //new arrival dropdown data
 export const newArrivalDropdownData=['Urban Shirts','Winter Wears','Cargo Pants','Oversized T-Shirts','View All',]
+
+//hot deal carousel data
+
+import hotd1 from './image/hot-d-1.png';
+import hotd2 from './image/hot-d-2.png';
+import hotd3 from './image/hot-d-3.png';
+import hotd4 from './image/hot-d-4.png';
+import hotd5 from './image/hot-d-5.png';
+import hotd6 from './image/hot-d-6.png';
+import hotd7 from './image/hot-d-7.png';
+import hotd8 from './image/hot-d-8.png';
+import hotd9 from './image/hot-d-9.png';
+import hotd10 from './image/hot-d-10.png';
+
+export const HotDealimages = [hotd1, hotd2, hotd3, hotd4, hotd5, hotd6, hotd7,hotd8,hotd9,hotd10];
+
+//Discount coopen data
+
+import cashb1 from './image/cash-b-1.png'
+import cashb2 from './image/cash-b-2.png'
+import cashb3 from './image/cash-b-3.png'
+import cashb4 from './image/cash-b-4.png'
+import cashb5 from './image/cash-b-5.png'
+import cashb6 from './image/cash-b-6.png'
+import cashb7 from './image/cash-b-7.png'
+export const DisCoopimages = [cashb1,cashb2,cashb3,cashb4,cashb5,cashb6,cashb7];

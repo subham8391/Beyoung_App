@@ -1,4 +1,4 @@
-
+/* Discount Coopen carousel */
 .splide {
   width: 100%; 
   margin: 0 auto;
@@ -24,3 +24,35 @@
   background-color: transparent;
 }
 
+/* HotDeals carousel */
+.splide_slide{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.window{
+  width: auto;
+  height: 110vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.window img{
+  height: 110vh;
+  width: 100%;
+}
+.windows{
+  width: auto;
+  height: 110vh;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+}
+.windows img{
+  height: 55vh;
+  width: 100%;
+}
