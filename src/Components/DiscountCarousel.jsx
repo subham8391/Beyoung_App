@@ -1,10 +1,9 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { Splide, SplideSlide } from '@splidejs/react-splide';
 import '@splidejs/splide/dist/css/themes/splide-default.min.css';
-import {DisCoopimages} from '../ConstentData'
 import './components.css';
 
-function DiscountCarousel() {
+function DiscountCarousel({DisCoop}) {
   return (
     <Splide
       options={{
@@ -17,7 +16,7 @@ function DiscountCarousel() {
         pagination:false,
       }}
     >
-      {DisCoopimages.map((image, index) => (
+      {DisCoop.map((image, index) => (
         <SplideSlide key={index}>
           <img src={image} alt={`Slide ${index}`} />
         </SplideSlide>

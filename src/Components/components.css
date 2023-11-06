@@ -1,49 +1,49 @@
 /* Discount Coopen carousel */
 .splide {
-  width: 100%; 
+  width: 100%;
   margin: 0 auto;
 }
 .splide__track {
   padding-right: 11rem !important;
 }
 
-.splide__list{
+.splide__list {
   padding: 0;
 }
-.splide__slide{
+.splide__slide {
   width: 100%;
 }
 .splide__slide img {
   cursor: pointer;
-  width: 100%; 
+  width: 100%;
   height: 150px;
-  border-radius: 10px; 
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
-.splide__slide:hover{
+.splide__slide:hover {
   background-color: transparent;
 }
 
 /* HotDeals carousel */
-.splide_slide{
+.splide_slide {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
   gap: 10px;
 }
-.window{
+.window {
   width: auto;
   height: 110vh;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.window img{
+.window img {
   height: 110vh;
   width: 100%;
 }
-.windows{
+.windows {
   width: auto;
   height: 110vh;
   display: flex;
@@ -52,7 +52,112 @@
   justify-content: center;
   align-items: center;
 }
-.windows img{
+.windows img {
   height: 55vh;
   width: 100%;
+}
+
+/* ProductCrausel */
+.slick-track {
+  position: relative;
+  top: 0;
+  left: 0;
+  display: flex !important;
+  flex-direction: row;
+  gap:15px;
+  margin-left: auto;
+  margin-right: auto;
+
+}
+.slick-prev {
+  left: 10px !important;
+  z-index: 2;
+}
+.slick-next {
+  right: 20px !important;
+  z-index: 2;
+}
+.slick-prev:before,
+.slick-next:before {
+  font-size: 30px !important;
+}
+.product-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 425px;
+  width: 100%;
+  border-radius: 10px 10px 0 0;
+}
+.product-card-img {
+  width: 100%;
+  height: 85%;
+  border-radius: 10px 10px 0 0;
+}
+.product-card-img img {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px 10px 0 0;
+}
+.product-card-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 15%;
+  padding: 10px;
+  background-color: rgb(215, 215, 215);
+  border-radius: 0 0 10px 10px;
+   overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.product-card-title h3 {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  flex-direction: column;
+  text-transform: capitalize;
+  border-left: 5px solid yellow;
+  padding: 2px;
+}
+
+.dig-slid{
+  width: 45% !important;
+}
+.b-window{
+  height: 100vh;
+  width: auto;
+  display: flex;
+  justify-content:start;
+  align-items: center;
+}
+.bw-link{
+  height: 100vh;
+  width: 100%;
+}
+.bw-link img {
+  height: 100%;
+  width: 100%;
+}
+.small-slid{
+  width: 25% !important;
+}
+.s-windows {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+}
+.sw-link{
+  height: 48vh;
+  width: 100%;
+}
+.sw-link img {
+  width: 100%;
+  height: 100%;
 }
