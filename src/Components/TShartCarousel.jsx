@@ -5,10 +5,22 @@ import { Link } from 'react-router-dom';
 import './components.css';
 
 function TShartCarousel({ tShartData }) {
+  const smallSlides = [];
+
+  // Create pairs of unique indices for small-slid images
+  for (let i = 1; i < tShartData.length; i += 2) {
+    if (i + 1 < tShartData.length) {
+      smallSlides.push([i, i + 1]);
+    } else {
+      // Handle the case when there is an odd number of images
+      smallSlides.push([i]);
+    }
+  }
+
   return (
     <Splide
       options={{
-        type:'loop',
+        type: 'loop',
         perPage: 1,
         perMove: 1,
         pagination: false,
@@ -19,6 +31,7 @@ function TShartCarousel({ tShartData }) {
         },
       }}
     >
+      {/* First Slide - Static */}
       <SplideSlide className='dig-slid'>
         <div className="b-window">
           <Link className='bw-link' to='/'>
@@ -26,46 +39,20 @@ function TShartCarousel({ tShartData }) {
           </Link>
         </div>
       </SplideSlide>
-      <SplideSlide className='small-slid'>
-        <div className="s-windows">
-          <Link className='sw-link' to='/'>
-            <img src={tShartData[1]} alt="Image 2" />
-          </Link>
-          <Link className='sw-link' to='/'>
-            <img src={tShartData[2]} alt="Image 3" />
-          </Link>
-        </div>
-      </SplideSlide>
-      <SplideSlide className='small-slid'>
-        <div className="s-windows">
-          <Link className='sw-link' to='/'>
-            <img src={tShartData[3]} alt="Image 5" />
-          </Link>
-          <Link className='sw-link' to='/'>
-            <img src={tShartData[4]} alt="Image 6" />
-          </Link>
-        </div>
-      </SplideSlide>
-      <SplideSlide className='small-slid'>
-        <div className="s-windows">
-          <Link className='sw-link' to='/'>
-            <img src={tShartData[5]} alt="Image 8" />
-          </Link>
-          <Link className='sw-link' to='/'>
-            <img src={tShartData[6]} alt="Image 9" />
-          </Link>
-        </div>
-      </SplideSlide>
-      <SplideSlide className='small-slid'>
-        <div className="s-windows">
-          <Link className='sw-link' to='/'>
-            <img src={tShartData[7]} alt="Image 8" />
-          </Link>
-          <Link className='sw-link' to='/'>
-            <img src={tShartData[8]} alt="Image 9" />
-          </Link>
-        </div>
-      </SplideSlide>
+
+      {/* Dynamic Slides with different images */}
+      {smallSlides.map((indices, index) => (
+        <SplideSlide className='small-slid' key={index}>
+          <div className="s-windows">
+            {indices.map((i) => (
+              <Link className='sw-link' to='/' key={i}>
+              <img src={tShartData[i].timg} alt={`Image ${i}`} />
+              <h4>{tShartData[i].heading}</h4>
+            </Link>
+            ))}
+          </div>
+        </SplideSlide>
+      ))}
     </Splide>
   );
 }

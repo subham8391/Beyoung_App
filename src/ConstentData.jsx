@@ -113,12 +113,18 @@ import tsimg5 from  './image/ts-img-5.jpg';
 import tsimg6 from  './image/ts-img-6.jpg';
 import tsimg7 from  './image/ts-img-7.jpg';
 import tsimg8 from  './image/ts-img-8.jpg';
+
+//shirts data
+import shirts1 from './image/shirts1.jpg';
+import shirts2 from './image/shirts2.jpg';
+import shirts3 from './image/shirts3.jpg';
+
 export const HomeData=[
   {DisCoopimages: [cashb1,cashb2,cashb3,cashb4,cashb5,cashb6,cashb7]},
   {HotDealimages: [hotd1, hotd2, hotd3, hotd4, hotd5, hotd6, hotd7,hotd8,hotd9,hotd10]},
   {NewArrivalData:{apiEndpoint:'https://academics.newtonschool.co/api/v1/ecommerce/clothes/products?limit=10&filter={"sellerTag": "new arrival","subCategory": "shirt","gender": "Men"}'}},
-  {TShartsData:[tsimg,tsimg1,tsimg2,tsimg3,tsimg4,tsimg5,tsimg6,tsimg7,tsimg8]},
-  {ShartsData:{apiEndpoint:'https://academics.newtonschool.co/api/v1/ecommerce/clothes/products',subCategory: "shirt",gender: "Men"}},
+  {TShartsData:[tsimg,{timg:tsimg1,heading:'Classic Polo'},{timg:tsimg2,heading:'Plus Size T-Shirts'},{timg:tsimg3,heading:'Full Sleeve T-Shirts'},{timg:tsimg4,heading:'Activewear'},{timg:tsimg5,heading:'Polos'},{timg:tsimg6,heading:'Plain T-Shirts'},{timg:tsimg7,heading:'Printed T-Shirts'},{timg:tsimg8,heading:'Oversized T-Shirts'}]},
+  {ShartsData:[shirts1,shirts2,shirts3]},
   {BottomWareData:{apiEndpoint:'https://academics.newtonschool.co/api/v1/ecommerce/clothes/products',subCategory: "trouser",gender: "Men"}},
   {WomenData:{apiEndpoint:'https://academics.newtonschool.co/api/v1/ecommerce/clothes/products',gender: "Women"}},
   {SPCollectionData:{apiEndpoint:'https://academics.newtonschool.co/api/v1/ecommerce/clothes/products',gender: "Men"}},

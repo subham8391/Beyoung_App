@@ -8,7 +8,7 @@ function ProductCarousel({ newArrival }) {
 
   useEffect(() => {
     const fetchData = async () => {
-      const{apiEndpoint}=newArrival
+      const{apiEndpoint}=newArrival;
       try {
         const response = await fetch(`${apiEndpoint}`,{
           method: "get",

@@ -27,11 +27,15 @@ function Home() {
               <div className="duo-item"><img src={du2} alt="" /></div>
             </div>
             <div className="hot-deals">
-              <h2 className='hd-head'>HOT DEALS</h2>
+              <div className="hed-lin">
+                <h2 className='hd-head'>HOT DEALS</h2>
+              </div>
               <HOtDealsCarousel hotDealData={HomeData[1].HotDealimages} />
             </div>
             <div className="new-arrivals">
-              <h2 className='hd-head'>NEW ARRIVALS</h2>
+              <div className="hed-lin">
+                <h2 className='hd-head'>NEW ARRIVALS</h2>
+              </div>
               <ProductCarousel newArrival={HomeData[2].NewArrivalData} />
             </div>
             <div className="home-banner">
@@ -55,12 +59,42 @@ function Home() {
               <p>FOR MEN</p>
             </div>
             <div className="new-arrivals">
-              <h2 className='hd-head'>T-SHIRTS</h2>
-              <p>High On Demand</p>
+              <div className="hed-lin">
+                <h2 className='hd-head'>T-SHIRTS</h2>
+                <p className='tag-line'>High On Demand</p>
+              </div>
               <TShartCarousel tShartData={HomeData[3].TShartsData} />
             </div>
           </div>
-
+          <div className="shirts-container">
+            <div className="hed-lin">
+              <div className="bsp-head">
+                <h2 className='hd-head'>SHIRTS</h2>
+                <Link to='/viewAllShirts'>ViewAll</Link>
+              </div>
+              <p className='tag-line'>Formal To Casual Styles</p>
+            </div>
+              <div className="shirts-aria">
+                {HomeData[4].ShartsData.map((pro,index)=>(
+                  <Link key={index} to='/shirts'>
+                    <img src={pro} alt="shirt-img" />
+                  </Link>
+                ))}
+              </div>
+          </div>
+          <div className="bottomwear-container">
+            <div className="hed-lin">
+                <h2 className='hd-head'>BOTTOMWEARS</h2>
+              <p className='tag-line'>High On Demand</p>
+            </div>
+              <div className="shirts-aria">
+                {HomeData[4].ShartsData.map((pro,index)=>(
+                  <Link key={index} to='/shirts'>
+                    <img src={pro} alt="shirt-img" />
+                  </Link>
+                ))}
+              </div>
+          </div>
         </div>
       </div>
     </>
