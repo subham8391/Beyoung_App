@@ -5,12 +5,17 @@ import du1 from '../image/home-2.jpeg'
 import du2 from '../image/home-3.jpg'
 import hb1 from '../image/home-4.png'
 import hb2 from '../image/strip.jpg'
+import hb3 from '../image/scrolling-strip.jpg'
 import bspi1 from '../image/Combo-banner.jpg'
+import bwba from '../image/Bottomwear-banner.jpg';
+import Bsdi from '../image/Bsdi.jpg'
+import reviewimg from '../image/review-illustration.png'
 import { HomeData } from '../ConstentData'
 import DiscountCarousel from '../Components/DiscountCarousel'
 import HOtDealsCarousel from '../Components/HOtDealsCarousel'
 import ProductCarousel from '../Components/ProductCarousel'
 import TShartCarousel from '../Components/TShartCarousel'
+import ReviewCarousel from '../Components/ReviewCarousel'
 import './home.css'
 function Home() {
   return (
@@ -55,7 +60,7 @@ function Home() {
             <div className="home-banner hb-2">
               <img src={hb2} alt="" />
             </div>
-            <div className="for-man">
+            <div className="for-man-female">
               <p>FOR MEN</p>
             </div>
             <div className="new-arrivals">
@@ -74,26 +79,70 @@ function Home() {
               </div>
               <p className='tag-line'>Formal To Casual Styles</p>
             </div>
-              <div className="shirts-aria">
-                {HomeData[4].ShartsData.map((pro,index)=>(
-                  <Link key={index} to='/shirts'>
-                    <img src={pro} alt="shirt-img" />
-                  </Link>
-                ))}
-              </div>
+            <div className="shirts-aria">
+              {HomeData[4].ShartsData.map((pro, index) => (
+                <Link key={index} to='/shirts'>
+                  <img src={pro} alt="shirt-img" />
+                </Link>
+              ))}
+            </div>
           </div>
           <div className="bottomwear-container">
             <div className="hed-lin">
-                <h2 className='hd-head'>BOTTOMWEARS</h2>
+              <h2 className='hd-head'>BOTTOMWEARS</h2>
               <p className='tag-line'>High On Demand</p>
             </div>
-              <div className="shirts-aria">
-                {HomeData[4].ShartsData.map((pro,index)=>(
-                  <Link key={index} to='/shirts'>
-                    <img src={pro} alt="shirt-img" />
-                  </Link>
-                ))}
-              </div>
+            <div className="bottomwear-img">
+              <img src={bwba} alt="" />
+            </div>
+            <div className="bottomwear-aria">
+              <ProductCarousel newArrival={HomeData[5].BottomWareData} />
+            </div>
+          </div>
+          <div className="for-man-female">
+            <p>FOR WOMEN</p>
+          </div>
+          <div className="women-container">
+            <ProductCarousel newArrival={HomeData[6].WomenData} />
+          </div>
+          <div className="home-banner hb-2">
+            <img src={hb3} alt="" />
+          </div>
+          <div className="review-by-customer">
+            <div className="review-thumbnel">
+              <img src={reviewimg} alt="" />
+              <Link to='/viewAllReview'>View All Reviews</Link>
+            </div>
+            <div className="review-carousel">
+              <ReviewCarousel reviewData={HomeData[7].Reviewimg} />
+            </div>
+          </div>
+          <div className="home-banner-bb hb-2">
+            <img src={Bsdi} alt="" />
+          </div>
+          <div className="shopl-container">
+            <div className="hed-lin">
+              <h2 className='hd-head'>SHOP THE LOOK</h2>
+            </div>
+            <div className="shirts-aria">
+              {HomeData[8].ShopTheLook.map((pro, index) => (
+                <Link key={index} to='/shirts'>
+                  <img src={pro} alt="shirt-img" />
+                </Link>
+              ))}
+            </div>
+          </div>
+          <div className="shop-by-collection">
+            <div className="hed-lin">
+              <h2 className='hd-head'>SHOP BY COLLECTION</h2>
+            </div>
+            <ProductCarousel newArrival={HomeData[9].SPCollectionData} />
+          </div>
+          <div className="tranding-section">
+            <div className="hed-lin">
+              <h2 className='hd-head'>TRENDING STYLES</h2>
+            </div>
+            <ProductCarousel newArrival={HomeData[10].TrandingStyleData} />
           </div>
         </div>
       </div>

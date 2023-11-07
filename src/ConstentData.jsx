@@ -83,16 +83,17 @@ export const womenDropdownData = [
 export const newArrivalDropdownData=['Urban Shirts','Winter Wears','Cargo Pants','Oversized T-Shirts','View All',]
 
 //hot deal carousel data
-import hotd1 from './image/hot-d-1.jpg';
-import hotd2 from './image/hot-d-2.jpg';
-import hotd3 from './image/hot-d-3.jpg';
-import hotd4 from './image/hot-d-4.jpg';
-import hotd5 from './image/hot-d-5.jpg';
-import hotd6 from './image/hot-d-6.jpg';
-import hotd7 from './image/hot-d-7.jpg';
-import hotd8 from './image/hot-d-8.jpg';
-import hotd9 from './image/hot-d-9.jpg';
-import hotd10 from './image/hot-d-10.jpg';
+
+import hotd1 from './image/hot-d-2.jpg';
+import hotd2 from './image/hot-d-3.jpg';
+import hotd3 from './image/hot-d-4.jpg';
+import hotd4 from './image/hot-d-5.jpg';
+import hotd5 from './image/hot-d-6.jpg';
+import hotd6 from './image/hot-d-7.jpg';
+import hotd7 from './image/hot-d-8.jpg';
+import hotd8 from './image/hot-d-9.jpg';
+import hotd9 from './image/hot-d-10.jpg';
+import hotd10 from './image/hot-d-1.jpg';
 
 //Discount coopen data
 
@@ -118,6 +119,19 @@ import tsimg8 from  './image/ts-img-8.jpg';
 import shirts1 from './image/shirts1.jpg';
 import shirts2 from './image/shirts2.jpg';
 import shirts3 from './image/shirts3.jpg';
+//review Carousel data
+import rs1 from './image/review-scroll-1.png'
+import rs2 from './image/review-scroll-2.png'
+import rs3 from './image/review-scroll-3.png'
+import rs4 from './image/review-scroll-4.png'
+import rs5 from './image/review-scroll-5.png'
+import rs6 from './image/review-scroll-6.png'
+import rs7 from './image/review-scroll-7.png'
+//shop-the-look carousel data
+import stl1 from './image/shop-the-look-1.jpg'
+import stl2 from './image/shop-the-look-2.jpg'
+import stl3 from './image/shop-the-look-3.jpg'
+import stl4 from './image/shop-the-look-4.jpg'
 
 export const HomeData=[
   {DisCoopimages: [cashb1,cashb2,cashb3,cashb4,cashb5,cashb6,cashb7]},
@@ -125,9 +139,11 @@ export const HomeData=[
   {NewArrivalData:{apiEndpoint:'https://academics.newtonschool.co/api/v1/ecommerce/clothes/products?limit=10&filter={"sellerTag": "new arrival","subCategory": "shirt","gender": "Men"}'}},
   {TShartsData:[tsimg,{timg:tsimg1,heading:'Classic Polo'},{timg:tsimg2,heading:'Plus Size T-Shirts'},{timg:tsimg3,heading:'Full Sleeve T-Shirts'},{timg:tsimg4,heading:'Activewear'},{timg:tsimg5,heading:'Polos'},{timg:tsimg6,heading:'Plain T-Shirts'},{timg:tsimg7,heading:'Printed T-Shirts'},{timg:tsimg8,heading:'Oversized T-Shirts'}]},
   {ShartsData:[shirts1,shirts2,shirts3]},
-  {BottomWareData:{apiEndpoint:'https://academics.newtonschool.co/api/v1/ecommerce/clothes/products',subCategory: "trouser",gender: "Men"}},
-  {WomenData:{apiEndpoint:'https://academics.newtonschool.co/api/v1/ecommerce/clothes/products',gender: "Women"}},
-  {SPCollectionData:{apiEndpoint:'https://academics.newtonschool.co/api/v1/ecommerce/clothes/products',gender: "Men"}},
-  {TrandingStyleData:{apiEndpoint:'https://academics.newtonschool.co/api/v1/ecommerce/clothes/products',sellerTag: "trending",gender: "Men"}},
+  {BottomWareData:{apiEndpoint:'https://academics.newtonschool.co/api/v1/ecommerce/clothes/products?limit=10&filter={"subCategory": "trouser","gender": "Men"}'}},
+  {WomenData:{apiEndpoint:'https://academics.newtonschool.co/api/v1/ecommerce/clothes/products?limit=10&filter={"gender": "Women","sellerTag": "new arrival","subCategory": "shirt"}'}},
+  {Reviewimg:[rs1,rs2,rs3,rs4,rs5,rs6,rs7]},
+  {ShopTheLook:[stl1,stl2,stl3,stl4,]},
+  {SPCollectionData:{apiEndpoint:'https://academics.newtonschool.co/api/v1/ecommerce/clothes/products?limit=10&filter={"gender": "Men","sellerTag": "top rated"}'}},
+  {TrandingStyleData:{apiEndpoint:'https://academics.newtonschool.co/api/v1/ecommerce/clothes/products?limit=10&filter={"gender": "Men","sellerTag": "trending"}'}},
   {FeaturedOnimages:[]},
 ]

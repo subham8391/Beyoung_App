@@ -14,6 +14,7 @@ function HOtDealsCarousel({hotDealData}) {
         perPage: 2,
         perMove: 1,
         pagination: false,
+        padding:{right:'11rem'},
         breakpoints: {
           768: {
             perPage: 2,
@@ -32,21 +33,12 @@ function HOtDealsCarousel({hotDealData}) {
       </SplideSlide>
       <SplideSlide>
         <div className="splide_slide">
-          <div className="window">
-            <Link to='/'>
-              <img src={hotDealData[1]} alt="Image 1" />
-            </Link>
-          </div>
-        </div>
-      </SplideSlide>
-      <SplideSlide>
-        <div className="splide_slide">
           <div className="windows">
             <Link to='/'>
-              <img src={hotDealData[2]} alt="Image 2" />
+              <img src={hotDealData[1]} alt="Image 2" />
             </Link>
             <Link to='/'>
-              <img src={hotDealData[3]} alt="Image 3" />
+              <img src={hotDealData[2]} alt="Image 3" />
             </Link>
           </div>
         </div>
@@ -55,7 +47,7 @@ function HOtDealsCarousel({hotDealData}) {
         <div className="splide_slide">
           <div className="window">
             <Link to='/'>
-              <img src={hotDealData[4]} alt="Image 4" />
+              <img src={hotDealData[3]} alt="Image 4" />
             </Link>
           </div>
         </div>
@@ -64,10 +56,10 @@ function HOtDealsCarousel({hotDealData}) {
         <div className="splide_slide">
           <div className="windows">
             <Link to='/'>
-              <img src={hotDealData[5]} alt="Image 5" />
+              <img src={hotDealData[4]} alt="Image 5" />
             </Link>
             <Link to='/'>
-              <img src={hotDealData[6]} alt="Image 6" />
+              <img src={hotDealData[5]} alt="Image 6" />
             </Link>
           </div>
         </div>
@@ -76,7 +68,7 @@ function HOtDealsCarousel({hotDealData}) {
         <div className="splide_slide">
           <div className="window">
             <Link to='/'>
-              <img src={hotDealData[7]} alt="Image 7" />
+              <img src={hotDealData[6]} alt="Image 7" />
             </Link>
           </div>
         </div>
@@ -85,10 +77,19 @@ function HOtDealsCarousel({hotDealData}) {
         <div className="splide_slide">
           <div className="windows">
             <Link to='/'>
-              <img src={hotDealData[8]} alt="Image 8" />
+              <img src={hotDealData[7]} alt="Image 8" />
             </Link>
             <Link to='/'>
-              <img src={hotDealData[9]} alt="Image 9" />
+              <img src={hotDealData[8]} alt="Image 9" />
+            </Link>
+          </div>
+        </div>
+      </SplideSlide>
+      <SplideSlide>
+        <div className="splide_slide">
+          <div className="window">
+            <Link to='/'>
+              <img src={hotDealData[9]} alt="Image 1" />
             </Link>
           </div>
         </div>
@@ -98,3 +99,63 @@ function HOtDealsCarousel({hotDealData}) {
 }
 
 export default HOtDealsCarousel;
+
+
+
+
+
+//Second Type
+
+/*import React from 'react';
+import { Splide, SplideSlide } from '@splidejs/react-splide';
+import '@splidejs/splide/dist/css/themes/splide-default.min.css';
+import '@splidejs/splide-extension-grid';
+
+import { Link } from 'react-router-dom';
+import './components.css';
+
+function HOtDealsCarousel({ hotDealData }) {
+  // Organize the hotDealData array to have unique images for each SplideSlide.
+  const organizedData = [
+    [hotDealData[0]],
+    [hotDealData[1],hotDealData[2]],
+    [hotDealData[3]],
+    [hotDealData[4], hotDealData[5]],
+    [hotDealData[6]],
+    [hotDealData[7], hotDealData[8]],
+    [hotDealData[9]],
+  ];
+
+  return (
+    <Splide
+      options={{
+        type: 'loop',
+        perPage: 2,
+        perMove: 1,
+        pagination: false,
+        padding: { right: '11rem' },
+        breakpoints: {
+          768: {
+            perPage: 2,
+          },
+        },
+      }}
+    >
+      {organizedData.map((images, index) => (
+        <SplideSlide key={index}>
+          <div className="splide_slide">
+            <div className={images.length === 1 ? 'window' : 'windows'}>
+              {images.map((image, imageIndex) => (
+                <Link key={imageIndex} to="/">
+                  <img src={image} alt={`Image ${index * 2 + imageIndex}`} />
+                </Link>
+              ))}
+            </div>
+          </div>
+        </SplideSlide>
+      ))}
+    </Splide>
+  );
+}
+
+export default HOtDealsCarousel; */

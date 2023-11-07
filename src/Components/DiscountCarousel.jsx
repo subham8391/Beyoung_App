@@ -14,6 +14,9 @@ function DiscountCarousel({DisCoop}) {
         arrows:false,
         interval:2000,
         pagination:false,
+        padding: {
+          right: '11rem'
+        }
       }}
     >
       {DisCoop.map((image, index) => (

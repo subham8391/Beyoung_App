@@ -24,6 +24,7 @@ function TShartCarousel({ tShartData }) {
         perPage: 1,
         perMove: 1,
         pagination: false,
+        padding:{right:'5rem'},
         breakpoints: {
           768: {
             perPage: 2,
