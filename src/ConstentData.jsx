@@ -1,31 +1,26 @@
 
 //footer data
-
+import psf from './image/Play-Store-footer.png';
+import asf from './image/App-Store-footer.png'
 export const footerLists = [
   {
-    title: 'Popular TV Shows',
-    items: ['Kumkum Bhagya', 'Kundali Bhagya', 'Bhagya Lakshmi', 'Meet', 'Annapoorna', 'Indira', 'Korean Drama',],
+    title: 'NEED HELP',
+    items: ['Contact Us', 'Track Order', 'Returns & Refunds', 'FAQ`s', 'Career', ],
   },
   {
-    title: 'Premium Movies',
-    items: ['Habibi', 'Kisi Ka Bhi Kisi Ka Jaan', 'Bandaa', 'RRR', 'Uunchai', 'Uri: The Surgical Strike', 'The Kashmir Files', 'Dial 100', 'Helmet'],
+    title: 'COMPANY',
+    items: ['About Us', 'Beyoung Blog', 'Beyoungistan', 'Collaboration', 'Media', ],
   },
   {
-    title: 'Popular Live TV Channels',
-    items: ['Zee News', 'Zee TV HD', '&TV HD', 'Zee Marathi HD'],
+    title: 'MORE INFO',
+    items: ['Term and Conditions', 'Privacy Policy', 'Shipping Policy', 'Sitemap'],
   },
   {
-    title: 'Popular Web Series',
-    items: ['Taj', 'Sunflower', 'Tripling', 'Pitchers', 'Naxalbari', 'Anantham', 'Gaalivana'],
+    title: 'LOCATION',
+    items: ['support@beyoung.in', 'Eklingpura Chouraha, Ahmedabad Main Road', '(NH 8- Near Mahadev Hotel) Udaipur, India- 313002',],
+    app: { heading: 'DOWNLOAD THE APP', app: [psf, asf] },
   },
-  {
-    title: 'Bollywood Top Celebrities',
-    items: ['Sunny Leone', 'Disha Patani', 'Deepika Padukone', 'Salman Khan', 'Monoj Bajpayee', 'Nora Fatehi', 'Puja Hegda'],
-  },
-  {
-    title: 'Games & News',
-    items: ['Play', 'Stories']
-  }
+ 
 ];
 
 //means dropdown data
@@ -132,6 +127,12 @@ import stl1 from './image/shop-the-look-1.jpg'
 import stl2 from './image/shop-the-look-2.jpg'
 import stl3 from './image/shop-the-look-3.jpg'
 import stl4 from './image/shop-the-look-4.jpg'
+//featured on carousel data
+import foi1 from './image/fo-img-1.png'
+import foi2 from './image/fo-img-2.png'
+import foi3 from './image/fo-img-3.png'
+import foi4 from './image/fo-img-4.png'
+import foi5 from './image/fo-img-5.png'
 
 export const HomeData=[
   {DisCoopimages: [cashb1,cashb2,cashb3,cashb4,cashb5,cashb6,cashb7]},
@@ -145,5 +146,5 @@ export const HomeData=[
   {ShopTheLook:[stl1,stl2,stl3,stl4,]},
   {SPCollectionData:{apiEndpoint:'https://academics.newtonschool.co/api/v1/ecommerce/clothes/products?limit=10&filter={"gender": "Men","sellerTag": "top rated"}'}},
   {TrandingStyleData:{apiEndpoint:'https://academics.newtonschool.co/api/v1/ecommerce/clothes/products?limit=10&filter={"gender": "Men","sellerTag": "trending"}'}},
-  {FeaturedOnimages:[]},
+  {FeaturedOnimages:[foi1,foi2,foi3,foi4,foi5]},
 ]

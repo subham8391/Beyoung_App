@@ -217,3 +217,18 @@
     width: 100%;
     padding: 30px 20px 0 20px;
 }
+.featured-on-secton{
+    width: 100%;
+    padding: 30px 20px 0 20px;
+}
+.featured-on-head{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.bar{
+    width: 42%;
+    height: 5px;
+    background-color: #F8EB27;
+}

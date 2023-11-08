@@ -16,6 +16,7 @@ import HOtDealsCarousel from '../Components/HOtDealsCarousel'
 import ProductCarousel from '../Components/ProductCarousel'
 import TShartCarousel from '../Components/TShartCarousel'
 import ReviewCarousel from '../Components/ReviewCarousel'
+import FeaturedOn from '../Components/FeaturedOn'
 import './home.css'
 function Home() {
   return (
@@ -143,6 +144,15 @@ function Home() {
               <h2 className='hd-head'>TRENDING STYLES</h2>
             </div>
             <ProductCarousel newArrival={HomeData[10].TrandingStyleData} />
+          </div>
+          <div className="featured-on-secton">
+            
+              <div className="featured-on-head">
+                <div className="bar"></div>
+                <h2>FEATURED ON</h2>
+                <div className="bar"></div>
+              </div>
+            <FeaturedOn featuredOn={HomeData[11].FeaturedOnimages} />
           </div>
         </div>
       </div>

@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { BrowserRouter as Router, Route, Link, Routes } from 'react-router-dom';
 import NavigationBar from './Header/NavigationBar';
+import Footer from './Footer/Footer';
 import Home from './home/Home';
 import Men from './men/Men'
 import Women from './women/Women'
@@ -28,6 +29,7 @@ function App() {
             <Route path='/new-arrival' element={<NewArrivals />}/>
           </Routes>
         </div>
+        <Footer />
       </Router>
     </>
   )

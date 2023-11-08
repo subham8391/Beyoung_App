@@ -41,7 +41,7 @@ function ProductCarousel({ newArrival }) {
     slidesToScroll: 1,
     autoplay: false,
     autoplaySpeed: 2000,
-    variableWidth: true,
+    variableWidth: false,
   };
 
   return (
@@ -53,7 +53,7 @@ function ProductCarousel({ newArrival }) {
             <img src={item.displayImage} alt={item.name} />
             </div>
             <div className="product-card-title">
-            <h3>{item.brand}</h3>
+            <h3>{item.name}</h3>
             </div>
           </div>
         ))}
