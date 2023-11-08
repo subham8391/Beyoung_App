@@ -42,7 +42,7 @@ function Home() {
               <div className="hed-lin">
                 <h2 className='hd-head'>NEW ARRIVALS</h2>
               </div>
-              <ProductCarousel newArrival={HomeData[2].NewArrivalData} />
+              <ProductCarousel productContent={HomeData[2].NewArrivalData} />
             </div>
             <div className="home-banner">
               <img src={hb1} alt="" />
@@ -97,14 +97,14 @@ function Home() {
               <img src={bwba} alt="" />
             </div>
             <div className="bottomwear-aria">
-              <ProductCarousel newArrival={HomeData[5].BottomWareData} />
+              <ProductCarousel productContent={HomeData[5].BottomWareData} />
             </div>
           </div>
           <div className="for-man-female">
             <p>FOR WOMEN</p>
           </div>
           <div className="women-container">
-            <ProductCarousel newArrival={HomeData[6].WomenData} />
+            <ProductCarousel productContent={HomeData[6].WomenData} />
           </div>
           <div className="home-banner hb-2">
             <img src={hb3} alt="" />
@@ -137,13 +137,13 @@ function Home() {
             <div className="hed-lin">
               <h2 className='hd-head'>SHOP BY COLLECTION</h2>
             </div>
-            <ProductCarousel newArrival={HomeData[9].SPCollectionData} />
+            <ProductCarousel productContent={HomeData[9].SPCollectionData} />
           </div>
           <div className="tranding-section">
             <div className="hed-lin">
               <h2 className='hd-head'>TRENDING STYLES</h2>
             </div>
-            <ProductCarousel newArrival={HomeData[10].TrandingStyleData} />
+            <ProductCarousel productContent={HomeData[10].TrandingStyleData} />
           </div>
           <div className="featured-on-secton">
             

@@ -3,12 +3,12 @@ import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import './components.css'
-function ProductCarousel({ newArrival }) {
+function ProductCarousel({ productContent }) {
   const [items, setItems] = useState([]);
 
   useEffect(() => {
     const fetchData = async () => {
-      const{apiEndpoint}=newArrival;
+      const{apiEndpoint}=productContent;
       try {
         const response = await fetch(`${apiEndpoint}`,{
           method: "get",

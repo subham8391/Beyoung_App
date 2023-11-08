@@ -1,3 +1,4 @@
+/* men dropdown */
 .mend-section{
     background-color: #ffffff;
     position: absolute;
@@ -39,3 +40,36 @@
     height: 100%;
     width: 100%;
 }
+
+/* men section */
+
+.men-section{
+    width: 100%;
+    padding-top: 6.875rem;
+    height: auto;
+}
+.men-container{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 20px 0 20px;
+}
+.fil-sec{
+    width: 25%;
+    height: 100vh;
+    color: black;
+    /* background-color: aqua; */
+    display: flex;
+}
+.product-sec{
+    width: 75%;
+    /* background-color: antiquewhite; */
+    height: 100vh;
+    overflow: scroll;
+}
+.product-sec::-webkit-scrollbar {
+    display: none;
+    }

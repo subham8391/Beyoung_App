@@ -23,6 +23,15 @@ export const footerLists = [
  
 ];
 
+//social media link
+import sm1 from './image/insta-icon.jpg'
+import sm2 from './image/linkdin-icon.jpg'
+import sm3 from './image/facebook-icon.jpg'
+import sm4 from './image/twiter-icon.jpg'
+import sm5 from './image/pintarest-icon.jpg'
+import sm6 from './image/youtube-icon.jpg'
+export const socialLinkData=[sm1,sm2,sm3,sm4,sm5,sm6]
+
 //means dropdown data
 
 export const menDropdownData = [
@@ -148,3 +157,7 @@ export const HomeData=[
   {TrandingStyleData:{apiEndpoint:'https://academics.newtonschool.co/api/v1/ecommerce/clothes/products?limit=10&filter={"gender": "Men","sellerTag": "trending"}'}},
   {FeaturedOnimages:[foi1,foi2,foi3,foi4,foi5]},
 ]
+
+//Men page Data
+
+export const MenProduct=[{apiEndpoint:'https://academics.newtonschool.co/api/v1/ecommerce/clothes/products?limit=300&filter={"gender": "Men"}'}]

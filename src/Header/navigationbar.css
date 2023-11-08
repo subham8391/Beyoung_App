@@ -38,9 +38,7 @@
   font-size: 15px;
   font-weight: bold;
 }
-.auth-sec{
-  padding: 0 10px;
-}
+
 .auth-btn{
   border: none;
   background: none;
@@ -61,6 +59,7 @@
     height: 100%;
 }
 .auth-sec{
+    padding: 0 10px;
     display: flex;
     flex-direction: row;
     justify-content: center;

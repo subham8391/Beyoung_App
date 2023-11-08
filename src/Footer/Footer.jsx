@@ -1,6 +1,8 @@
 import React from 'react';
 import { footerLists } from '../ConstentData';
 import { Link } from 'react-router-dom';
+import payi from '../image/Frame-payment -1.jpg'
+import { socialLinkData } from '../ConstentData';
 import './footer.css';
 
 function Footer() {
@@ -31,6 +33,23 @@ function Footer() {
           ))}
         </div>
         <hr />
+        <div className="pay-social-icon">
+          <div className="pay-contener">
+            <h3>100% SECURE PAYMENT</h3>
+            <img src={payi} alt="" />
+          </div>
+          <hr className='psd'/>
+          <div className="social-container">
+          <h3>LET'S BE FRIENDS</h3>
+          <div className="social-link">
+              {socialLinkData.map((pro, index) => (
+                <Link key={index} to='/social media'>
+                  <img src={pro} alt="shirt-img" />
+                </Link>
+              ))}
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );
