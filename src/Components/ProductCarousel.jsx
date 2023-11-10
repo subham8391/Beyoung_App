@@ -8,9 +8,15 @@ function ProductCarousel({ productContent }) {
 
   useEffect(() => {
     const fetchData = async () => {
-      const{apiEndpoint}=productContent;
+      const{apiEndpoint,sellerTag,subCategory,gender}=productContent;
+      const filter = {
+        gender,
+        sellerTag,
+        subCategory,
+      };
+      const filterQueryString = `?filter=${JSON.stringify(filter)}&limit=10`;
       try {
-        const response = await fetch(`${apiEndpoint}`,{
+        const response = await fetch(`${apiEndpoint}${filterQueryString}`,{
           method: "get",
           headers: new Headers({
             projectId: "mmvz5wuhf8k7",
@@ -21,19 +27,13 @@ function ProductCarousel({ productContent }) {
           throw new Error('Network response was not ok');
         }
         const data = await response.json();
-        // console.log(data)
-        // const filteredItems = data.data.filter((item) => {
-        //   return ( item.subCategory === newArrival.subCategory && item.gender === newArrival.gender);
-        // });
-         
         setItems(data.data);
       } catch (error) {
         console.error('Error fetching data:', error);
       }
     };
-
     fetchData();
-  }, []);
+  }, [productContent]);
 
   const settings = {
     infinite: true,

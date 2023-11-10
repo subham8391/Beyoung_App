@@ -146,18 +146,46 @@ import foi5 from './image/fo-img-5.png'
 export const HomeData=[
   {DisCoopimages: [cashb1,cashb2,cashb3,cashb4,cashb5,cashb6,cashb7]},
   {HotDealimages: [hotd1, hotd2, hotd3, hotd4, hotd5, hotd6, hotd7,hotd8,hotd9,hotd10]},
-  {NewArrivalData:{apiEndpoint:'https://academics.newtonschool.co/api/v1/ecommerce/clothes/products?limit=10&filter={"sellerTag": "new arrival","subCategory": "shirt","gender": "Men"}'}},
+  {NewArrivalData:{apiEndpoint:'https://academics.newtonschool.co/api/v1/ecommerce/clothes/products',sellerTag: "new arrival",subCategory: "shirt",gender: "Men"}},
   {TShartsData:[tsimg,{timg:tsimg1,heading:'Classic Polo'},{timg:tsimg2,heading:'Plus Size T-Shirts'},{timg:tsimg3,heading:'Full Sleeve T-Shirts'},{timg:tsimg4,heading:'Activewear'},{timg:tsimg5,heading:'Polos'},{timg:tsimg6,heading:'Plain T-Shirts'},{timg:tsimg7,heading:'Printed T-Shirts'},{timg:tsimg8,heading:'Oversized T-Shirts'}]},
   {ShartsData:[shirts1,shirts2,shirts3]},
-  {BottomWareData:{apiEndpoint:'https://academics.newtonschool.co/api/v1/ecommerce/clothes/products?limit=10&filter={"subCategory": "trouser","gender": "Men"}'}},
-  {WomenData:{apiEndpoint:'https://academics.newtonschool.co/api/v1/ecommerce/clothes/products?limit=10&filter={"gender": "Women","sellerTag": "new arrival","subCategory": "shirt"}'}},
+  {BottomWareData:{apiEndpoint:'https://academics.newtonschool.co/api/v1/ecommerce/clothes/products',subCategory: "trouser",gender: "Men"}},
+  {WomenData:{apiEndpoint:'https://academics.newtonschool.co/api/v1/ecommerce/clothes/products',gender: "Women",sellerTag: "new arrival",subCategory: "shirt"}},
   {Reviewimg:[rs1,rs2,rs3,rs4,rs5,rs6,rs7]},
   {ShopTheLook:[stl1,stl2,stl3,stl4,]},
-  {SPCollectionData:{apiEndpoint:'https://academics.newtonschool.co/api/v1/ecommerce/clothes/products?limit=10&filter={"gender": "Men","sellerTag": "top rated"}'}},
-  {TrandingStyleData:{apiEndpoint:'https://academics.newtonschool.co/api/v1/ecommerce/clothes/products?limit=10&filter={"gender": "Men","sellerTag": "trending"}'}},
+  {SPCollectionData:{apiEndpoint:'https://academics.newtonschool.co/api/v1/ecommerce/clothes/products',gender: "Men",sellerTag: "top rated"}},
+  {TrandingStyleData:{apiEndpoint:'https://academics.newtonschool.co/api/v1/ecommerce/clothes/products',gender: "Men",sellerTag: "trending"}},
   {FeaturedOnimages:[foi1,foi2,foi3,foi4,foi5]},
 ]
 
 //Men page Data
 
-export const MenProduct=[{apiEndpoint:'https://academics.newtonschool.co/api/v1/ecommerce/clothes/products?limit=300&filter={"gender": "Men"}'}]
+export const MenProduct=[{apiEndpoint:'https://academics.newtonschool.co/api/v1/ecommerce/clothes/products',gender:'Men'}]
+
+//Women page data
+
+export const WomenProduct=[{apiEndpoint:'https://academics.newtonschool.co/api/v1/ecommerce/clothes/products',gender:'Women'}]
+
+//Combo page data
+
+export const ComboProduct= [{apiEndpoint:'https://academics.newtonschool.co/api/v1/ecommerce/clothes/products?page=2&limit=300'}]
+
+//color filter data
+
+export const ColorData=[
+{bg_color:'#FFFFFF',color:'WHITE'},
+{bg_color:'#000000',color:'BLACK'},
+{bg_color:'#FFFDD0',color:'CREAM'},
+{bg_color:'#FF0000',color:'RED'},
+{bg_color:'#008000',color:'GREEN'},
+{bg_color:'#000080',color:'BLUE'},
+{bg_color:'#FFA500',color:'ORANGE'},
+{bg_color:'#A52A2A',color:'BROWN'},
+{bg_color:'#808080',color:'GRAY'},
+{bg_color:'#808000',color:'OLIVE'},
+{bg_color:'#800000',color:'MAROON'},
+{bg_color:'#800080',color:'PURPLE'},
+{bg_color:'#F5F5DC',color:'BEIGE'},
+{bg_color:'#FFC0CB',color:'PINK'},
+{bg_color:'#27bab6',color:'MULTICOLOR'},
+]
