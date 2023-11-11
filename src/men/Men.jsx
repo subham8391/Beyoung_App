@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { MenProduct } from '../ConstentData';
 import ProductFetcher from '../Components/ProductFetcher';
-import ColorFilter from '../Components/Filter/colorFilter';
+import ColorFilter from '../Components/Filter/ColorFilter';
 import SizeFilter from '../Components/Filter/SizeFilter';
 import PriceFilter from '../Components/Filter/PriceFilter';
 import BrandFilter from '../Components/Filter/BrandFilter';
