@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { WomenProduct } from '../ConstentData'
 import ProductFetcher from '../Components/ProductFetcher';
 import WomenBanner from '../image/Women-clothing-banner.jpg'
-import ColorFilter from '../Components/Filter/colorFilter';
+import ColorFilter from '../Components/Filter/ColorFilter';
 import SizeFilter from '../Components/Filter/SizeFilter';
 import PriceFilter from '../Components/Filter/PriceFilter';
 import BrandFilter from '../Components/Filter/BrandFilter';
