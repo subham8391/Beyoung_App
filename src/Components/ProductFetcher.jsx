@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './components.css';
 
-const ProductFetcher = ({ productData,selectedColor }) => {
+const ProductFetcher = ({ productData,selectedColor,selectedSize,selectedBrand,selectedPriceOrder }) => {
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
@@ -19,8 +19,22 @@ const ProductFetcher = ({ productData,selectedColor }) => {
             color: selectedColor,
           };
         }
-  
-        const filterQueryString = `?filter=${JSON.stringify(filter)}&limit=200`;
+        if (selectedSize) {
+          // If a size is selected, include it in the filter
+          filter = {
+            ...filter,
+            size: selectedSize,
+          };
+        }
+        if (selectedBrand) {
+          // If a brand is selected, include it in the filter
+          filter = {
+            ...filter,
+            brand: selectedBrand,
+          };
+        }
+      
+        const filterQueryString = `?filter=${JSON.stringify(filter)}&limit=300`;
 
         const response = await fetch(`${apiEndpoint}${filterQueryString}`, {
           method: 'get',
@@ -34,14 +48,26 @@ const ProductFetcher = ({ productData,selectedColor }) => {
         }
 
         const data = await response.json();
-        setProducts(data.data);
+        let filteredProducts = data.data;
+
+        if (selectedPriceOrder) {
+          // Sort by price in ascending or descending order
+          filteredProducts = filteredProducts.sort((a, b) => {
+            const priceA = a.price;
+            const priceB = b.price;
+
+            return selectedPriceOrder === 'Price : Low to High' ? priceA - priceB : priceB - priceA;
+          });
+        }
+
+        setProducts(filteredProducts);
       } catch (error) {
         console.error('Error fetching data:', error);
       }
     };
 
     fetchData();
-  }, [productData,selectedColor]);
+  }, [productData,selectedColor,selectedSize,selectedBrand,selectedPriceOrder]);
 
   return (
     <div className="product-section">
@@ -55,7 +81,6 @@ const ProductFetcher = ({ productData,selectedColor }) => {
               <p>{item.name}</p>
               <p>{item.subCategory}</p>
               <p>₹{item.price}</p>
-              <p>{item.color}</p>
             </div>
           </div>
         ))}

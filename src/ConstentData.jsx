@@ -181,7 +181,7 @@ export const ColorData=[
 {bg_color:'#000080',color:'BLUE'},
 {bg_color:'#FFA500',color:'ORANGE'},
 {bg_color:'#A52A2A',color:'BROWN'},
-{bg_color:'#808080',color:'GRAY'},
+{bg_color:'#808080',color:'GREY'},
 {bg_color:'#808000',color:'OLIVE'},
 {bg_color:'#800000',color:'MAROON'},
 {bg_color:'#800080',color:'PURPLE'},
@@ -189,3 +189,37 @@ export const ColorData=[
 {bg_color:'#FFC0CB',color:'PINK'},
 {bg_color:'#27bab6',color:'MULTICOLOR'},
 ]
+
+
+//size filter data
+
+export const SizeData=[
+  {d_size:'S',size:'S'},
+  {d_size:'M',size:'M'},
+  {d_size:'L',size:'L'},
+  {d_size:'XL',size:'XL'},
+  {d_size:'XXL',size:'XXL'},
+]
+
+//brand filter data
+
+export const BrandData=[
+  {p_brand:'Bewakoof®',brand:'Bewakoof®'},
+  {p_brand:'Campus Sutra',brand:'Campus Sutra'},
+  {p_brand:'Belliskey',brand:'Belliskey'},
+  {p_brand:'Kotty',brand:'Kotty'},
+  {p_brand:'OFFICIAL CARTOON NETWORK MERCHANDISE',brand:'OFFICIAL CARTOON NETWORK MERCHANDISE'},
+  {p_brand:'Bewakoof Air® 1.0',brand:'Bewakoof Air® 1.0'},
+  {p_brand:'OFFICIAL DISNEY MERCHANDISE',brand:'OFFICIAL DISNEY MERCHANDISE'},
+  {p_brand:'OFFICIAL HARRY POTTER MERCHANDISE',brand:'OFFICIAL HARRY POTTER MERCHANDISE'},
+  {p_brand:'OFFICIAL MARVEL MERCHANDISE',brand:'OFFICIAL MARVEL MERCHANDISE'},
+  {p_brand:'OFFICIAL MINIONS MERCHANDISE',brand:'OFFICIAL MINIONS MERCHANDISE'},
+  {p_brand:'OFFICIAL NARUTO MERCHANDISE',brand:'OFFICIAL NARUTO MERCHANDISE'},
+  {p_brand:'OFFICIAL DC MERCHANDISE',brand:'OFFICIAL DC MERCHANDISE'},
+  {p_brand:'OFFICIAL PEANUTS MERCHANDISE',brand:'OFFICIAL PEANUTS MERCHANDISE'},
+  {p_brand:'OFFICIAL GARFIELD MERCHANDISE',brand:'OFFICIAL PEANUTS MERCHANDISE'},
+]
+
+//price filter data
+
+export const PriceData=['Price : Low to High','Price : High to Low']
