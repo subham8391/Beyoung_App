@@ -62,7 +62,7 @@ function NavigationBar() {
                     <Link to="/bb-ke-favorites">BB KE FAVORITES</Link>
                   </li>
                   <li>
-                    <Link to="/shop-the-look">SHOP THE LOOK</Link>
+                    <Link to="/winter-wears">WINTER WEARS</Link>
                   </li>
                   <li onMouseEnter={handleNewArrivalDropdownToggle} onMouseLeave={handleNewArrivalDropdownToggle}>
                     <span>NEW ARRIVALS</span>

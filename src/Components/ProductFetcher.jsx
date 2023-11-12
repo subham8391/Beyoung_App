@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './components.css';
 
-const ProductFetcher = ({ productData,selectedColor,selectedSize,selectedBrand,selectedPriceOrder }) => {
+const ProductFetcher = ({ selectCategary,productData,selectedColor,selectedSize,selectedBrand,selectedPriceOrder }) => {
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
@@ -12,6 +12,12 @@ const ProductFetcher = ({ productData,selectedColor,selectedSize,selectedBrand,s
           gender,
           sellerTag,
         };
+        if(selectCategary){
+          filter={
+            ...filter,
+            subCategory:selectCategary,
+          }
+        }
         if (selectedColor) {
           // If a color is selected, include it in the filter
           filter = {
@@ -67,7 +73,7 @@ const ProductFetcher = ({ productData,selectedColor,selectedSize,selectedBrand,s
     };
 
     fetchData();
-  }, [productData,selectedColor,selectedSize,selectedBrand,selectedPriceOrder]);
+  }, [selectCategary,productData,selectedColor,selectedSize,selectedBrand,selectedPriceOrder]);
 
   return (
     <div className="product-section">

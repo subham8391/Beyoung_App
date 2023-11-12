@@ -168,7 +168,7 @@ export const WomenProduct=[{apiEndpoint:'https://academics.newtonschool.co/api/v
 
 //Combo page data
 
-export const ComboProduct= [{apiEndpoint:'https://academics.newtonschool.co/api/v1/ecommerce/clothes/products?page=2&limit=300'}]
+export const ComboProduct= [{apiEndpoint:'https://academics.newtonschool.co/api/v1/ecommerce/clothes/products'}]
 
 //color filter data
 
@@ -223,3 +223,18 @@ export const BrandData=[
 //price filter data
 
 export const PriceData=['Price : Low to High','Price : High to Low']
+
+//subcategory filter data
+
+export const SubcategoryData=[
+  {h_subCategory:'shirt',subCategory:'shirt'},
+  {h_subCategory:'tshirt',subCategory:'tshirt'},
+  {h_subCategory:'trouser',subCategory:'trouser'},
+  {h_subCategory:'jumpsuit',subCategory:'jumpsuit'},
+  {h_subCategory:'jeans',subCategory:'jeans'},
+  {h_subCategory:'shorts',subCategory:'shorts'},
+  {h_subCategory:'kurta',subCategory:'kurta'},
+  {h_subCategory:'kurti',subCategory:'kurti'},
+  {h_subCategory:'jogger',subCategory:'jogger'},
+  {h_subCategory:'pyjamas',subCategory:'pyjamas'},
+]
