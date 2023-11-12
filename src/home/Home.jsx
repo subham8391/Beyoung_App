@@ -1,4 +1,4 @@
-import React from 'react'
+import React,{useEffect} from 'react'
 import { Link } from 'react-router-dom'
 import hti from '../image/home-1.jpg'
 import du1 from '../image/home-2.jpeg'
@@ -19,6 +19,10 @@ import ReviewCarousel from '../Components/ReviewCarousel'
 import FeaturedOn from '../Components/FeaturedOn'
 import './home.css'
 function Home() {
+  useEffect(() => {
+    
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <>
       <div className="home-section">

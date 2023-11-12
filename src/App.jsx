@@ -7,7 +7,7 @@ import Men from './men/Men'
 import Women from './women/Women'
 import Combos from './combos/Combos'
 import BbKiFavorites from './bb-ki-favorites/BbKiFavorites'
-import ShopTheLook from './shop-the-look/ShopTheLook'
+import WinterWears from './winter-wears/WinterWears';
 import NewArrivals from './new-arrivals/NewArrivals'
 import './App.css'
 
@@ -25,7 +25,7 @@ function App() {
             <Route path='/womens-clothing' element={<Women /> }/>
             <Route path='/combo-products' element={<Combos /> }/>
             <Route path='/bb-ke-favorites' element={<BbKiFavorites />}/>
-            <Route path='/shop-the-look' element={<ShopTheLook /> }/>
+            <Route path='/winter-wears' element={<WinterWears /> }/>
             <Route path='/new-arrival' element={<NewArrivals />}/>
           </Routes>
         </div>

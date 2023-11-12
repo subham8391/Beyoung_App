@@ -170,6 +170,12 @@ export const WomenProduct=[{apiEndpoint:'https://academics.newtonschool.co/api/v
 
 export const ComboProduct= [{apiEndpoint:'https://academics.newtonschool.co/api/v1/ecommerce/clothes/products'}]
 
+//winter ware page data
+
+export const BBFevouritProduct=[{apiEndpoint:'https://academics.newtonschool.co/api/v1/ecommerce/clothes/products',brand:'Bewakoof®'}]
+//winter ware page data
+
+export const WinterWearsProduct=[{apiEndpoint:'https://academics.newtonschool.co/api/v1/ecommerce/clothes/products',subCategory:'hoodie'}]
 //color filter data
 
 export const ColorData=[
@@ -237,4 +243,25 @@ export const SubcategoryData=[
   {h_subCategory:'kurti',subCategory:'kurti'},
   {h_subCategory:'jogger',subCategory:'jogger'},
   {h_subCategory:'pyjamas',subCategory:'pyjamas'},
+]
+
+
+//BB fevourite filter data
+
+import bbfeb1 from './image/bb-feb-1.jpg'
+import bbfeb2 from './image/bb-feb-2.jpg'
+import bbfeb3 from './image/bb-feb-3.jpg'
+import bbfeb4 from './image/bb-feb-4.jpg'
+import bbfeb5 from './image/bb-feb-5.jpg'
+import bbfeb6 from './image/bb-feb-6.jpg'
+import bbfeb7 from './image/bb-feb-7.jpg'
+
+export const BBFevouritData=[
+  {f_img:bbfeb1,subCategory:'tshirt'},
+  {f_img:bbfeb2,subCategory:'shorts'},
+  {f_img:bbfeb3,subCategory:'shirt'},
+  {f_img:bbfeb4,subCategory:'kurta'},
+  {f_img:bbfeb5,subCategory:'kurti'},
+  {f_img:bbfeb6,subCategory:'pyjamas'},
+  {f_img:bbfeb7,subCategory:'jogger'},
 ]

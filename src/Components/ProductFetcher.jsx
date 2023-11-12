@@ -7,10 +7,12 @@ const ProductFetcher = ({ selectCategary,productData,selectedColor,selectedSize,
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const { gender, sellerTag, apiEndpoint } = productData[0];
+        const { gender, sellerTag,subCategory,brand, apiEndpoint } = productData[0];
         let filter = {
           gender,
           sellerTag,
+          subCategory,
+          brand,
         };
         if(selectCategary){
           filter={

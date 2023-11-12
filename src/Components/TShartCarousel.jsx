@@ -35,7 +35,7 @@ function TShartCarousel({ tShartData }) {
       {/* First Slide - Static */}
       <SplideSlide className='dig-slid'>
         <div className="b-window">
-          <Link className='bw-link' to='/'>
+          <Link className='bw-link' to='/combo-products'>
             <img src={tShartData[0]} alt="Image 0" />
           </Link>
         </div>
@@ -46,7 +46,7 @@ function TShartCarousel({ tShartData }) {
         <SplideSlide className='small-slid' key={index}>
           <div className="s-windows">
             {indices.map((i) => (
-              <Link className='sw-link' to='/' key={i}>
+              <Link className='sw-link' to='/combo-products' key={i}>
               <img src={tShartData[i].timg} alt={`Image ${i}`} />
               <h4>{tShartData[i].heading}</h4>
             </Link>

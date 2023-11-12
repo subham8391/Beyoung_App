@@ -1,4 +1,4 @@
-import React,{useState} from 'react'
+import React,{useState,useEffect} from 'react'
 import { ComboProduct } from '../ConstentData'
 import ProductFetcher from '../Components/ProductFetcher';
 import comboBanner from '../image/combo-categry-banner.jpg'
@@ -31,6 +31,10 @@ function Combos() {
     setSelectedPriceOrder(order === selectedPriceOrder ? null : order);
   };
 
+  useEffect(() => {
+    
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <>
     <div className="combo-section">

@@ -1,24 +1,19 @@
-import React, { useState,useEffect } from 'react';
-import {BBFevouritProduct } from '../ConstentData';
+import React, { useState } from 'react';
+import {WinterWearsProduct } from '../ConstentData';
 import ProductFetcher from '../Components/ProductFetcher';
 import ColorFilter from '../Components/Filter/ColorFilters';
 import SizeFilter from '../Components/Filter/SizeFilter';
 import PriceFilter from '../Components/Filter/PriceFilter';
-import BBFevouriteFilter from '../Components/Filter/BBFevouriteFilter';
 import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
-import './bbkifavorites.css'
-function BbKiFavorites() {
-  const [selectCategary,setSelectCategary]=useState(null);
+import winterBanner from '../image/winter-wear-banner.jpg'
+import './winterWears.css'
+function WinterWears() {
   const [selectedColor, setSelectedColor] = useState(null);
   const [selectedSize, setSelectedSize] = useState(null);
   const [selectedPriceOrder, setSelectedPriceOrder] = useState(null);
   const [isColorFilterVisible, setIsColorFilterVisible] = useState(true);
   const [isSizeFilterVisible, setIsSizeFilterVisible] = useState(true);
   const [isPriceFilterVisible, setIsPriceFilterVisible] = useState(true);
-
-  const handleSelectCategory =(subCategory)=>{
-    setSelectCategary(subCategory);
-  }
   const toggleColorFilter = () => {
     setIsColorFilterVisible(!isColorFilterVisible);
   };
@@ -38,18 +33,14 @@ function BbKiFavorites() {
   const handlePriceOrderChange = (order) => {
     setSelectedPriceOrder(order === selectedPriceOrder ? null : order);
   };
-  useEffect(() => {
-    
-    window.scrollTo(0, 0);
-  }, []);
+
   return (
     <>
-      <div className="bb-feb-section">
-        <div className="bb-feb-filter">
-        <h3>LOVED BY BB</h3>
-         <BBFevouriteFilter selectCategary={selectCategary} onCategoryChange={handleSelectCategory}/>
-       </div>
-        <div className="bb-feb-container">
+      <div className="winter-w-section">
+      <div className="winter-w-banner">
+          <img src={winterBanner} alt="" />
+        </div>
+        <div className="winter-w-container">
           <div className="fil-sec">
             <h2>FILTER</h2>
             <div className="col-filter">
@@ -72,9 +63,9 @@ function BbKiFavorites() {
             </div>
           </div>
           <div className="product-sec">
-            <h2>BB KE FAVORITES</h2>
+            <h2>WINTER WEAR</h2>
             
-            <ProductFetcher productData={BBFevouritProduct} selectedColor={selectedColor} selectedSize={selectedSize} selectedPriceOrder={selectedPriceOrder} selectCategary={selectCategary}/>
+            <ProductFetcher productData={WinterWearsProduct} selectedColor={selectedColor} selectedSize={selectedSize} selectedPriceOrder={selectedPriceOrder} />
           </div>
         </div>
       </div>
@@ -82,4 +73,4 @@ function BbKiFavorites() {
   );
 }
 
-export default BbKiFavorites
+export default WinterWears
