@@ -7,7 +7,7 @@ function NewArrivalDropdown() {
     <div className='new-arrival-section'>
       <div className="new-arrival-container">
         {newArrivalDropdownData.map((data,index)=>(
-          <Link key={index} to={`/${data}`}>{data}</Link>
+          <Link key={index} to={`/${data.path}`}>{data.heading}</Link>
         ))}
       </div>
     </div>

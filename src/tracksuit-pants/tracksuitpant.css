@@ -1,0 +1,26 @@
+.track-suit-section{
+    width: 100%;
+    padding-top: 6.875rem;
+    height: auto;
+}
+.track-suit-banner{
+    width: 100%;
+    height: auto;
+    padding-bottom:20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.track-suit-banner img{
+width: 100%;
+}
+.track-suit-page-container{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 20px 0 20px;
+    gap: 20px;
+}

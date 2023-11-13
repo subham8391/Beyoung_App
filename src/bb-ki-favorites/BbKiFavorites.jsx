@@ -46,7 +46,7 @@ function BbKiFavorites() {
     <>
       <div className="bb-feb-section">
         <div className="bb-feb-filter">
-        <h3>LOVED BY BB</h3>
+        <h2>LOVED BY BB</h2>
          <BBFevouriteFilter selectCategary={selectCategary} onCategoryChange={handleSelectCategory}/>
        </div>
         <div className="bb-feb-container">

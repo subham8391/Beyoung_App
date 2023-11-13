@@ -84,7 +84,7 @@ export const womenDropdownData = [
 ];
 
 //new arrival dropdown data
-export const newArrivalDropdownData=['Urban Shirts','Winter Wears','Cargo Pants','Oversized T-Shirts','View All',]
+export const newArrivalDropdownData=[{heading:'Urban Shirts',path:'urban-shirt'},{heading:'Winter Wears',path:'winter-wears'},{heading:'Tracksuit Pants',path:'tracksuit-pants'},{heading:'Oversized T-Shirts',path:'oversize-tshirts'},{heading:'View All',path:'new-arrival'},]
 
 //hot deal carousel data
 
@@ -176,6 +176,18 @@ export const BBFevouritProduct=[{apiEndpoint:'https://academics.newtonschool.co/
 //winter ware page data
 
 export const WinterWearsProduct=[{apiEndpoint:'https://academics.newtonschool.co/api/v1/ecommerce/clothes/products',subCategory:'hoodie'}]
+
+//UrbanShirt page data
+
+export const UrbanShirtProduct=[{apiEndpoint:'https://academics.newtonschool.co/api/v1/ecommerce/clothes/products',subCategory:'shirt'}]
+
+//UrbanShirt page data
+
+export const TracksuitProduct=[{apiEndpoint:'https://academics.newtonschool.co/api/v1/ecommerce/clothes/products',subCategory:'tracksuit'}]
+
+//o-tshart page data
+
+export const OTshirtProduct=[{apiEndpoint:'https://academics.newtonschool.co/api/v1/ecommerce/clothes/products',subCategory:'tshirt'}]
 //color filter data
 
 export const ColorData=[

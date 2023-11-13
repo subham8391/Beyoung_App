@@ -9,6 +9,9 @@ import Combos from './combos/Combos'
 import BbKiFavorites from './bb-ki-favorites/BbKiFavorites'
 import WinterWears from './winter-wears/WinterWears';
 import NewArrivals from './new-arrivals/NewArrivals'
+import UrbanShirts from './urban-shirts/UrbanShirts';
+import TracksuitPants from './tracksuit-pants/TracksuitPants';
+import OverSizeTshirt from './oversize-tshirt/OverSizeTshirt';
 import './App.css'
 
 function App() {
@@ -27,6 +30,9 @@ function App() {
             <Route path='/bb-ke-favorites' element={<BbKiFavorites />}/>
             <Route path='/winter-wears' element={<WinterWears /> }/>
             <Route path='/new-arrival' element={<NewArrivals />}/>
+            <Route path='/urban-shirt' element={<UrbanShirts />} />
+            <Route path='/tracksuit-pants' element={<TracksuitPants />} />
+            <Route path='/oversize-tshirts' element={<OverSizeTshirt />} />
           </Routes>
         </div>
         <Footer />
