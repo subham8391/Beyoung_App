@@ -191,3 +191,42 @@
 .fab-c-optionn.selected {
     border: 2px solid rgb(0, 255, 195);
   }
+
+
+  
+.newarrival-f-section{
+    width: 100%;
+    /* height: 80vh; */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0 20px 0;
+}
+.newarrival-f-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    height: 100%;
+    width: 100%;
+    gap: 20px;
+}
+.newarrival-f-optionn{
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+  border: 2px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.newarrival-f-optionn p{
+  text-transform: uppercase;
+  font-size: 20px;
+  font-weight: bolder;
+}
+.newarrival-f-optionn.selected {
+    border: 2px solid rgb(0, 255, 195);
+  }

@@ -12,7 +12,7 @@ function WomenDropdown() {
           <div className="d-content" key={index}>
             <h3>{data.title}</h3>
             {data.items.map((dcon,index)=>(
-              <Link key={index} to={`/${dcon}`}>{dcon}</Link>
+              <Link key={index} to={`/${dcon.path}`}>{dcon.heading}</Link>
             ))}
           </div>
         ))}

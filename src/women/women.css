@@ -1,7 +1,7 @@
 .womend-section{
     background-color: #ffffff;
     position: absolute;
-    top: 95%;
+    top: 90%;
     left: 5%;
     width: 90%;
     padding: 20px;
@@ -26,7 +26,7 @@
 .d-content{
     display: flex;
     flex-direction: column;
-    
+    gap: 2px;
 }
 .d-content a:hover{
     color: rgb(255, 238, 0);
@@ -112,3 +112,34 @@ width: 100%;
         padding: 10px 0 10px 0;
         cursor: pointer;
     }
+
+
+/*women pages css */
+
+
+.pages-section{
+    width: 100%;
+    padding-top: 6.875rem;
+    height: auto;
+}
+.pages-banner{
+    width: 100%;
+    height: auto;
+    padding-bottom:20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.pages-banner img{
+width: 100%;
+}
+.pages-page-container{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 20px 0 20px;
+    gap: 20px;
+}

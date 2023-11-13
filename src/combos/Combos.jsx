@@ -42,7 +42,7 @@ function Combos() {
         <img src={comboBanner} alt="" />
       </div>
       <div className="combo-categori-filter">
-         <SubCategoryFilter selectCategary={selectCategary} onCategoryChange={handleSelectCategory}/>
+         <SubCategoryFilter  selectCategary={selectCategary} onCategoryChange={handleSelectCategory}/>
       </div>
       <div className="combo-page-container">
         <div className="fil-sec">
