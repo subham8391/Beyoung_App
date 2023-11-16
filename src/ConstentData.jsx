@@ -192,6 +192,10 @@ export const OTshirtProduct=[{apiEndpoint:'https://academics.newtonschool.co/api
 //new arrival data
 
 export const NewArrivalProduct=[{apiEndpoint:'https://academics.newtonschool.co/api/v1/ecommerce/clothes/products',sellerTag: "new arrival"}]
+
+//product details data
+
+export const ProductDetailsData=[{apiEndpoint:'https://academics.newtonschool.co/api/v1/ecommerce/product/'}];
 //color filter data
 
 export const ColorData=[

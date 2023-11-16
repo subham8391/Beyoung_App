@@ -28,6 +28,7 @@ import WomenJumpSuit from './women/WomenJumpSuit'
 import WomenKurti from './women/WomenKurti'
 import WomenShirt from './women/WomenShirt'
 import WomenTShirt from './women/WomenTShirt'
+import ProductDetails from './product-details/ProductDetails';
 import './App.css'
 
 function App() {
@@ -65,6 +66,7 @@ function App() {
             <Route path='/women-kurti' element={<WomenKurti />} />
             <Route path='/women-shirt' element={<WomenShirt/>} />
             <Route path='/women-tShirt' element={<WomenTShirt/>} />
+            <Route path='/details/:id' element={<ProductDetails/>} />
           </Routes>
         </div>
         <Footer />

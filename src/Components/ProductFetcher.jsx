@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import './components.css';
 
 const ProductFetcher = ({ selectCategary,productData,selectedColor,selectedSize,selectedBrand,selectedPriceOrder }) => {
@@ -82,6 +83,7 @@ const ProductFetcher = ({ selectCategary,productData,selectedColor,selectedSize,
       <div className="product-container">
         {products.map((item, index) => (
           <div className="product" key={index}>
+            <Link to={`/details/${item._id}`}>
             <div className="product-img">
               <img src={item.displayImage} alt={item.name} />
             </div>
@@ -90,6 +92,7 @@ const ProductFetcher = ({ selectCategary,productData,selectedColor,selectedSize,
               <p>{item.subCategory}</p>
               <p>₹{item.price}</p>
             </div>
+            </Link>
           </div>
         ))}
       </div>
