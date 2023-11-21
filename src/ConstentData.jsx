@@ -86,6 +86,15 @@ export const womenDropdownData = [
 //new arrival dropdown data
 export const newArrivalDropdownData=[{heading:'Urban Shirts',path:'urban-shirt'},{heading:'Winter Wears',path:'winter-wears'},{heading:'Tracksuit Pants',path:'tracksuit-pants'},{heading:'Oversized T-Shirts',path:'oversize-tshirts'},{heading:'View All',path:'new-arrival'},]
 
+//Account dropdown data
+export const MyAccountDropdownData=[
+  {heading:'Order',path:'/myaccount/order'},
+  {heading:'Address',path:'/myaccount/address'},
+  {heading:'Profile',path:'/myaccount/profile'},
+  {heading:'Wishlist',path:'/myaccount/wishlist'},
+  {heading:'Coupons',path:'/myaccount/coupons'},
+]
+
 //hot deal carousel data
 
 import hotd1 from './image/hot-d-2.jpg';
@@ -321,3 +330,15 @@ export const WomenKurtiProduct=[{apiEndpoint:'https://academics.newtonschool.co/
 
 export const MenTShirtProduct=[{apiEndpoint:'https://academics.newtonschool.co/api/v1/ecommerce/clothes/products',gender:'Men',subCategory:'tshirt'}];
 export const WomenTShirtProduct=[{apiEndpoint:'https://academics.newtonschool.co/api/v1/ecommerce/clothes/products',gender:'Women',subCategory:'tshirt'}];
+
+//MyAccount tab data
+
+export const AccountTabs = [
+  { label: 'Order',  tabName: 'order' },
+  { label: 'Address',  tabName: 'address' },
+  { label: 'Profile',  tabName: 'profile' },
+  { label: 'Wishlist',  tabName: 'wishlist' },
+  { label: 'Coupons', tabName: 'coupons' },
+  { label: 'Tickets', tabName: 'tickets' },
+];
+

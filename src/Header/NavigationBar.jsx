@@ -5,16 +5,19 @@ import { SlLocationPin } from 'react-icons/sl';
 import MenDropdown from '../men/MenDropdown';
 import WomenDropdown from '../women/WomenDropdown';
 import NewArrivalDropdown from '../new-arrivals/NewArrivalDropdown';
+import MyAccountDropdown from '../Account/MyAccountDropdown';
 import SearchBar from './SearchBar';
 import Auth from '../Authenticion/auth';
 import './navigationbar.css';
 
 function NavigationBar() {
+  const [isAccountDropdownOpen,setAccountDropdownOpen]=useState(false);
   const [isMenDropdownOpen, setMenDropdownOpen] = useState(false);
   const [isWomenDropdownOpen, setWomenDropdownOpen] = useState(false);
   const [isNewArrivalDropdownOpen, setNewArrivalDropdownOpen] = useState(false);
   const [isSearchBarOpen, setIsSearchBarOpen] = useState(false);
-
+  
+  const handleAccountDropdownToggle= () => setAccountDropdownOpen(!isAccountDropdownOpen);
   const handleMenDropdownToggle = () => setMenDropdownOpen(!isMenDropdownOpen);
   const handleWomenDropdownToggle = () => setWomenDropdownOpen(!isWomenDropdownOpen);
   const handleNewArrivalDropdownToggle = () => setNewArrivalDropdownOpen(!isNewArrivalDropdownOpen);
@@ -46,7 +49,9 @@ function NavigationBar() {
             <div className="auth-sec">
                 {isAuthenticated ? (
                   <>
-                    <Link to='/my-account' className="auth-btn">My Account</Link>
+                    <div className="auth-btn" onMouseEnter={handleAccountDropdownToggle} onMouseLeave={handleAccountDropdownToggle}>My Account
+                     {isAccountDropdownOpen && <MyAccountDropdown />}
+                    </div>
                     <hr className="diveder" />
                     <div className="auth-btn" onClick={handleLogout}>Logout</div>
                   </>
