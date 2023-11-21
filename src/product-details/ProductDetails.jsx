@@ -56,7 +56,7 @@ function ProductDetails() {
                 </div>
                 <div className="similar-product-section">
                     <span>SIMILAR PRODUCTS</span>
-                    <SimilarProduct subCategory={product ? product.subCategory : null} gender={product ? product.gender :null}/>
+                    <SimilarProduct subCategory={product ? product.subCategory : null} gender={product ? product.gender :null} brand={product ? product.brand :null}/>
                 </div>
 
             </div>

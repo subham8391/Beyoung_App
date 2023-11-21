@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
-function SimilarProduct({ subCategory,gender }) {
+function SimilarProduct({ subCategory,gender,brand }) {
   const [sProduct, setSProduct] = useState([]);
 
   useEffect(() => {
@@ -10,6 +10,7 @@ function SimilarProduct({ subCategory,gender }) {
         const filter = {
           subCategory: subCategory,
           gender:gender,
+          brand:brand,
         };
 
         const filterQueryString = `?filter=${JSON.stringify(filter)}&limit=20`; 
