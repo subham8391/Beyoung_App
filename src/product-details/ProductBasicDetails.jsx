@@ -44,7 +44,7 @@ function ProductBasicDetails({ product }) {
                         <div className="dalivary-section">
                             <p>Enter your Pincode to check the delivery time and free pick up options</p>
                             <div className="pin-aria">
-                                <input type="password" inputmode="numeric" maxlength="6" name='pin'id='pin' placeholder='Enter Pincode' />
+                                <input className='pin-input' type="password" inputmode="numeric" maxlength="6" name='pin'id='pin' placeholder='Enter Pincode' />
                                 <button className='chk-btn'>Check</button>
                             </div>
                             <div className="hi-li"><BsCashCoin /> Cash On Delivery</div>
