@@ -3,6 +3,9 @@ import { useParams } from 'react-router-dom';
 import { ProductDetailsData } from '../ConstentData';
 import ProductImgCarousel from './ProductImgCarousel';
 import ProductBasicDetails from './ProductBasicDetails';
+import ProductAllDetails from './ProductAllDetails';
+import ProductDisIcon from './ProductDisIcon';
+import SimilarProduct from './SimilarProduct';
 import './productdetails.css';
 
 
@@ -45,6 +48,15 @@ function ProductDetails() {
                     <div className="select-B-details">
                         <ProductBasicDetails product={product} />
                     </div>
+                </div>
+                <div className="product-d-section">
+                    <h2>Product Details</h2>
+                    <ProductAllDetails product={product} />
+                    <ProductDisIcon />
+                </div>
+                <div className="similar-product-section">
+                    <span>SIMILAR PRODUCTS</span>
+                    <SimilarProduct subCategory={product ? product.subCategory : null} gender={product ? product.gender :null}/>
                 </div>
 
             </div>

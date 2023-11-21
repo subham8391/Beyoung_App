@@ -1,11 +1,12 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link,useLocation,useNavigate } from 'react-router-dom';
 import { AiOutlineSearch, AiOutlineHeart, AiOutlineShoppingCart } from 'react-icons/ai';
 import { SlLocationPin } from 'react-icons/sl';
 import MenDropdown from '../men/MenDropdown';
 import WomenDropdown from '../women/WomenDropdown';
 import NewArrivalDropdown from '../new-arrivals/NewArrivalDropdown';
 import SearchBar from './SearchBar';
+import Auth from '../Authenticion/auth';
 import './navigationbar.css';
 
 function NavigationBar() {
@@ -24,8 +25,18 @@ function NavigationBar() {
       setIsSearchBarOpen(true);
     }
   };
+  const isAuthenticated = Auth.isAuthenticated();
+  const location = useLocation();
+  const path = location.pathname;
+  const navigate=useNavigate()
+  const handleLogout = () => {
+    Auth.logout();
+    navigate('/');
+  };
+  
   return (
     <>
+    {!(path === '/login' || path === '/signup') && (
       <div className="navigation-sec">
         <div className="navi-container">
           <div className="navi-container-top">
@@ -33,10 +44,20 @@ function NavigationBar() {
               <SlLocationPin /> <span>TRACK YOUR ORDER</span>
             </div>
             <div className="auth-sec">
-              <button className="auth-btn">LOG IN</button>
-              <hr className="diveder" />
-              <button className="auth-btn">SIGNUP</button>
-            </div>
+                {isAuthenticated ? (
+                  <>
+                    <Link to='/my-account' className="auth-btn">My Account</Link>
+                    <hr className="diveder" />
+                    <div className="auth-btn" onClick={handleLogout}>Logout</div>
+                  </>
+                ) : (
+                  <>
+                    <Link to='/login' className="auth-btn">Log In</Link>
+                    <hr className="diveder" />
+                    <Link to='/signup' className="auth-btn">Sign Up</Link>
+                  </>
+                )}
+              </div>
           </div>
           <div className="navi-container-bottom">
             <div className="navig-container-left">
@@ -80,6 +101,7 @@ function NavigationBar() {
         </div>
         {isSearchBarOpen && <SearchBar />}
       </div>
+    )}
     </>
   );
 }

@@ -1,12 +1,16 @@
 import React from 'react';
 import { footerLists } from '../ConstentData';
-import { Link } from 'react-router-dom';
+import { Link,useLocation } from 'react-router-dom';
 import payi from '../image/Frame-payment -1.jpg'
 import { socialLinkData } from '../ConstentData';
 import './footer.css';
 
 function Footer() {
+  const location = useLocation();
+  const path = location.pathname;
   return (
+    <>
+    {!(path === '/login' || path === '/signup') && (
     <div className='footer-section'>
       <div className="footer-container">
         <div className="foot-con">
@@ -52,6 +56,8 @@ function Footer() {
         </div>
       </div>
     </div>
+    )}
+    </>
   );
 }
 

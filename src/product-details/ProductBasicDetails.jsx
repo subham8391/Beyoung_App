@@ -48,8 +48,9 @@ function ProductBasicDetails({ product }) {
                                 <button className='chk-btn'>Check</button>
                             </div>
                             <div className="hi-li"><BsCashCoin /> Cash On Delivery</div>
-                            <div className="hi-li"><FaTruck/> Express Shipping</div>
+                            <div className="hi-li"><FaTruck /> Express Shipping</div>
                         </div>
+                        
                     </div>
                 </div>
             )}

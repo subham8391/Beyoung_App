@@ -2,6 +2,8 @@ import { useState } from 'react'
 import { BrowserRouter as Router, Route, Link, Routes } from 'react-router-dom';
 import NavigationBar from './Header/NavigationBar';
 import Footer from './Footer/Footer';
+import Login from './Authenticion/Login';
+import Signup from './Authenticion/Signup';
 import Home from './home/Home';
 import Men from './men/Men'
 import Women from './women/Women'
@@ -40,7 +42,9 @@ function App() {
         <NavigationBar />
         <div>
     	    <Routes>
-          <Route path="/" exact element={<Home />} />
+            <Route path="/signup" element={<Signup />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/" exact element={<Home />} />
             <Route path='/mens-clothing' element={<Men />}/>
             <Route path='/womens-clothing' element={<Women /> }/>
             <Route path='/combo-products' element={<Combos /> }/>
@@ -66,7 +70,7 @@ function App() {
             <Route path='/women-kurti' element={<WomenKurti />} />
             <Route path='/women-shirt' element={<WomenShirt/>} />
             <Route path='/women-tShirt' element={<WomenTShirt/>} />
-            <Route path='/details/:id' element={<ProductDetails/>} />
+            <Route path='/details/:name/:id' element={<ProductDetails/>} />
           </Routes>
         </div>
         <Footer />

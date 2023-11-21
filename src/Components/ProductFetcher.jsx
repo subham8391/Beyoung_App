@@ -83,7 +83,7 @@ const ProductFetcher = ({ selectCategary,productData,selectedColor,selectedSize,
       <div className="product-container">
         {products.map((item, index) => (
           <div className="product" key={index}>
-            <Link to={`/details/${item._id}`}>
+            <Link to={`/details/${item.name}/${item._id}`}>
             <div className="product-img">
               <img src={item.displayImage} alt={item.name} />
             </div>
