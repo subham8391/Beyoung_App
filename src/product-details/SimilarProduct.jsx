@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-
 function SimilarProduct({ subCategory,gender,brand }) {
   const [sProduct, setSProduct] = useState([]);
 

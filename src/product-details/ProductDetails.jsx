@@ -8,7 +8,6 @@ import ProductDisIcon from './ProductDisIcon';
 import SimilarProduct from './SimilarProduct';
 import './productdetails.css';
 
-
 function ProductDetails() {
     const { id } = useParams();
     const [product, setProduct] = useState(null);

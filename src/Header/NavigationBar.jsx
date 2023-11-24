@@ -99,8 +99,8 @@ function NavigationBar() {
             </div>
             <div className="navig-container-right">
             <div className="ncr-icon" onClick={handleSearchToggle}><AiOutlineSearch /></div>
-              <div className="ncr-icon"><AiOutlineHeart /></div>
-              <div className="ncr-icon"><AiOutlineShoppingCart /></div>
+              <Link to='/myaccount/wishlist' className="ncr-icon"><AiOutlineHeart /></Link>
+              <Link className="ncr-icon"><AiOutlineShoppingCart /></Link>
             </div>
           </div>
         </div>

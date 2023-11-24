@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import AddToWishlist from './Wishlist/AddToWishlist';
 import './components.css';
 
 const ProductFetcher = ({ selectCategary,productData,selectedColor,selectedSize,selectedBrand,selectedPriceOrder }) => {
@@ -81,8 +82,11 @@ const ProductFetcher = ({ selectCategary,productData,selectedColor,selectedSize,
   return (
     <div className="product-section">
       <div className="product-container">
-        {products.map((item, index) => (
-          <div className="product" key={index}>
+        {products.map((item) => (
+          <div className="product" key={item._id}>
+            {/* <div className="add-wishlist">
+            <AddToWishlist id={item._id}/>
+            </div> */}
             <Link to={`/details/${item.name}/${item._id}`}>
             <div className="product-img">
               <img src={item.displayImage} alt={item.name} />

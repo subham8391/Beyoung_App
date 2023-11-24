@@ -3,14 +3,22 @@ import { FaTruck } from "react-icons/fa";
 import { BsCashCoin } from "react-icons/bs";
 import { FaCartShopping } from "react-icons/fa6";
 import { BsArrowRightCircle } from "react-icons/bs";
+import AddToWishlist from '../Components/Wishlist/AddToWishlist';
+import RemoveWishlistBtn from '../Components/Wishlist/RemoveWishlistBtn';
+import WishlistBtn from '../Components/Wishlist/WishlistBtn';
 function ProductBasicDetails({ product }) {
     const options = Array.from({ length: 10 }, (_, index) => index + 1)
+    const size_order=['S','M','L','XL','XXL']
     return (
         <>
             {product && product.size && (
                 <div className="product-bd-section">
                     <div className="product-bd-container">
+                        <div className="pdc-head">
                         <h2>{product.name}</h2>
+                    
+                        <WishlistBtn id={product._id}/>
+                        </div>
                         <p>{product.subCategory}</p>
                         <h3>₹ {product.price}</h3>
                         <h4>Inclusive of All Taxes + Free Shipping</h4>
@@ -20,7 +28,7 @@ function ProductBasicDetails({ product }) {
                         <div className="p-color" style={{ backgroundColor: product.color }}></div>
                         <h4>SIZE:</h4>
                         <div className="p-size">
-                            {product.size.map((size, index) => (
+                            {product.size.sort((a,b)=>size_order.indexOf(a)-size_order.indexOf(b)).map((size, index) => (
                                 <div className="p-s-circle" key={index}>
                                     <p>{size}</p>
                                 </div>

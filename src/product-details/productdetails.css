@@ -103,6 +103,17 @@
     align-items: start;
    gap: 10px;
   }
+  .pdc-head{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+  }
+  .pdc-head h2{
+    width: 90%;
+  }
   .p-color{
     height: 50px;
     width: 50px;
@@ -305,6 +316,7 @@
 }
 
 .sm-product {
+  
   width: 230px;
   height: 350px;
   display: flex;
