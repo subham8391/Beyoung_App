@@ -39,6 +39,8 @@ import Profile from './Account/Profile';
 import Wishlist from './Account/Wishlist';
 import Coupons from './Account/Coupons';
 import Tickets from './Account/Tickets';
+import CheckOut from './Components/Checkout/CheckOut';
+import Cart from './Components/Checkout/Cart'
 import './App.css'
 
 function App() {
@@ -87,6 +89,9 @@ function App() {
               <Route path="/myaccount/coupons" element={<PrivateRoute> <Coupons /> </PrivateRoute>} />
               <Route path="/myaccount/tickets" element={<PrivateRoute> <Tickets /> </PrivateRoute>} />
             </Route>
+            <Route path='/checkout' element={<PrivateRoute><CheckOut /></PrivateRoute>}>
+             <Route path='/checkout/cart' element={<PrivateRoute><Cart /></PrivateRoute>}/>
+           </Route>
           </Routes>
         </div>
         <Footer />

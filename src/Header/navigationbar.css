@@ -76,6 +76,10 @@
     gap: 30px; 
     
   }
+  .logo a{
+    font-family: 'IBM Plex Sans','Open Sans', sans-serif;
+    font-weight: bolder;
+  }
   
   ul {
     list-style: none;

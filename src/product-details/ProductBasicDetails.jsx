@@ -1,23 +1,33 @@
-import React from 'react'
+import React, { useState } from 'react';
 import { FaTruck } from "react-icons/fa";
 import { BsCashCoin } from "react-icons/bs";
-import { FaCartShopping } from "react-icons/fa6";
 import { BsArrowRightCircle } from "react-icons/bs";
-import AddToWishlist from '../Components/Wishlist/AddToWishlist';
-import RemoveWishlistBtn from '../Components/Wishlist/RemoveWishlistBtn';
+import AddToCart from '../Components/Checkout/AddToCart';
 import WishlistBtn from '../Components/Wishlist/WishlistBtn';
+
 function ProductBasicDetails({ product }) {
-    const options = Array.from({ length: 10 }, (_, index) => index + 1)
-    const size_order=['S','M','L','XL','XXL']
+    const [selectedSize, setSelectedSize] = useState('');
+    const [selectedQty, setSelectedQty] = useState(1); // Default to 1
+
+    const qty = Array.from({ length: 10 }, (_, index) => index + 1);
+    const size_order = ['S', 'M', 'L', 'XL', 'XXL'];
+
+    const handleSizeChange = (size) => {
+        setSelectedSize(size);
+    };
+
+    const handleQtyChange = (event) => {
+        setSelectedQty(parseInt(event.target.value));
+    };
+
     return (
         <>
             {product && product.size && (
                 <div className="product-bd-section">
                     <div className="product-bd-container">
                         <div className="pdc-head">
-                        <h2>{product.name}</h2>
-                    
-                        <WishlistBtn id={product._id}/>
+                            <h2>{product.name}</h2>
+                            <WishlistBtn id={product._id}/>
                         </div>
                         <p>{product.subCategory}</p>
                         <h3>₹ {product.price}</h3>
@@ -28,16 +38,16 @@ function ProductBasicDetails({ product }) {
                         <div className="p-color" style={{ backgroundColor: product.color }}></div>
                         <h4>SIZE:</h4>
                         <div className="p-size">
-                            {product.size.sort((a,b)=>size_order.indexOf(a)-size_order.indexOf(b)).map((size, index) => (
-                                <div className="p-s-circle" key={index}>
+                            {product.size.sort((a, b) => size_order.indexOf(a) - size_order.indexOf(b)).map((size, index) => (
+                                <div className={`p-s-circle ${selectedSize === size ? 'selected' : ''}`} key={index} onClick={() => handleSizeChange(size)}>
                                     <p>{size}</p>
                                 </div>
                             ))}
                         </div>
                         <div className="p-qut">
-                            <label For="qty">QTY:</label>
-                            <select name="qty" id="qty">
-                                {options.map((value) => (
+                            <label htmlFor="qty">QTY:</label>
+                            <select name="qty" id="qty" onChange={handleQtyChange}>
+                                {qty.map((value) => (
                                     <option key={value} value={value}>
                                         {value}
                                     </option>
@@ -45,25 +55,24 @@ function ProductBasicDetails({ product }) {
                             </select>
                         </div>
                         <div className="p-action-btn">
-                            <div className="add-to-cart-btn"><FaCartShopping /> ADD TO CART </div>
+                            <AddToCart id={product._id} size={selectedSize} qty={selectedQty} />
                             <div className="buy-now-btn"><BsArrowRightCircle /> BUY NOW</div>
                         </div>
                         <h4>DELIVERY OPTIONS</h4>
                         <div className="dalivary-section">
                             <p>Enter your Pincode to check the delivery time and free pick up options</p>
                             <div className="pin-aria">
-                                <input className='pin-input' type="password" inputmode="numeric" maxlength="6" name='pin'id='pin' placeholder='Enter Pincode' />
+                                <input className='pin-input' type="password" inputmode="numeric" maxLength="6" name='pin' id='pin' placeholder='Enter Pincode' />
                                 <button className='chk-btn'>Check</button>
                             </div>
                             <div className="hi-li"><BsCashCoin /> Cash On Delivery</div>
                             <div className="hi-li"><FaTruck /> Express Shipping</div>
                         </div>
-                        
                     </div>
                 </div>
             )}
         </>
-    )
+    );
 }
 
-export default ProductBasicDetails
+export default ProductBasicDetails;

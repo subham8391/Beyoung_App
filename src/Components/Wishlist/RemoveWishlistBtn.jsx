@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { FaHeart } from "react-icons/fa";
 import Auth from '../../Authenticion/auth';
-import './wishlist.css'
+import './wishlistbtn.css'
 function RemoveWishlistBtn({ id }) {
   const [isInWatchlist, setIsInWatchlist] = useState(false);
   const navigate = useNavigate();

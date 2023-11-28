@@ -39,7 +39,7 @@ function NavigationBar() {
   
   return (
     <>
-    {!(path === '/login' || path === '/signup') && (
+    {!(path === '/login' || path === '/signup' || path === '/checkout') && (
       <div className="navigation-sec">
         <div className="navi-container">
           <div className="navi-container-top">
@@ -98,9 +98,9 @@ function NavigationBar() {
               </nav>
             </div>
             <div className="navig-container-right">
-            <div className="ncr-icon" onClick={handleSearchToggle}><AiOutlineSearch /></div>
+              <div className="ncr-icon" onClick={handleSearchToggle}><AiOutlineSearch /></div>
               <Link to='/myaccount/wishlist' className="ncr-icon"><AiOutlineHeart /></Link>
-              <Link className="ncr-icon"><AiOutlineShoppingCart /></Link>
+              <Link to='/checkout' className="ncr-icon"><AiOutlineShoppingCart /></Link>
             </div>
           </div>
         </div>

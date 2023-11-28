@@ -10,7 +10,7 @@ function Footer() {
   const path = location.pathname;
   return (
     <>
-    {!(path === '/login' || path === '/signup') && (
+    {!(path === '/login' || path === '/signup' || path === '/checkout') && (
     <div className='footer-section'>
       <div className="footer-container">
         <div className="foot-con">

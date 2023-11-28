@@ -1,14 +1,15 @@
+
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { IoCloseSharp } from "react-icons/io5";
-function Wishlist() {
+import './checkout.css'
+function Cart() {
   const [contentData, setContentData] = useState([]);
   const [loading, setLoading] = useState(true);
-
   useEffect(() => {
     const fetchContent = async () => {
       try {
-        const url = 'https://academics.newtonschool.co/api/v1/ecommerce/wishlist';
+        const url = 'https://academics.newtonschool.co/api/v1/ecommerce/cart';
         const response = await fetch(url, {
           method: 'GET',
           headers: {
@@ -34,10 +35,10 @@ function Wishlist() {
     fetchContent();
   }, []);
 
-  const removeFromWishlist = async (id) => {
+  const removeFromcart = async (id) => {
     try {
       const response = await fetch(
-        `https://academics.newtonschool.co/api/v1/ecommerce/wishlist/${id}`,
+        `https://academics.newtonschool.co/api/v1/ecommerce/cart/${id}`,
         {
           method: 'DELETE',
           headers: {
@@ -49,11 +50,11 @@ function Wishlist() {
       );
 
       if (response.ok) {
-        const updatedContent = contentData.filter(item => item.products._id !== id);
+        const updatedContent = contentData.filter(item => item.product._id !== id);
         setContentData(updatedContent);
       }
     } catch (error) {
-      console.error('Error removing from wishlist', error);
+      console.error('Error removing from cart', error);
     }
   };
 
@@ -66,24 +67,33 @@ function Wishlist() {
   }
 
   return (
-    <div className="wishlist-product-section">
-      <div className="wishlist-product-container">
+    <div className="cart-product-section">
+      <div className="cart-product-container">
         {contentData.map((item, index) => (
-          <div className="wishlist-product" key={index}>
-            <div className="del-wishlist">
-              <button onClick={() => removeFromWishlist(item.products._id)}>
-              <IoCloseSharp />
-              </button>
+          <div className="cart-product" key={index}>
+            <div className="card-top-sec">
+              <div className="cart-top-left">
+                <Link to={`/details/${item.product.name}/${item.product._id}`}>
+                  <div className="cart-product-img">
+                    <img src={item.product.displayImage} alt={item.product.name} />
+                  </div>
+                  <div className="cart-product-details">
+                    <p>Qty : {item.quantity}</p>
+                  </div>
+                </Link>
+              </div>
+              <div className="cart-top-right">
+                <h4>{item.product.name}</h4>
+                <h4>₹ {item.product.price}</h4>
+                <p>Ratings: {item.product.ratings}</p>
+                <p>Size : {item.size}</p>
+                <div className="del-cart">
+                  <button onClick={() => removeFromcart(item.product._id)}>
+                    Remove
+                  </button>
+                </div>
+              </div>
             </div>
-            <Link to={`/details/${item.products.name}/${item.products._id}`}>
-              <div className="wishlist-product-img">
-                <img src={item.products.displayImage} alt={item.products.name} />
-              </div>
-              <div className="wishlist-product-details">
-                <p>{item.products.name}</p>
-                <p>₹{item.products.price}</p>
-              </div>
-            </Link>
           </div>
         ))}
       </div>
@@ -91,4 +101,4 @@ function Wishlist() {
   )
 }
 
-export default Wishlist;
+export default Cart

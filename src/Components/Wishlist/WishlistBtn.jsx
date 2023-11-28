@@ -2,16 +2,16 @@ import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { FaHeart } from 'react-icons/fa';
 import Auth from '../../Authenticion/auth';
-import './wishlist.css';
+import './wishlistbtn.css';
 
 function WishlistBtn({ id }) {
-  const [isInWatchlist, setIsInWatchlist] = useState(false);
+  const [isInWishlist, setIsInWishlist] = useState(false);
   const navigate = useNavigate();
 
   useEffect(() => {
     const fetchContent = async () => {
       try {
-        const url = `https://academics.newtonschool.co/api/v1/ecommerce/wishlist/${id}`;
+        const url = `https://academics.newtonschool.co/api/v1/ecommerce/wishlist`;
 
         const response = await fetch(url, {
           method: 'GET',
@@ -20,33 +20,46 @@ function WishlistBtn({ id }) {
             projectID: 'mmvz5wuhf8k7',
           },
         });
-
-        if (response.ok) {
-          setIsInWatchlist(true);
-        } else {
-          setIsInWatchlist(false);
+        
+        if (!response.ok) {
+          throw new Error('Network response was not ok');
         }
+
+        const data = await response.json();
+        // console.log(data);
+        // console.log(id)
+        const content = data.data.items;
+
+        const isPresent = content.filter(item => item.products._id === id)
+        // console.log(isPresent,'is present')
+        if (isPresent.length > 0) {
+          setIsInWishlist(true);
+        }
+        else {
+          setIsInWishlist(false);
+        }
+       
       } catch (error) {
-        setIsInWatchlist(false);
+        setIsInWishlist(false);
       }
     };
 
     fetchContent();
-  }, [id]);
+  }, []);
 
-  const handleWatchlistClick = async () => {
+  const handleWishlistClick = async () => {
     try {
       if (!Auth.isAuthenticated()) {
         navigate('/login');
         return;
       }
 
-      const api = isInWatchlist
+      const api = isInWishlist
         ? `https://academics.newtonschool.co/api/v1/ecommerce/wishlist/${id}`
         : 'https://academics.newtonschool.co/api/v1/ecommerce/wishlist';
 
-      const method = isInWatchlist ? 'DELETE' : 'PATCH';
-
+      const method = isInWishlist ? 'DELETE' : 'PATCH';
+      console.log(isInWishlist);
       const response = await fetch(api, {
         method,
         headers: {
@@ -54,16 +67,16 @@ function WishlistBtn({ id }) {
           projectID: 'mmvz5wuhf8k7',
           'Content-Type': 'application/json',
         },
-        body: !isInWatchlist ? JSON.stringify({ productId: id }) : undefined,
+        body: !isInWishlist ? JSON.stringify({ productId: id }) : undefined,
       });
 
       if (response.ok) {
-        setIsInWatchlist(!isInWatchlist);
-      }
+        setIsInWishlist((prevIsInWishlist) => !prevIsInWishlist);
+      } 
     } catch (error) {
       console.error(
         `Error ${
-          isInWatchlist ? 'removing from' : 'adding to'
+          isInWishlist ? 'removing from' : 'adding to'
         } wishlist`,
         error
       );
@@ -71,8 +84,8 @@ function WishlistBtn({ id }) {
   };
 
   return (
-    <div className="wishlist-btn-container" onClick={handleWatchlistClick}>
-      <FaHeart color={isInWatchlist ? 'yellow' : 'gray'} />
+    <div className="wishlist-btn-container" onClick={handleWishlistClick}>
+      <FaHeart color={isInWishlist ? 'yellow' : 'gray'} />
     </div>
   );
 }
