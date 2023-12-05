@@ -6,6 +6,8 @@ import MenDropdown from '../men/MenDropdown';
 import WomenDropdown from '../women/WomenDropdown';
 import NewArrivalDropdown from '../new-arrivals/NewArrivalDropdown';
 import MyAccountDropdown from '../Account/MyAccountDropdown';
+import WishlistIcon from './WishlistIcon';
+import CartIcon from './CartIcon';
 import SearchBar from './SearchBar';
 import Auth from '../Authenticion/auth';
 import './navigationbar.css';
@@ -99,8 +101,8 @@ function NavigationBar() {
             </div>
             <div className="navig-container-right">
               <div className="ncr-icon" onClick={handleSearchToggle}><AiOutlineSearch /></div>
-              <Link to='/myaccount/wishlist' className="ncr-icon"><AiOutlineHeart /></Link>
-              <Link to='/checkout' className="ncr-icon"><AiOutlineShoppingCart /></Link>
+              <WishlistIcon />
+              <CartIcon />
             </div>
           </div>
         </div>

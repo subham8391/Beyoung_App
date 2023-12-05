@@ -77,21 +77,19 @@ function Cart() {
                   <div className="cart-product-img">
                     <img src={item.product.displayImage} alt={item.product.name} />
                   </div>
-                  <div className="cart-product-details">
-                    <p>Qty : {item.quantity}</p>
-                  </div>
                 </Link>
-              </div>
-              <div className="cart-top-right">
-                <h4>{item.product.name}</h4>
-                <h4>₹ {item.product.price}</h4>
-                <p>Ratings: {item.product.ratings}</p>
-                <p>Size : {item.size}</p>
                 <div className="del-cart">
                   <button onClick={() => removeFromcart(item.product._id)}>
                     Remove
                   </button>
                 </div>
+              </div>
+              <div className="cart-top-right">
+                <h4>{item.product.name}</h4>
+                <h4>₹ {item.product.price * item.quantity}</h4>
+                <p>Ratings: {item.product.ratings.toFixed(1)}</p>
+                <p>Size : {item.size}</p>
+                <p>Qty : {item.quantity}</p>
               </div>
             </div>
           </div>

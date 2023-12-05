@@ -41,6 +41,7 @@ import Coupons from './Account/Coupons';
 import Tickets from './Account/Tickets';
 import CheckOut from './Components/Checkout/CheckOut';
 import Cart from './Components/Checkout/Cart'
+import SearchResult from './Header/SearchResult';
 import './App.css'
 
 function App() {
@@ -52,6 +53,7 @@ function App() {
         <NavigationBar />
         <div>
           <Routes>
+            <Route path="/search" element={<SearchResult />} />
             <Route path="/signup" element={<Signup />} />
             <Route path="/login" element={<Login />} />
             <Route path="/" exact element={<Home />} />
