@@ -342,3 +342,14 @@ export const AccountTabs = [
   { label: 'Tickets', tabName: 'tickets' },
 ];
 
+//cart footer icons
+import chf1 from './image/checkFoot1.png'
+import chf2 from './image/checkFoot2.png'
+import chf3 from './image/checkFoot3.png'
+import chf4 from './image/checkFoot4.png'
+import chf5 from './image/checkFoot5.png'
+import chf6 from './image/checkFoot6.png'
+import chf7 from './image/checkFoot7.png'
+import chf8 from './image/checkFoot8.png'
+export const CartFooter=[chf1,chf2,chf3,chf4,chf5,chf6,chf7,chf8]; 
+

@@ -32,7 +32,7 @@ function ProductBasicDetails({ product }) {
                         <p>{product.subCategory}</p>
                         <h3>₹ {product.price}</h3>
                         <h4>Inclusive of All Taxes + Free Shipping</h4>
-                        <h4>{product.ratings} (Ratings & Reviews)</h4>
+                        <h4>{product.ratings.toFixed(1)} (Ratings & Reviews)</h4>
                         <h4>Extra ₹100 OFF on ₹999 (Code:BEYOUNG100)</h4>
                         <h4>COLOR: {product.color}</h4>
                         <div className="p-color" style={{ backgroundColor: product.color }}></div>

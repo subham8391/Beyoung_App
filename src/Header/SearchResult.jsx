@@ -1,7 +1,7 @@
-// SearchResult.js
+
 import React, { useEffect, useState } from 'react';
 import { useLocation, Link } from 'react-router-dom';
-
+import Empty from '../image/EmptySearch.gif'
 function SearchResult() {
   const location = useLocation();
   const query = new URLSearchParams(location.search).get('q');
@@ -28,6 +28,7 @@ function SearchResult() {
         setSearchResults(data.data);
       } catch (error) {
         console.error('Error Fetching Data:', error);
+        setSearchResults([]);
       } finally {
         setLoading(false); 
       }
@@ -61,7 +62,12 @@ function SearchResult() {
             ))}
           </div>
         ) : (
-          <h1>Product Not Available</h1>
+          <div className="empty-search-result">
+              <img src={Empty} alt="" />
+              <h2>WE COULDN'T FIND ANY MATCHES</h2>
+              <p>Maybe you’ll find the product search differant product:</p>
+          </div>
+          
         )}
       </div>
     </div>
