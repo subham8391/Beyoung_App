@@ -44,7 +44,7 @@ function CheckOut() {
                             {/* Render content based on activeStep */}
                             {activeStep === 0 && <Cart handleStepChange={handleStepChange} />}
                             {activeStep === 1 && <CAddress handleStepChange={handleStepChange}/>}
-                            {activeStep === 2 && <Payment />}
+                            {activeStep === 2 && <Payment handleStepChange={handleStepChange}/>}
                         </div>
                     </div>
                     <div className="checkout-footer">

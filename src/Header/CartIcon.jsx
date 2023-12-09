@@ -34,7 +34,7 @@ function CartIcon() {
       return (
         <div>
           {isAuthenticated && (
-            <Link to='/checkout/cart' className="ncr-icon">
+            <Link to='/checkout' className="ncr-icon">
               <AiOutlineShoppingCart />
               <p>{contentData.results}</p>
             </Link>

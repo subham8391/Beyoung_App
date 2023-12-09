@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { FaCartShopping } from "react-icons/fa6";
+import { BsArrowRightCircle } from "react-icons/bs";
 import Auth from '../../Authenticion/auth';
-function AddToCart({id,size,qty,disabled}) {
-    const [isInAddToCart, setIsInAddToCart] = useState(false);
+
+function BuyNow({id,size,qty,disabled}) {
+    const [BuyNow, setBuyNow] = useState(false);
     const navigate = useNavigate();
     useEffect(() => {
         const fetchContent = async () => {
@@ -25,13 +26,13 @@ function AddToCart({id,size,qty,disabled}) {
             const content = data.data.items;
             const isPresent = content.filter(item => item._id === id); 
             if (isPresent.length > 0) {
-              setIsInAddToCart(true);
+              setBuyNow(true);
             }
             else {
-              setIsInAddToCart(false);
+              setBuyNow(false);
             }
           } catch (error) {
-            setIsInAddToCart(false);
+            setBuyNow(false);
           }
         };
     
@@ -61,17 +62,17 @@ function AddToCart({id,size,qty,disabled}) {
           );
     
           if (response.ok) {
-            setIsInAddToCart((prevIsInWishlist) => !prevIsInWishlist);
+            setBuyNow((prevIsInWishlist) => !prevIsInWishlist);
+            navigate('/checkout/cart');
           }
         } catch (error) {
           console.error('Error adding to wishlist', error);
         }
       };
-    
-      return (
-        <div className={`add-to-cart-btn ${disabled ? 'disabled' : ''}`} onClick={disabled ? null : handleAddTOCart}>
-            <FaCartShopping /> ADD TO CART </div>
-      );
+  return (
+    <div className={`buy-now-btn ${disabled ? 'disabled' : ''}`} onClick={disabled ? null : handleAddTOCart}>
+        <BsArrowRightCircle /> BUY NOW</div>
+  )
 }
 
-export default AddToCart
+export default BuyNow

@@ -41,7 +41,7 @@ function NavigationBar() {
   
   return (
     <>
-    {!(path === '/login' || path === '/signup' || path === '/checkout') && (
+    {!(path === '/login' || path === '/signup' || path === '/checkout' || path === '/checkout/cart' || path === '/checkout/shipping' || path === '/checkout/payment') && (
       <div className="navigation-sec">
         <div className="navi-container">
           <div className="navi-container-top">

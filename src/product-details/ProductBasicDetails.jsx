@@ -1,17 +1,17 @@
 import React, { useState } from 'react';
 import { FaTruck } from "react-icons/fa";
 import { BsCashCoin } from "react-icons/bs";
-import { BsArrowRightCircle } from "react-icons/bs";
 import AddToCart from '../Components/Checkout/AddToCart';
+import BuyNow from '../Components/Checkout/BuyNow';
 import WishlistBtn from '../Components/Wishlist/WishlistBtn';
 
 function ProductBasicDetails({ product }) {
     const [selectedSize, setSelectedSize] = useState('');
-    const [selectedQty, setSelectedQty] = useState(1); // Default to 1
+    const [selectedQty, setSelectedQty] = useState(1); 
 
     const qty = Array.from({ length: 10 }, (_, index) => index + 1);
     const size_order = ['S', 'M', 'L', 'XL', 'XXL'];
-
+   
     const handleSizeChange = (size) => {
         setSelectedSize(size);
     };
@@ -19,6 +19,7 @@ function ProductBasicDetails({ product }) {
     const handleQtyChange = (event) => {
         setSelectedQty(parseInt(event.target.value));
     };
+    const isSizeSelected = selectedSize !== '';
 
     return (
         <>
@@ -55,8 +56,9 @@ function ProductBasicDetails({ product }) {
                             </select>
                         </div>
                         <div className="p-action-btn">
-                            <AddToCart id={product._id} size={selectedSize} qty={selectedQty} />
-                            <div className="buy-now-btn"><BsArrowRightCircle /> BUY NOW</div>
+                            <AddToCart id={product._id} size={selectedSize} qty={selectedQty} disabled={!isSizeSelected}/>
+                            <BuyNow id={product._id} size={selectedSize} qty={selectedQty} disabled={!isSizeSelected}/>
+                            
                         </div>
                         <h4>DELIVERY OPTIONS</h4>
                         <div className="dalivary-section">

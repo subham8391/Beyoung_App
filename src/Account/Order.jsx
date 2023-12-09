@@ -23,8 +23,8 @@ function Order() {
         }
 
         const data = await response.json();
-        const orders = data.data; // Access the 'data' containing the orders
-        setContentData(orders); // Update state with the fetched orders
+        const orders = data.data; 
+        setContentData(orders); 
         setLoading(false);
       } catch (error) {
         console.error('Error Fetching Data');
