@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import Paymentimg from '../../image/Payment-img.png'
+import Paymentimg from '../../image/Payment-Img.png'
 import { BsCheckCircleFill } from "react-icons/bs";
 import './checkout.css'
 
