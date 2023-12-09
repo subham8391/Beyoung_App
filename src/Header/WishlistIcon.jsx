@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom'
 import {AiOutlineHeart} from 'react-icons/ai';
+import Auth from '../Authenticion/auth';
 function WishlistIcon() {
     const [contentData, setContentData] = useState(0);
+    const isAuthenticated = Auth.isAuthenticated();
     useEffect(() => {
         const fetchContent = async () => {
           try {
@@ -30,8 +32,21 @@ function WishlistIcon() {
         fetchContent();
       }, []);
   return (
-    <div><Link to='/myaccount/wishlist' className="ncr-icon"><AiOutlineHeart /><p>{contentData.results}</p></Link></div>
+    <div>
+          {isAuthenticated && (
+            <Link to='/myaccount/wishlist' className="ncr-icon">
+              <AiOutlineHeart />
+              <p>{contentData.results}</p>
+            </Link>
+          )}
+          {!isAuthenticated && (
+            <Link to='/login' className="ncr-icon">
+              <AiOutlineHeart />
+            </Link>
+          )}
+        </div>
   )
 }
 
 export default WishlistIcon
+

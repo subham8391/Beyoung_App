@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom'
 import {AiOutlineShoppingCart } from 'react-icons/ai';
+import Auth from '../Authenticion/auth';
 function CartIcon() {
     const [contentData, setContentData] = useState(0);
+    const isAuthenticated = Auth.isAuthenticated();
     useEffect(() => {
         const fetchContent = async () => {
           try {
@@ -29,9 +31,21 @@ function CartIcon() {
     
         fetchContent();
       }, []);
-  return (
-    <div><Link to='/checkout' className="ncr-icon"><AiOutlineShoppingCart /><p>{contentData.results}</p></Link></div>
-  )
+      return (
+        <div>
+          {isAuthenticated && (
+            <Link to='/checkout/cart' className="ncr-icon">
+              <AiOutlineShoppingCart />
+              <p>{contentData.results}</p>
+            </Link>
+          )}
+          {!isAuthenticated && (
+            <Link to='/login' className="ncr-icon">
+              <AiOutlineShoppingCart />
+            </Link>
+          )}
+        </div>
+      )
 }
 
 export default CartIcon
