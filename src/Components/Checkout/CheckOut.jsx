@@ -3,9 +3,16 @@ import { Link } from 'react-router-dom'
 import { TbShieldLockFilled } from "react-icons/tb";
 import { CartFooter } from '../../ConstentData';
 import Cart from './Cart';
+import CAddress from './CAddress';
+import Payment from './Payment';
+import { Stepper, Step, StepLabel } from '@mui/material';
 import './checkout.css'
 function CheckOut() {
-   
+    const [activeStep, setActiveStep] = useState(0);
+    const steps = ['Cart', 'Address', 'Payment'];
+    const handleStepChange = (step) => {
+        setActiveStep(step);
+      };
     return (
         <>
             <div className="checkout-section">
@@ -24,16 +31,27 @@ function CheckOut() {
                         </div>
                     </div>
                     <div className="checkout-body">
-                        <div className="progress-bar"></div>
+                        <div className="progress-bar">
+                            <Stepper activeStep={activeStep} >
+                                {steps.map((label, index) => (
+                                    <Step key={label}>
+                                        <StepLabel>{label}</StepLabel>
+                                    </Step>
+                                ))}
+                            </Stepper>
+                        </div>
                         <div className="checkout-content">
-                            <Cart />
+                            {/* Render content based on activeStep */}
+                            {activeStep === 0 && <Cart handleStepChange={handleStepChange} />}
+                            {activeStep === 1 && <CAddress handleStepChange={handleStepChange}/>}
+                            {activeStep === 2 && <Payment />}
                         </div>
                     </div>
                     <div className="checkout-footer">
-                    {CartFooter.map((item,index)=>(
-                        <img src={item} alt="" key={index} />
-                    ))}
-                     </div>
+                        {CartFooter.map((item, index) => (
+                            <img src={item} alt="" key={index} />
+                        ))}
+                    </div>
                 </div>
             </div >
         </>

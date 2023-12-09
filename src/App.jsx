@@ -41,7 +41,10 @@ import Coupons from './Account/Coupons';
 import Tickets from './Account/Tickets';
 import CheckOut from './Components/Checkout/CheckOut';
 import Cart from './Components/Checkout/Cart'
+import CAddress from './Components/Checkout/CAddress';
+import Payment from './Components/Checkout/Payment';
 import SearchResult from './Header/SearchResult';
+import CommingSoon from './CommingSoon/CommingSoon';
 import './App.css'
 
 function App() {
@@ -53,6 +56,7 @@ function App() {
         <NavigationBar />
         <div>
           <Routes>
+          <Route path="*" element={<CommingSoon />} />
             <Route path="/search" element={<SearchResult />} />
             <Route path="/signup" element={<Signup />} />
             <Route path="/login" element={<Login />} />
@@ -93,6 +97,8 @@ function App() {
             </Route>
             <Route path='/checkout' element={<PrivateRoute><CheckOut /></PrivateRoute>}>
              <Route path='/checkout/cart' element={<PrivateRoute><Cart /></PrivateRoute>}/>
+             <Route path='/checkout/shipping' element={<PrivateRoute><CAddress /></PrivateRoute>}/>
+             <Route path='/checkout/payment' element={<PrivateRoute><Payment /></PrivateRoute>}/>
            </Route>
           </Routes>
         </div>

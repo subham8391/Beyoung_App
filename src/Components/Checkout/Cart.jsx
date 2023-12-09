@@ -1,15 +1,19 @@
 
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { IoCloseSharp } from "react-icons/io5";
 import EmptyCart from '../../image/Empty_cart.png'
 import Coup from '../../image/coupon.png'
 import './checkout.css'
-function Cart() {
+function Cart({ handleStepChange }) {
   const [contentData, setContentData] = useState([]);
   const [priceData, setPriceData] = useState([]);
   const [totalPriceWithGST, setTotalPriceWithGST] = useState(0);
   const [loading, setLoading] = useState(true);
+
+  const handleCheckout = () => {
+    handleStepChange(1); 
+  };
+
   useEffect(() => {
     const fetchContent = async () => {
       try {
@@ -79,7 +83,7 @@ function Cart() {
   const discountAmount = (totalPriceWithGST - totalPrice).toFixed(2);
   const ShippingFee = priceData.results > 0 ? 50 : 0;
   const TotalAmmount = (totalPrice + ShippingFee);
-
+  const isCartEmpty = loading || priceData.results < 1;
   return (
     <>
       <div className="ch-content">
@@ -146,7 +150,11 @@ function Cart() {
         <div className="ta-conterner">
         <div className="tac-child"><h3>Total Ammount</h3><h3>₹{TotalAmmount}</h3></div>
         <div className="tac-save"><span>You Saved ₹{discountAmount} on this order</span></div>
-        <div className="steper-btn"><h3>CHECKOUT SECURELY</h3></div>
+        {!isCartEmpty && (
+          <div className="steper-btn" onClick={handleCheckout}>
+            <h3>CHECKOUT SECURELY</h3>
+          </div>
+        )}
         </div>
       </div>
     </>

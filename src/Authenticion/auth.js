@@ -12,7 +12,7 @@ const Auth = {
           },
           body: JSON.stringify({
             ...user,
-            appType: 'ott',
+            appType: 'ecommerce',
           }),
         });
   
@@ -41,7 +41,7 @@ const Auth = {
             },
             body: JSON.stringify({
               ...credentials,
-              appType: 'ott',
+              appType: 'ecommerce',
             }),
           });
     

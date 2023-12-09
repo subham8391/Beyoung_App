@@ -38,7 +38,7 @@ function MyAccount() {
 
     const handleTabClick = (tabName) => {
         setActiveTab(tabName);
-        navigate(`/myaccount/${tabName}`); // Change the route when a tab is clicked
+        navigate(`/myaccount/${tabName}`); 
     };
 
     const handleLogout = () => {
