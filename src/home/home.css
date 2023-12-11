@@ -232,3 +232,35 @@
     height: 5px;
     background-color: #F8EB27;
 }
+
+@media screen and (max-width: 1200px) {
+    .home-section{
+        width: 100%;
+        padding-top: 5.56rem;
+        height: auto;
+    }
+    .home-top-img{
+        width: 100%;
+        height: auto;
+    }
+}
+@media screen and (max-width: 760px) {
+    .home-section{
+        padding-top: 5.16rem;   
+    }
+    .dis-coop-sec{
+        padding: 0 10px 0 0;
+    }
+    .home-duo-img{
+        padding: 10px 10px 0 10px;
+        gap: 10px;
+    }
+    .duo-item{
+        height: auto;
+        border-radius: 10px;
+    }
+    .hot-deals{
+        width: 100%;
+        padding: 10px 10px 0 10px;
+    }
+}

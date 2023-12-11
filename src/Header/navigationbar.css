@@ -13,8 +13,6 @@
     justify-content: center;
     align-items: center;
     width: 100%;
-    /* background-color: blueviolet;
-    padding: 10px; */
 }
 .navi-container-top{
     display: flex;
@@ -74,7 +72,6 @@
     justify-content: center;
     align-items: center;
     gap: 30px; 
-    
   }
   .logo a{
     font-family: 'IBM Plex Sans','Open Sans', sans-serif;
@@ -110,7 +107,7 @@
     justify-content: center;
     align-items: center;
     gap: 15px; 
-
+    
   }
   .ncr-icon{
     height: 40px;
@@ -118,8 +115,8 @@
     background-color: rgb(255, 255, 255);
     border-radius: 50%;
     display: flex;
-    justify-content: space-between;
-    align-items: end;
+    justify-content: center;
+    align-items: center;
     font-size: 20px;
     cursor: pointer;
   }
@@ -132,8 +129,8 @@
     justify-content: center;
     align-items: center;
     position: relative;
-    right: 10px;
-    bottom: 15px;
+    right: 5px;
+    bottom: 9px;
     font-size: 15px;
     z-index: 1;
   }
@@ -253,3 +250,30 @@
       flex-direction: column;
       width: 100%;
     }
+
+    @media screen and (max-width: 1200px) {
+      .navi-container-top{
+        padding: 10px 5px;
+    }
+    .navi-container-bottom{
+      padding: 5px;
+    }
+    .navig-container-left nav{
+      display: none; 
+    }
+    .ncr-icon{
+      height: 30px;
+      width: 30px;
+    }
+  }
+  @media screen and (max-width: 760px) {
+    .track-order-sec{
+      font-size: 15px;
+    }
+    .track-order-sec span{
+      font-size: 12px;
+    }
+    .auth-btn{
+      font-size: 12px;
+    }
+  }

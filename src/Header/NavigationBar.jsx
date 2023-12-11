@@ -59,9 +59,9 @@ function NavigationBar() {
                   </>
                 ) : (
                   <>
-                    <Link to='/login' className="auth-btn">Log In</Link>
+                    <Link to='/login' className="auth-btn">LogIn</Link>
                     <hr className="diveder" />
-                    <Link to='/signup' className="auth-btn">Sign Up</Link>
+                    <Link to='/signup' className="auth-btn">SignUp</Link>
                   </>
                 )}
               </div>
