@@ -243,6 +243,7 @@
         width: 100%;
         height: auto;
     }
+    
 }
 @media screen and (max-width: 760px) {
     .home-section{
@@ -263,4 +264,22 @@
         width: 100%;
         padding: 10px 10px 0 10px;
     }
+    .new-arrivals{
+        width: 100%;
+        padding: 10px 10px 0 10px;
+    }
+    .home-banner{
+        padding: 10px 10px 0 10px; 
+    }
+    .bsp-sec{
+        padding: 10px 10px 0 10px;
+    }
+    .hb-2{
+        margin-top: 10px;
+    }
+    .for-man-female{
+        margin-top: 30px;
+        font-size: 20px;
+    }
+    
 }

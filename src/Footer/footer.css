@@ -31,6 +31,7 @@
 .app-links{
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     gap: 10px;
 }
 .app-links a img{
@@ -86,4 +87,13 @@
 .social-link a img{
     height: 100%;
     width: 100%;
+}
+
+@media screen and (max-width: 1200px) {
+    
+}
+@media screen and (max-width: 760px) {
+    .app-links a img{
+        height: 30px;
+    }
 }

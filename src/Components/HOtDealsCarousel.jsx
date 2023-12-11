@@ -17,7 +17,8 @@ function HOtDealsCarousel({hotDealData}) {
         padding:{right:'11rem'},
         breakpoints: {
           768: {
-            perPage: 2,
+            perPage: 3,
+            padding:{right:'0'},
           },
         },
       }}

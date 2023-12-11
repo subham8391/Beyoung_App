@@ -27,7 +27,8 @@ function TShartCarousel({ tShartData }) {
         padding:{right:'5rem'},
         breakpoints: {
           768: {
-            perPage: 2,
+            perPage: 1,
+            padding:{right:'0'},
           },
         },
       }}
