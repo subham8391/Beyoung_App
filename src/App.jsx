@@ -56,7 +56,7 @@ function App() {
         <NavigationBar />
         <div>
           <Routes>
-          <Route path="*" element={<CommingSoon />} />
+            <Route path="*" element={<CommingSoon />} />
             <Route path="/search" element={<SearchResult />} />
             <Route path="/signup" element={<Signup />} />
             <Route path="/login" element={<Login />} />

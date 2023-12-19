@@ -281,5 +281,43 @@
         margin-top: 30px;
         font-size: 20px;
     }
-    
+    .shirts-container{
+        padding: 10px 10px 0 10px;
+    }
+    .shirts-aria a{
+        height: auto;
+    }
+    .bottomwear-container{
+        padding: 10px 10px 0 10px;
+    }
+    .women-container{
+        padding: 10px 10px 0 10px;
+    }
+    .review-by-customer{
+        width: 100%;
+        padding: 10px 10px 0 10px;
+        height: 30vh;
+    }
+    .review-thumbnel a{
+        position: relative;
+        bottom: 30px;
+        font-size: 12px;
+    }
+    .shopl-container{
+        padding: 10px 10px 0 10px;
+    }
+    .shop-by-collection{
+        padding: 10px 10px 0 10px;
+    }
+    .tranding-section{
+        padding: 10px 10px 0 10px;
+    }
+    .featured-on-secton{
+        padding: 10px 10px 0 10px;
+    }
+    .bar{
+        width: 32%;
+        height: 5px;
+        background-color: #F8EB27;
+    }
 }
