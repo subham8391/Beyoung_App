@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState,useEffect } from 'react';
 import { WomenShirtProduct } from '../ConstentData'
 import ProductFetcher from '../Components/ProductFetcher';
 import urbanSBanner from '../image/Urban-shirt-banners.jpg'
@@ -14,6 +14,16 @@ function WomenShirt() {
     const [isColorFilterVisible, setIsColorFilterVisible] = useState(true);
     const [isSizeFilterVisible, setIsSizeFilterVisible] = useState(true);
     const [isPriceFilterVisible, setIsPriceFilterVisible] = useState(true);
+    const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+    useEffect(() => {
+    const handleResize = () => {
+      setWindowWidth(window.innerWidth);
+    };
+    window.addEventListener('resize', handleResize);
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
     const toggleColorFilter = () => {
       setIsColorFilterVisible(!isColorFilterVisible);
     };
@@ -40,6 +50,7 @@ function WomenShirt() {
             <img src={urbanSBanner} alt="" />
           </div> */}
           <div className="pages-page-container">
+          {windowWidth <= 760 ? null : (
             <div className="fil-sec">
               <h2>FILTER</h2>
               <div className="col-filter">
@@ -61,6 +72,7 @@ function WomenShirt() {
                 {isPriceFilterVisible && <PriceFilter onPriceChange={handlePriceOrderChange} />}
               </div>
             </div>
+          )}
             <div className="product-sec">
               <h2>WOMEN SHIRTS</h2>
               <ProductFetcher productData={WomenShirtProduct} selectedColor={selectedColor} selectedSize={selectedSize}  selectedPriceOrder={selectedPriceOrder}/>

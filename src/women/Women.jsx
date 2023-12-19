@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState,useEffect } from 'react';
 import { WomenProduct } from '../ConstentData'
 import ProductFetcher from '../Components/ProductFetcher';
 import WomenBanner from '../image/Women-clothing-banner.jpg'
@@ -17,6 +17,16 @@ function Women() {
   const [isSizeFilterVisible, setIsSizeFilterVisible] = useState(true);
   const [isBrandFilterVisible, setIsBrandFilterVisible] = useState(true);
   const [isPriceFilterVisible, setIsPriceFilterVisible] = useState(true);
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+  useEffect(() => {
+    const handleResize = () => {
+      setWindowWidth(window.innerWidth);
+    };
+    window.addEventListener('resize', handleResize);
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
   const toggleColorFilter = () => {
     setIsColorFilterVisible(!isColorFilterVisible);
   };
@@ -49,6 +59,7 @@ function Women() {
           <img src={WomenBanner} alt="" />
         </div>
         <div className="women-page-container">
+        {windowWidth <= 760 ? null : (
           <div className="fil-sec">
             <h2>FILTER</h2>
             <div className="col-filter">
@@ -76,6 +87,7 @@ function Women() {
               {isPriceFilterVisible && <PriceFilter onPriceChange={handlePriceOrderChange} />}
             </div>
           </div>
+          )}
           <div className="product-sec">
             <h2>WOMEN'S CLOTHING</h2>
             <p>Women's Clothing - Get your hands on stylish and comfortable clothing for women - Buy a range of ladies' clothing online at affordable prices. Beyoung offers the latest collection of Kurtis, shirts, tops, t-shirts, pants, boxers, and jeggings with existing offers and discounts. Find women's clothing for formal to weekend outings in all styles. Free Shipping | COD | S - 4XL Sizes | 15 Days Return</p>

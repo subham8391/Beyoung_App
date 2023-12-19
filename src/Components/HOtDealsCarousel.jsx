@@ -19,6 +19,7 @@ function HOtDealsCarousel({hotDealData}) {
           768: {
             perPage: 3,
             padding:{right:'0'},
+          
           },
         },
       }}

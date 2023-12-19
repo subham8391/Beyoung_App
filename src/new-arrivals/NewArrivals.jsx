@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState,useEffect } from 'react';
 import { NewArrivalProduct } from '../ConstentData'
 import ProductFetcher from '../Components/ProductFetcher';
 import NewArrivalFilter from '../Components/Filter/NewArrivalFilter';
@@ -15,6 +15,16 @@ function NewArrivals() {
   const [isColorFilterVisible, setIsColorFilterVisible] = useState(true);
   const [isSizeFilterVisible, setIsSizeFilterVisible] = useState(true);
   const [isPriceFilterVisible, setIsPriceFilterVisible] = useState(true);
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+  useEffect(() => {
+    const handleResize = () => {
+      setWindowWidth(window.innerWidth);
+    };
+    window.addEventListener('resize', handleResize);
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
   const handleSelectCategory =(subCategory)=>{
     setSelectCategary(subCategory);
   }
@@ -44,6 +54,7 @@ function NewArrivals() {
          <NewArrivalFilter selectCategary={selectCategary} onCategoryChange={handleSelectCategory}/>
       </div>
         <div className="newarrival-page-container">
+        {windowWidth <= 760 ? null : (
           <div className="fil-sec">
             <h2>FILTER</h2>
             <div className="col-filter">
@@ -65,6 +76,7 @@ function NewArrivals() {
               {isPriceFilterVisible && <PriceFilter onPriceChange={handlePriceOrderChange} />}
             </div>
           </div>
+        )}
           <div className="product-sec">
             <h2>NEW ARRIVAL</h2>
             <ProductFetcher productData={NewArrivalProduct} selectedColor={selectedColor} selectedSize={selectedSize}  selectedPriceOrder={selectedPriceOrder} selectCategary={selectCategary}/>

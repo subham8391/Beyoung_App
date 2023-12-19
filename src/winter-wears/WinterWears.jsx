@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState,useEffect } from 'react';
 import {WinterWearsProduct } from '../ConstentData';
 import ProductFetcher from '../Components/ProductFetcher';
 import ColorFilter from '../Components/Filter/ColorFilters';
@@ -14,6 +14,16 @@ function WinterWears() {
   const [isColorFilterVisible, setIsColorFilterVisible] = useState(true);
   const [isSizeFilterVisible, setIsSizeFilterVisible] = useState(true);
   const [isPriceFilterVisible, setIsPriceFilterVisible] = useState(true);
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+  useEffect(() => {
+    const handleResize = () => {
+      setWindowWidth(window.innerWidth);
+    };
+    window.addEventListener('resize', handleResize);
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
   const toggleColorFilter = () => {
     setIsColorFilterVisible(!isColorFilterVisible);
   };
@@ -41,6 +51,7 @@ function WinterWears() {
           <img src={winterBanner} alt="" />
         </div>
         <div className="winter-w-container">
+        {windowWidth <= 760 ? null : (
           <div className="fil-sec">
             <h2>FILTER</h2>
             <div className="col-filter">
@@ -62,6 +73,7 @@ function WinterWears() {
               {isPriceFilterVisible && <PriceFilter onPriceChange={handlePriceOrderChange} />}
             </div>
           </div>
+        )}
           <div className="product-sec">
             <h2>WINTER WEAR</h2>
             

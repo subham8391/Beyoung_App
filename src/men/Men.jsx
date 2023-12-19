@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState,useEffect } from 'react';
 import { MenProduct } from '../ConstentData';
 import ProductFetcher from '../Components/ProductFetcher';
 import ColorFilter from '../Components/Filter/ColorFilters';
@@ -17,6 +17,16 @@ function Men() {
   const [isSizeFilterVisible, setIsSizeFilterVisible] = useState(true);
   const [isBrandFilterVisible, setIsBrandFilterVisible] = useState(true);
   const [isPriceFilterVisible, setIsPriceFilterVisible] = useState(true);
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+  useEffect(() => {
+    const handleResize = () => {
+      setWindowWidth(window.innerWidth);
+    };
+    window.addEventListener('resize', handleResize);
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
   const toggleColorFilter = () => {
     setIsColorFilterVisible(!isColorFilterVisible);
   };
@@ -47,6 +57,7 @@ function Men() {
     <>
       <div className="men-section">
         <div className="men-container">
+        {windowWidth <= 760 ? null : (
           <div className="fil-sec">
             <h2>FILTER</h2>
             <div className="col-filter">
@@ -74,6 +85,7 @@ function Men() {
               {isPriceFilterVisible && <PriceFilter onPriceChange={handlePriceOrderChange} />}
             </div>
           </div>
+          )}
           <div className="product-sec">
             <h2>MENS CLOTHING</h2>
             <p>Mens Clothing is all about being stylish and comfortable all day long. Beyoung understands the same and provides you with a handsome range of Clothing For Men out there. Scroll below to get a look at it.</p>

@@ -290,7 +290,7 @@ export const BBFevouritData=[
   {f_img:bbfeb2,subCategory:'shorts'},
   {f_img:bbfeb3,subCategory:'shirt'},
   {f_img:bbfeb4,subCategory:'kurta'},
-  {f_img:bbfeb5,subCategory:'kurti'},
+  {f_img:bbfeb5,subCategory:'hoodie'},
   {f_img:bbfeb6,subCategory:'pyjamas'},
   {f_img:bbfeb7,subCategory:'jogger'},
 ]

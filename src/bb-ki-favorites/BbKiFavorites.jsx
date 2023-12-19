@@ -15,7 +15,16 @@ function BbKiFavorites() {
   const [isColorFilterVisible, setIsColorFilterVisible] = useState(true);
   const [isSizeFilterVisible, setIsSizeFilterVisible] = useState(true);
   const [isPriceFilterVisible, setIsPriceFilterVisible] = useState(true);
-
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+    useEffect(() => {
+    const handleResize = () => {
+      setWindowWidth(window.innerWidth);
+    };
+    window.addEventListener('resize', handleResize);
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
   const handleSelectCategory =(subCategory)=>{
     setSelectCategary(subCategory);
   }
@@ -50,6 +59,7 @@ function BbKiFavorites() {
          <BBFevouriteFilter selectCategary={selectCategary} onCategoryChange={handleSelectCategory}/>
        </div>
         <div className="bb-feb-container">
+        {windowWidth <= 760 ? null : (
           <div className="fil-sec">
             <h2>FILTER</h2>
             <div className="col-filter">
@@ -71,6 +81,7 @@ function BbKiFavorites() {
               {isPriceFilterVisible && <PriceFilter onPriceChange={handlePriceOrderChange} />}
             </div>
           </div>
+        )}
           <div className="product-sec">
             <h2>BB KE FAVORITES</h2>
             

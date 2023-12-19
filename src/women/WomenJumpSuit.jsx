@@ -15,6 +15,16 @@ function WomenJumpSuit() {
     const [isColorFilterVisible, setIsColorFilterVisible] = useState(true);
     const [isSizeFilterVisible, setIsSizeFilterVisible] = useState(true);
     const [isPriceFilterVisible, setIsPriceFilterVisible] = useState(true);
+    const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+    useEffect(() => {
+    const handleResize = () => {
+      setWindowWidth(window.innerWidth);
+    };
+    window.addEventListener('resize', handleResize);
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
     const toggleColorFilter = () => {
       setIsColorFilterVisible(!isColorFilterVisible);
     };
@@ -41,6 +51,7 @@ function WomenJumpSuit() {
             <img src={urbanSBanner} alt="" />
           </div> */}
           <div className="pages-page-container">
+          {windowWidth <= 760 ? null : (
             <div className="fil-sec">
               <h2>FILTER</h2>
               <div className="col-filter">
@@ -62,6 +73,7 @@ function WomenJumpSuit() {
                 {isPriceFilterVisible && <PriceFilter onPriceChange={handlePriceOrderChange} />}
               </div>
             </div>
+          )}
             <div className="product-sec">
               <h2>WOMEN PANTS</h2>
               <ProductFetcher productData={WomenJumpSuitProduct} selectedColor={selectedColor} selectedSize={selectedSize}  selectedPriceOrder={selectedPriceOrder}/>

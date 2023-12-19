@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState,useEffect } from 'react';
 import { TracksuitProduct } from '../ConstentData'
 import ProductFetcher from '../Components/ProductFetcher';
 import cargoBaner from '../image/cargo_banner.jpg'
@@ -14,6 +14,16 @@ function TracksuitPants() {
     const [isColorFilterVisible, setIsColorFilterVisible] = useState(true);
     const [isSizeFilterVisible, setIsSizeFilterVisible] = useState(true);
     const [isPriceFilterVisible, setIsPriceFilterVisible] = useState(true);
+    const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+  useEffect(() => {
+    const handleResize = () => {
+      setWindowWidth(window.innerWidth);
+    };
+    window.addEventListener('resize', handleResize);
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
     const toggleColorFilter = () => {
       setIsColorFilterVisible(!isColorFilterVisible);
     };
@@ -40,6 +50,7 @@ function TracksuitPants() {
             <img src={cargoBaner} alt="" />
           </div>
           <div className="track-suit-page-container">
+          {windowWidth <= 760 ? null : (
             <div className="fil-sec">
               <h2>FILTER</h2>
               <div className="col-filter">
@@ -61,6 +72,7 @@ function TracksuitPants() {
                 {isPriceFilterVisible && <PriceFilter onPriceChange={handlePriceOrderChange} />}
               </div>
             </div>
+          )}
             <div className="product-sec">
               <h2>MENS TRACKSUIT PANTS</h2>
               <p>Flat 50% OFF! Beyoung offers highly functional, stylish, and comfortable Mens Tracksuit Pants at jaw-dropping discounts. We bring you an amazing collection of Tracksuit pants that are as versatile as it’s appealing to the eyes. Specially designed for modern lifestyle and urban fashion, crafted from high-quality material, ensure durability and comfort throughout the day. ✅COD ✅Premium Quality ✅15 Days Easy Return</p>

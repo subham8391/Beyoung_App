@@ -13,7 +13,16 @@ function Combos() {
   const [isPriceFilterVisible, setIsPriceFilterVisible] = useState(true);
   const [selectedBrand, setSelectedBrand] = useState(null);
   const [selectedPriceOrder, setSelectedPriceOrder] = useState(null);
-
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+    useEffect(() => {
+    const handleResize = () => {
+      setWindowWidth(window.innerWidth);
+    };
+    window.addEventListener('resize', handleResize);
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
   const handleSelectCategory =(subCategory)=>{
     setSelectCategary(subCategory);
   }
@@ -45,6 +54,7 @@ function Combos() {
          <SubCategoryFilter  selectCategary={selectCategary} onCategoryChange={handleSelectCategory}/>
       </div>
       <div className="combo-page-container">
+      {windowWidth <= 760 ? null : (
         <div className="fil-sec">
           <h2>FILTER</h2>
           <div className="brand-filter">
@@ -60,6 +70,7 @@ function Combos() {
               {isPriceFilterVisible && <PriceFilter onPriceChange={handlePriceOrderChange} />}
             </div>
         </div>
+      )}
         <div className="product-sec">
           <h2>COMBOS (UNISEX)</h2>
           <p>Combo T Shirts - Buy T Shirt Combos Online in India at Low Price. Latest Collection of Plain and Printed Combo T shirts For Mens Online at Beyoung. ✓ Pack of 3 & 4 Combo T-shirts ✓Big Discounts ✓Free Shipping ✓COD.</p>

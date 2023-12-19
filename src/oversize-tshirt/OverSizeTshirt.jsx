@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState,useEffect } from 'react';
 import { OTshirtProduct } from '../ConstentData'
 import ProductFetcher from '../Components/ProductFetcher';
 import oversizeB from '../image/oversize-banner.jpg'
@@ -14,6 +14,16 @@ function OverSizeTshirt() {
     const [isColorFilterVisible, setIsColorFilterVisible] = useState(true);
     const [isSizeFilterVisible, setIsSizeFilterVisible] = useState(true);
     const [isPriceFilterVisible, setIsPriceFilterVisible] = useState(true);
+    const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+  useEffect(() => {
+    const handleResize = () => {
+      setWindowWidth(window.innerWidth);
+    };
+    window.addEventListener('resize', handleResize);
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
     const toggleColorFilter = () => {
       setIsColorFilterVisible(!isColorFilterVisible);
     };
@@ -40,6 +50,7 @@ function OverSizeTshirt() {
             <img src={oversizeB} alt="" />
           </div>
           <div className="oversize-tshirt-page-container">
+          {windowWidth <= 760 ? null : (
             <div className="fil-sec">
               <h2>FILTER</h2>
               <div className="col-filter">
@@ -61,6 +72,7 @@ function OverSizeTshirt() {
                 {isPriceFilterVisible && <PriceFilter onPriceChange={handlePriceOrderChange} />}
               </div>
             </div>
+          )}
             <div className="product-sec">
               <h2>OVERSIZE T SHIRT</h2>
               <p>Get the best look with oversize t shirt for men online in India at Beyoung. We bring you amazing colors, styles, and sizes in our coolest collection. Shop your favorites online at Beyoung from the amazing collection of Oversized T shirts for men at the best price starting from just Rs.209.</p>
