@@ -9,7 +9,9 @@ function PriceFilter({ onPriceChange }) {
     if (selectedPriceOrder === order) {
       // If the same checkbox is clicked again, uncheck it
       setSelectedPriceOrder(null);
-      onPriceChange(null); // Notify the parent component about the change
+      // Notify the parent component about the change
+      onPriceChange(null); 
+     
     } else {
       // Otherwise, update the selected order
       setSelectedPriceOrder(order);

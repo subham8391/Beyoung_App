@@ -1,4 +1,3 @@
-import { useState } from 'react'
 import { BrowserRouter as Router, Route, Link, Routes } from 'react-router-dom';
 import NavigationBar from './Header/NavigationBar';
 import Footer from './Footer/Footer';
@@ -14,16 +13,8 @@ import NewArrivals from './new-arrivals/NewArrivals'
 import UrbanShirts from './urban-shirts/UrbanShirts';
 import TracksuitPants from './tracksuit-pants/TracksuitPants';
 import OverSizeTshirt from './oversize-tshirt/OverSizeTshirt';
-import MenHoodie from './men/MenHoodie';
-import MenJeans from './men/MenJeans'
-import MenJogger from './men/MenJogger'
-import MenKurta from './men/MenKurta'
-import MenPyjama from './men/MenPyjama'
-import MenShirt from './men/MenShirt'
-import MenShorts from './men/MenShorts'
-import MenTracksuit from './men/MenTracksuit'
-import MenTrouser from './men/MenTrouser'
-import MenTShirt from './men/MenTShirt'
+import { MenHoodie, MenJeans,MenJogger,MenKurta,MenPyjama,MenShirt,MenShorts,MenTracksuit,MenTrouser,MenTShirt } from './men/MenPages';
+
 import WomenJeans from './women/WomenJeans'
 import WomenJogger from './women/WomenJogger'
 import WomenJumpSuit from './women/WomenJumpSuit'
