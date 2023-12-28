@@ -1,13 +1,12 @@
-import React, { useState,useEffect } from 'react';
-import { WomenShirtProduct } from '../ConstentData'
+import React, { useState, useEffect } from 'react';
 import ProductFetcher from '../Components/ProductFetcher';
-import urbanSBanner from '../image/Urban-shirt-banners.jpg'
 import ColorFilter from '../Components/Filter/ColorFilters';
 import SizeFilter from '../Components/Filter/SizeFilter';
 import PriceFilter from '../Components/Filter/PriceFilter';
-import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
+import { IoIosArrowDown, IoIosArrowUp } from 'react-icons/io';
 import './women.css';
-function WomenShirt() {
+
+const WomenSubcategory = ({subCategory, productData }) => {
     const [selectedColor, setSelectedColor] = useState(null);
     const [selectedSize, setSelectedSize] = useState(null);
     const [selectedPriceOrder, setSelectedPriceOrder] = useState(null);
@@ -15,21 +14,25 @@ function WomenShirt() {
     const [isSizeFilterVisible, setIsSizeFilterVisible] = useState(true);
     const [isPriceFilterVisible, setIsPriceFilterVisible] = useState(true);
     const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+  
     useEffect(() => {
-    const handleResize = () => {
-      setWindowWidth(window.innerWidth);
-    };
-    window.addEventListener('resize', handleResize);
-    return () => {
-      window.removeEventListener('resize', handleResize);
-    };
-  }, []);
+      const handleResize = () => {
+        setWindowWidth(window.innerWidth);
+      };
+      window.addEventListener('resize', handleResize);
+      return () => {
+        window.removeEventListener('resize', handleResize);
+      };
+    }, []);
+  
     const toggleColorFilter = () => {
       setIsColorFilterVisible(!isColorFilterVisible);
     };
+  
     const toggleSizeFilter = () => {
       setIsSizeFilterVisible(!isSizeFilterVisible);
     };
+  
     const togglePriceFilter = () => {
       setIsPriceFilterVisible(!isPriceFilterVisible);
     };
@@ -37,18 +40,18 @@ function WomenShirt() {
     const handleColorItemClick = (color) => {
       setSelectedColor(color);
     };
+  
     const handleSelectedSize = (size) => {
       setSelectedSize(size);
-    }
+    };
+  
     const handlePriceOrderChange = (order) => {
       setSelectedPriceOrder(order === selectedPriceOrder ? null : order);
     };
+  
     return (
       <>
         <div className="pages-section">
-          {/* <div className="pages-banner">
-            <img src={urbanSBanner} alt="" />
-          </div> */}
           <div className="pages-page-container">
           {windowWidth <= 760 ? null : (
             <div className="fil-sec">
@@ -74,13 +77,13 @@ function WomenShirt() {
             </div>
           )}
             <div className="product-sec">
-              <h2>WOMEN SHIRTS</h2>
-              <ProductFetcher productData={WomenShirtProduct} selectedColor={selectedColor} selectedSize={selectedSize}  selectedPriceOrder={selectedPriceOrder}/>
+              <h2>{`WOMEN ${subCategory.toUpperCase()}`}</h2>
+              <ProductFetcher productData={productData} selectedColor={selectedColor} selectedSize={selectedSize} selectedPriceOrder={selectedPriceOrder} />
             </div>
           </div>
         </div>
       </>
     )
-}
-
-export default WomenShirt
+  }
+  
+  export default WomenSubcategory;

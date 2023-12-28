@@ -14,13 +14,8 @@ import UrbanShirts from './urban-shirts/UrbanShirts';
 import TracksuitPants from './tracksuit-pants/TracksuitPants';
 import OverSizeTshirt from './oversize-tshirt/OverSizeTshirt';
 import { MenHoodie, MenJeans,MenJogger,MenKurta,MenPyjama,MenShirt,MenShorts,MenTracksuit,MenTrouser,MenTShirt } from './men/MenPages';
+import {WomenShirt, WomenJogger, WomenJeans,WomenJumpSuit,WomenKurti,WomenTShirt} from './women/WomenPages'
 
-import WomenJeans from './women/WomenJeans'
-import WomenJogger from './women/WomenJogger'
-import WomenJumpSuit from './women/WomenJumpSuit'
-import WomenKurti from './women/WomenKurti'
-import WomenShirt from './women/WomenShirt'
-import WomenTShirt from './women/WomenTShirt'
 import ProductDetails from './product-details/ProductDetails';
 import PrivateRoute from './Authenticion/PrivateRoute';
 import MyAccount from './Account/MyAccount';
