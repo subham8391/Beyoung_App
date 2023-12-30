@@ -37,27 +37,27 @@ export const socialLinkData=[sm1,sm2,sm3,sm4,sm5,sm6]
 export const menDropdownData = [
   {
     title: 'Topwear',
-    items: [{heading:'Printed T-Shirts',path:'men-tshirt'},{heading:'Oversize T-Shirts New',path:'oversize-tshirts'},{heading:'Plain T-Shirts',path:'men-palin-tshirts'},{heading:'Full Sleeve T-Shirts',path:'men-fullsleeve-tshirt'},{heading:'Shirts',path:'men-shirt'},{heading:'Polo T-Shirts',path:'men-polo-tshirts'},{heading:'Half Sleeve T-Shirts',path:'men-half-tshirts'},{heading:'Plus Size T-Shirts',path:'men-plus-size-tshirts'},{heading:'Combos',path:'combo-products'},],
+    items: [{heading:'Printed T-Shirts', subCategory: 'tshirt'},{heading:'Oversize T-Shirts New', subCategory: ''},{heading:'Plain T-Shirts', subCategory: ''},{heading:'Full Sleeve T-Shirts', subCategory: ''},{heading:'Shirts', subCategory: 'shirt'},{heading:'Polo T-Shirts', subCategory: ''},{heading:'Kurta', subCategory: 'kurta'},{heading:'Plus Size T-Shirts', subCategory: ''}],
   },
   {
     title: 'Theme',
-    items: [{heading:'Travel',path:'men-theme'},{heading:'Gym',path:'men-gym'},{heading:'Cartoon',path:'men-cartoon'},{heading:'Sports',path:'men-sports'},{heading:'Music',path:'men-music'},{heading:'Biker',path:'men-biker'},{heading:'Funky',path:'men-funky'},{heading:'God',path:'men-god'},{heading:'Quotes',path:'men-quotes'},],
+    items: [{heading:'Travel',subCategory: ''},{heading:'Gym',subCategory: ''},{heading:'Cartoon',subCategory: ''},{heading:'Sports',subCategory: ''},{heading:'Music',subCategory: ''},{heading:'Biker',subCategory: ''},{heading:'Funky',subCategory: ''},{heading:'God',subCategory: ''},{heading:'Quotes',subCategory: ''},],
   },
   {
     title: 'Special',
-    items: [{heading:'Couple T-shirts',path:'couple-tshirt'},{heading:'Bestseller T shirts',path:'men-bestseller-tshirts'},{heading:'Deals & Offers',path:'deal-offers'},],
+    items: [{heading:'Couple T-shirts',subCategory: ''},{heading:'Bestseller T shirts',subCategory: ''},{heading:'Deals & Offers',subCategory: ''},],
   },
   {
     title: 'Bottomwear',
-    items: [{heading:'Joggers',path:'men-jogger'},{heading:'Jeans Pants',path:'men-jeans'},{heading:'Tracksuit',path:'men-tracksuit'},{heading:'Shorts New',path:'men-shorts'},{heading:'Trouser Pants New',path:'men-trouser'},{heading:'Pyjamas',path:'men-pyjama'},],
+    items: [{heading:'Joggers', subCategory: 'jogger'},{heading:'Jeans Pants', subCategory: 'jeans'},{heading:'Tracksuit', subCategory: 'tracksuit'},{heading:'Shorts New', subCategory: 'shorts'},{heading:'Trouser Pants New', subCategory: 'trouser'},{heading:'Pyjamas', subCategory: 'pyjamas'},],
   },
   {
     title: 'Shirts',
-    items: [{heading:'Plain Shirts',path:'men-shirt'},{heading:'Urban Shirts',path:'urban-shirt'},{heading:'Casual Shirts',path:'men-casual-shirts'},],
+    items: [{heading:'Plain Shirts',subCategory: ''},{heading:'Casual Shirts',subCategory: ''},],
   },
   {
     title: 'Winter Wears',
-    items: [{heading:'Jackets',path:'men-jackets'},{heading:'Sweatshirts',path:'men-sweatshirts'},{heading:'Hoodies',path:'men-hoodie'},]
+    items: [{heading:'Jackets',subCategory: ''},{heading:'Sweater', subCategory: 'sweater'},{heading:'Hoodies', subCategory: 'hoodie'},]
   }
 ];
 
@@ -66,19 +66,19 @@ export const menDropdownData = [
 export const womenDropdownData = [
   {
     title: 'Topwear',
-    items: [{heading:'Printed T-Shirts',path:'women-tShirt'},{heading:'Oversize T-Shirts New',path:'oversize-tshirts'},{heading:'Kurti',path:'women-kurti'},{heading:'Women Shirts',path:'women-shirt'},{heading:'Half Sleeve T-Shirts',path:'women-half-tshirts'},{heading:'Plain T-Shirts',path:'women-palin-tshirts'},{heading:'Full Sleeve T-Shirts',path:'women-fullsleeve-tshirt'},{heading:'Kurta Sets',path:'kurta-sets'},{heading:'Crop Tops',path:'crop-tops'},{heading:'Plus Size T-Shirts',path:'women-plus-size-tshirts'},{heading:'Combos',path:'combo-products'},],
+    items: [{heading:'Printed T-Shirts',subCategory: 'tshirt'},{heading:'Oversize T-Shirts New',subCategory: ''},{heading:'Kurti',subCategory: 'kurti'},{heading:'Women Shirts',subCategory: 'shirt'},{heading:'Half Sleeve T-Shirts',subCategory: ''},{heading:'Plain T-Shirts',subCategory: ''},{heading:'Full Sleeve T-Shirts',subCategory: ''},{heading:'Kurta Sets',subCategory: ''},{heading:'Crop Tops',subCategory: ''},{heading:'Plus Size T-Shirts',subCategory: ''},],
   },
   {
     title: 'Theme',
-    items: [{heading:'Travel',path:'women-theme'},{heading:'Gym',path:'women-gym'},{heading:'Cartoon',path:'women-cartoon'},{heading:'Sports',path:'women-sports'},{heading:'Music',path:'women-music'},{heading:'Biker',path:'women-biker'},{heading:'Funky',path:'women-funky'},{heading:'God',path:'women-god'},{heading:'Quotes',path:'women-quotes'},],
+    items: [{heading:'Travel',subCategory: ''},{heading:'Gym',subCategory: ''},{heading:'Cartoon',subCategory: ''},{heading:'Sports',subCategory: ''},{heading:'Music',subCategory: ''},{heading:'Biker',subCategory: ''},{heading:'Funky',subCategory: ''},{heading:'God',subCategory: ''},{heading:'Quotes',subCategory: ''},],
   },
   {
     title: 'Special',
-    items: [{heading:'Couple T-shirts',path:'couple-tshirts'},{heading:'Bestseller T shirts',path:'women-bestseller-tshirts'},{heading:'Deals & Offers',path:'deal-offers'},],
+    items: [{heading:'Couple T-shirts',subCategory: ''},{heading:'Bestseller T shirts',subCategory: ''},{heading:'Deals & Offers',subCategory: ''},],
   },
   {
     title: 'Bottomwear',
-    items: [{heading:'Jogger for Women',path:'women-jogger'},{heading:'Jeans',path:'women-jeans'},{heading:'Women Pants',path:'women-jumpSuit'},{heading:'Couple Boxers',path:'couple-boxer'},],
+    items: [{heading:'Jogger for Women',subCategory: 'jogger'},{heading:'Jeans',subCategory: 'jeans'},{heading:'Women Pants',subCategory: 'jumpsuit'},{heading:'Couple Boxers',subCategory: ''},],
   },
   
 ];
@@ -169,11 +169,11 @@ export const HomeData=[
 
 //Men page Data
 
-export const MenProduct=[{apiEndpoint:'https://academics.newtonschool.co/api/v1/ecommerce/clothes/products',gender:'Men'}]
+export const MenProduct=[{gender:'Men'}]
 
 //Women page data
 
-export const WomenProduct=[{apiEndpoint:'https://academics.newtonschool.co/api/v1/ecommerce/clothes/products',gender:'Women'}]
+export const WomenProduct=[{gender:'Women'}]
 
 //Combo page data
 
@@ -181,26 +181,26 @@ export const ComboProduct= [{apiEndpoint:'https://academics.newtonschool.co/api/
 
 //winter ware page data
 
-export const BBFevouritProduct=[{apiEndpoint:'https://academics.newtonschool.co/api/v1/ecommerce/clothes/products',brand:'Bewakoof®'}]
+export const BBFevouritProduct=[{brand:'Bewakoof®'}]
 //winter ware page data
 
-export const WinterWearsProduct=[{apiEndpoint:'https://academics.newtonschool.co/api/v1/ecommerce/clothes/products',subCategory:'hoodie'}]
+export const WinterWearsProduct=[{subCategory:'hoodie'}]
 
 //UrbanShirt page data
 
-export const UrbanShirtProduct=[{apiEndpoint:'https://academics.newtonschool.co/api/v1/ecommerce/clothes/products',subCategory:'shirt'}]
+export const UrbanShirtProduct=[{subCategory:'shirt'}]
 
 //UrbanShirt page data
 
-export const TracksuitProduct=[{apiEndpoint:'https://academics.newtonschool.co/api/v1/ecommerce/clothes/products',subCategory:'tracksuit'}]
+export const TracksuitProduct=[{subCategory:'tracksuit'}]
 
 //o-tshart page data
 
-export const OTshirtProduct=[{apiEndpoint:'https://academics.newtonschool.co/api/v1/ecommerce/clothes/products',subCategory:'tshirt'}]
+export const OTshirtProduct=[{subCategory:'tshirt'}]
 
 //new arrival data
 
-export const NewArrivalProduct=[{apiEndpoint:'https://academics.newtonschool.co/api/v1/ecommerce/clothes/products',sellerTag: "new arrival"}]
+export const NewArrivalProduct=[{sellerTag: "new arrival"}]
 
 //product details data
 
@@ -290,7 +290,7 @@ export const BBFevouritData=[
   {f_img:bbfeb2,subCategory:'shorts'},
   {f_img:bbfeb3,subCategory:'shirt'},
   {f_img:bbfeb4,subCategory:'kurta'},
-  {f_img:bbfeb5,subCategory:'hoodie'},
+  {f_img:bbfeb5,subCategory:'sweater'},
   {f_img:bbfeb6,subCategory:'pyjamas'},
   {f_img:bbfeb7,subCategory:'jogger'},
 ]
@@ -305,31 +305,7 @@ export const NewArrivalData=[
   {na_heading:'shorts',subCategory:'shorts'},
 ]
 
-//pages data
 
-export const MenShirtProduct=[{apiEndpoint:'https://academics.newtonschool.co/api/v1/ecommerce/clothes/products',gender:'Men',subCategory:'shirt'}];
-export const WomenShirtProduct=[{apiEndpoint:'https://academics.newtonschool.co/api/v1/ecommerce/clothes/products',gender:'Women',subCategory:'shirt'}];
-
-export const MenJoggerProduct=[{apiEndpoint:'https://academics.newtonschool.co/api/v1/ecommerce/clothes/products',gender:'Men',subCategory:'jogger'}];
-export const WomenJoggerProduct=[{apiEndpoint:'https://academics.newtonschool.co/api/v1/ecommerce/clothes/products',gender:'Women',subCategory:'jogger'}];
-
-export const MenJeansProduct=[{apiEndpoint:'https://academics.newtonschool.co/api/v1/ecommerce/clothes/products',gender:'Men',subCategory:'jeans'}];
-export const WomenJeansProduct=[{apiEndpoint:'https://academics.newtonschool.co/api/v1/ecommerce/clothes/products',gender:'Women',subCategory:'jeans'}];
-
-export const MenPyjamaProduct=[{apiEndpoint:'https://academics.newtonschool.co/api/v1/ecommerce/clothes/products',gender:'Men',subCategory:'pyjamas'}];
-export const MenShortsProduct=[{apiEndpoint:'https://academics.newtonschool.co/api/v1/ecommerce/clothes/products',gender:'Men',subCategory:'shorts'}];
-
-export const MenHoodieProduct=[{apiEndpoint:'https://academics.newtonschool.co/api/v1/ecommerce/clothes/products',gender:'Men',subCategory:'hoodie'}];
-export const MenTracksuitProduct=[{apiEndpoint:'https://academics.newtonschool.co/api/v1/ecommerce/clothes/products',gender:'Men',subCategory:'tracksuit'}];
-
-export const MenKurtaProduct=[{apiEndpoint:'https://academics.newtonschool.co/api/v1/ecommerce/clothes/products',gender:'Men',subCategory:'kurta'}];
-export const MenTrouserProduct=[{apiEndpoint:'https://academics.newtonschool.co/api/v1/ecommerce/clothes/products',gender:'Men',subCategory:'trouser'}];
-
-export const WomenJumpSuitProduct=[{apiEndpoint:'https://academics.newtonschool.co/api/v1/ecommerce/clothes/products',gender:'Women',subCategory:'jumpsuit'}];
-export const WomenKurtiProduct=[{apiEndpoint:'https://academics.newtonschool.co/api/v1/ecommerce/clothes/products',gender:'Women',subCategory:'kurti'}];
-
-export const MenTShirtProduct=[{apiEndpoint:'https://academics.newtonschool.co/api/v1/ecommerce/clothes/products',gender:'Men',subCategory:'tshirt'}];
-export const WomenTShirtProduct=[{apiEndpoint:'https://academics.newtonschool.co/api/v1/ecommerce/clothes/products',gender:'Women',subCategory:'tshirt'}];
 
 //MyAccount tab data
 

@@ -13,7 +13,7 @@ function MenDropdown() {
           <div className="d-content" key={index}>
             <h3>{data.title}</h3>
             {data.items.map((dcon,index)=>(
-              <Link key={index} to={`/${dcon.path}`}>{dcon.heading}</Link>
+              <Link key={index} to={`/men/${dcon.subCategory}`}>{dcon.heading}</Link>
             ))}
           </div>
         ))}

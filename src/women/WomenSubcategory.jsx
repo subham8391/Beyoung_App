@@ -1,12 +1,15 @@
 import React, { useState, useEffect } from 'react';
+import { useParams } from 'react-router-dom';
 import ProductFetcher from '../Components/ProductFetcher';
 import ColorFilter from '../Components/Filter/ColorFilters';
 import SizeFilter from '../Components/Filter/SizeFilter';
 import PriceFilter from '../Components/Filter/PriceFilter';
 import { IoIosArrowDown, IoIosArrowUp } from 'react-icons/io';
+import CommingSoon from '../CommingSoon/CommingSoon';
 import './women.css';
 
-const WomenSubcategory = ({subCategory, productData }) => {
+const WomenSubcategory = () => {
+    const { subCategory } = useParams();
     const [selectedColor, setSelectedColor] = useState(null);
     const [selectedSize, setSelectedSize] = useState(null);
     const [selectedPriceOrder, setSelectedPriceOrder] = useState(null);
@@ -14,7 +17,7 @@ const WomenSubcategory = ({subCategory, productData }) => {
     const [isSizeFilterVisible, setIsSizeFilterVisible] = useState(true);
     const [isPriceFilterVisible, setIsPriceFilterVisible] = useState(true);
     const [windowWidth, setWindowWidth] = useState(window.innerWidth);
-  
+    const WomenSubcategoryProduct=[{gender:'Women',subCategory:subCategory}]
     useEffect(() => {
       const handleResize = () => {
         setWindowWidth(window.innerWidth);
@@ -48,7 +51,9 @@ const WomenSubcategory = ({subCategory, productData }) => {
     const handlePriceOrderChange = (order) => {
       setSelectedPriceOrder(order === selectedPriceOrder ? null : order);
     };
-  
+    if (!subCategory) {
+      return <CommingSoon />;
+    }
     return (
       <>
         <div className="pages-section">
@@ -78,7 +83,7 @@ const WomenSubcategory = ({subCategory, productData }) => {
           )}
             <div className="product-sec">
               <h2>{`WOMEN ${subCategory.toUpperCase()}`}</h2>
-              <ProductFetcher productData={productData} selectedColor={selectedColor} selectedSize={selectedSize} selectedPriceOrder={selectedPriceOrder} />
+              <ProductFetcher productData={WomenSubcategoryProduct} selectedColor={selectedColor} selectedSize={selectedSize} selectedPriceOrder={selectedPriceOrder} />
             </div>
           </div>
         </div>

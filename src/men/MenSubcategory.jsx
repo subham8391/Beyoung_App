@@ -1,12 +1,15 @@
 import React, { useState, useEffect } from 'react';
+import { useParams } from 'react-router-dom';
 import ProductFetcher from '../Components/ProductFetcher';
 import ColorFilter from '../Components/Filter/ColorFilters';
 import SizeFilter from '../Components/Filter/SizeFilter';
 import PriceFilter from '../Components/Filter/PriceFilter';
 import { IoIosArrowDown, IoIosArrowUp } from 'react-icons/io';
+import CommingSoon from '../CommingSoon/CommingSoon';
 import './men.css';
 
-const MenSubcategory = ({subCategory, productData }) => {
+const MenSubcategory = () => {
+  const { subCategory } = useParams();
   const [selectedColor, setSelectedColor] = useState(null);
   const [selectedSize, setSelectedSize] = useState(null);
   const [selectedPriceOrder, setSelectedPriceOrder] = useState(null);
@@ -15,6 +18,8 @@ const MenSubcategory = ({subCategory, productData }) => {
   const [isPriceFilterVisible, setIsPriceFilterVisible] = useState(true);
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
+  const MenSubcategoryProduct=[{gender:'Men',subCategory:subCategory}]
+  
   useEffect(() => {
     const handleResize = () => {
       setWindowWidth(window.innerWidth);
@@ -49,6 +54,10 @@ const MenSubcategory = ({subCategory, productData }) => {
     setSelectedPriceOrder(order === selectedPriceOrder ? null : order);
   };
 
+  if (!subCategory) {
+    return <CommingSoon />;
+  }
+  
   return (
     <>
       <div className="pages-section">
@@ -77,8 +86,8 @@ const MenSubcategory = ({subCategory, productData }) => {
           </div>
         )}
           <div className="product-sec">
-            <h2>{`MEN ${subCategory.toUpperCase()}`}</h2>
-            <ProductFetcher productData={productData} selectedColor={selectedColor} selectedSize={selectedSize} selectedPriceOrder={selectedPriceOrder} />
+          <h2>{`MEN ${subCategory.toUpperCase()}`}</h2>
+            <ProductFetcher productData={MenSubcategoryProduct} selectedColor={selectedColor} selectedSize={selectedSize} selectedPriceOrder={selectedPriceOrder} />
           </div>
         </div>
       </div>

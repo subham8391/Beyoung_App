@@ -1,15 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import WishlistBtn from '../Components/Wishlist/WishlistBtn';
 import './components.css';
 
-const ProductFetcher = ({ selectCategary,productData,selectedColor,selectedSize,selectedBrand,selectedPriceOrder }) => {
+const ProductFetcher = ({ selectCategary,productData,selectedColor,selectedSize,selectedBrand,selectedPriceOrder}) => {
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const { gender, sellerTag,subCategory,brand, apiEndpoint } = productData[0];
+        const { gender, sellerTag,subCategory,brand,} = productData[0];
         let filter = {
           gender,
           sellerTag,
@@ -43,9 +42,8 @@ const ProductFetcher = ({ selectCategary,productData,selectedColor,selectedSize,
             brand: selectedBrand,
           };
         }
-      
+        const apiEndpoint= 'https://academics.newtonschool.co/api/v1/ecommerce/clothes/products'
         const filterQueryString = `?filter=${JSON.stringify(filter)}&limit=300`;
-
         const response = await fetch(`${apiEndpoint}${filterQueryString}`, {
           method: 'get',
           headers: new Headers({
@@ -84,9 +82,6 @@ const ProductFetcher = ({ selectCategary,productData,selectedColor,selectedSize,
       <div className="product-container">
         {products.map((item) => (
           <div className="product" key={item._id}>
-            {/* <div className="add-wishlist">
-            <WishlistBtn id={item._id}/>
-            </div> */}
             <Link to={`/details/${item.name}/${item._id}`}>
             <div className="product-img">
               <img src={item.displayImage} alt={item.name} />
