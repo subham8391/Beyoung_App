@@ -67,7 +67,9 @@ function Wishlist() {
 
   return (
     <div className="wishlist-product-section">
+      <h2> My-Wishlist</h2>
       <div className="wishlist-product-container">
+        
         {contentData.map((item, index) => (
           <div className="wishlist-product" key={index}>
             <div className="del-wishlist">
