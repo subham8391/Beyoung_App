@@ -373,7 +373,7 @@
 }
 .product {
   position: relative;
-  width: 220px;
+  width: 225px;
   height: 350px;
   display: flex;
   flex-direction: column;
