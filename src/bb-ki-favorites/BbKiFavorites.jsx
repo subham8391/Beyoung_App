@@ -82,7 +82,7 @@ function BbKiFavorites() {
             </div>
           </div>
         )}
-          <div className="product-sec">
+          <div className="product-sec" style={{ width: windowWidth <= 760 ? '100%' : '75%' }}>
             <h2>BB KE FAVORITES</h2>
             
             <ProductFetcher productData={BBFevouritProduct} selectedColor={selectedColor} selectedSize={selectedSize} selectedPriceOrder={selectedPriceOrder} selectCategary={selectCategary}/>

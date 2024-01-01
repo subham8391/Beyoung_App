@@ -47,3 +47,33 @@ width: 100%;
     padding: 30px 20px 0 20px;
     gap: 20px;
 }
+
+@media screen and (max-width: 1200px) {
+    .newarrival-section{
+        width: 100%;
+        padding-top: 5.56rem;
+        height: auto;
+    }
+    .newarrival-page-container{
+        padding: 0 10px 0 10px;
+    }
+    .bb-feb-filter{
+        gap: 10px;
+        padding: 10px 10px 10px 10px;
+    }
+
+}
+@media screen and (max-width: 760px) {
+    .fil-sec {
+      display: none;
+    }
+    .product-sec h2{
+        font-size: 18px;
+    }
+    .newarrival-section{
+        width: 100%;
+        padding-top: 5.16rem; 
+        height: auto;
+    }
+   
+  }

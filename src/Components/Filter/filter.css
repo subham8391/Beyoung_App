@@ -230,3 +230,64 @@
 .newarrival-f-optionn.selected {
     border: 2px solid rgb(0, 255, 195);
   }
+
+  @media screen and (max-width: 1200px) {
+    .sub-c-optionn{
+        height: 70px;
+        width: 70px;
+      }
+      .sub-c-container{
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+    .sub-c-optionn p{
+        text-transform: uppercase;
+        font-size: 13px;
+      }
+      .fab-c-optionn{
+        height: auto;
+        width: auto;
+      }
+      .newarrival-f-container{
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+    .newarrival-f-optionn{
+        height: 80px;
+        width: 80px;
+    }
+    .newarrival-f-optionn p{
+        text-transform: uppercase;
+        font-size: 14px;
+        font-weight: bolder;
+      }
+}
+@media screen and (max-width: 760px) {
+    .sub-c-optionn{
+        height: 60px;
+        width: 60px;
+      }
+      .sub-c-container{
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+    .sub-c-optionn p{
+        text-transform: uppercase;
+        font-size: 11px;
+      }
+      .fab-c-optionn{
+        height: auto;
+        width: auto;
+      }
+      .fab-c-section{
+        padding: 10px 0 10px 0;
+    }
+    .newarrival-f-optionn{
+        height: 60px;
+        width: 60px;
+    }
+    .newarrival-f-container{
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+  }

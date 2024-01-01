@@ -95,41 +95,23 @@
     cursor: pointer;
 }
 
-
-/*men pages css */
-
-
-.pages-section{
-    width: 100%;
-    padding-top: 6.875rem;
-    height: auto;
-}
-.pages-banner{
-    width: 100%;
-    height: auto;
-    padding-bottom:20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.pages-banner img{
-width: 100%;
-}
-.pages-page-container{
-    width: 100%;
-    height: auto;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    padding: 30px 20px 0 20px;
-    gap: 20px;
-}
-
-
-@media screen and (max-width: 1000px) {
-    .fil-sec{
-        display: none;
-        
+@media screen and (max-width: 1200px) {
+    .men-section{
+        width: 100%;
+        padding-top: 5.56rem;
+        height: auto;
+    }
+    .men-container{
+        padding: 20px 10px 0 10px;
     }
 }
+@media screen and (max-width: 760px) {
+    .fil-sec {
+      display: none;
+    }
+    .men-section{
+        width: 100%;
+        padding-top: 5.16rem; 
+        height: auto;
+    }
+  }

@@ -88,7 +88,7 @@ function Women() {
             </div>
           </div>
           )}
-          <div className="product-sec">
+          <div className="product-sec" style={{ width: windowWidth <= 760 ? '100%' : '75%' }}>
             <h2>WOMEN'S CLOTHING</h2>
             <p>Women's Clothing - Get your hands on stylish and comfortable clothing for women - Buy a range of ladies' clothing online at affordable prices. Beyoung offers the latest collection of Kurtis, shirts, tops, t-shirts, pants, boxers, and jeggings with existing offers and discounts. Find women's clothing for formal to weekend outings in all styles. Free Shipping | COD | S - 4XL Sizes | 15 Days Return</p>
             <ProductFetcher productData={WomenProduct} selectedColor={selectedColor} selectedSize={selectedSize} selectedBrand={selectedBrand} selectedPriceOrder={selectedPriceOrder}/>

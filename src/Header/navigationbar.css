@@ -250,6 +250,61 @@
       flex-direction: column;
       width: 100%;
     }
+    
+    .sight-bar{
+     display: none;
+    }
+    /* sight navigation bar */
+    
+    .sight-dropdown {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 400px; 
+      background-color: #fff; 
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); 
+    }
+    
+    .modal-content {
+      width: 100%; 
+      height: auto;
+      white-space: nowrap; 
+    }
+    .model-content-head{
+      background-color: #fffc33;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      padding:10px 20px;
+    }
+    .model-content-body{
+      height: 90vh;
+      width: 100%;
+      overflow-y: scroll;
+      padding-left: 20px;
+    }
+    .model-content-body h3{
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+    .sight-drob-con{
+      display: flex;
+      flex-direction: column;
+      text-transform:capitalize ;
+    }
+    .sight-drob-con a:hover{
+      color: rgb(255, 225, 0);
+      font-weight: bold;
+    }
+    .close-modal-btn{
+      background: none;
+      border: none;
+      font-size: 25px;
+      font-weight: bolder;
+      cursor: pointer;
+    }
 
     @media screen and (max-width: 1200px) {
       .navi-container-top{
@@ -264,6 +319,13 @@
     .ncr-icon{
       height: 30px;
       width: 30px;
+    }
+    .sight-bar{
+      cursor: pointer;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 20px;
     }
   }
   @media screen and (max-width: 760px) {

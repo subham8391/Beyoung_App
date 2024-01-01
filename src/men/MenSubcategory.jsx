@@ -6,7 +6,7 @@ import SizeFilter from '../Components/Filter/SizeFilter';
 import PriceFilter from '../Components/Filter/PriceFilter';
 import { IoIosArrowDown, IoIosArrowUp } from 'react-icons/io';
 import CommingSoon from '../CommingSoon/CommingSoon';
-import './men.css';
+import '../App.css';
 
 const MenSubcategory = () => {
   const { subCategory } = useParams();
@@ -85,7 +85,7 @@ const MenSubcategory = () => {
             </div>
           </div>
         )}
-          <div className="product-sec">
+          <div className="product-sec" style={{ width: windowWidth <= 760 ? '100%' : '75%' }}>
           <h2>{`MEN ${subCategory.toUpperCase()}`}</h2>
             <ProductFetcher productData={MenSubcategoryProduct} selectedColor={selectedColor} selectedSize={selectedSize} selectedPriceOrder={selectedPriceOrder} />
           </div>

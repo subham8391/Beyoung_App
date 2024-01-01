@@ -73,7 +73,7 @@ function OverSizeTshirt() {
               </div>
             </div>
           )}
-            <div className="product-sec">
+            <div className="product-sec" style={{ width: windowWidth <= 760 ? '100%' : '75%' }}>
               <h2>OVERSIZE T SHIRT</h2>
               <p>Get the best look with oversize t shirt for men online in India at Beyoung. We bring you amazing colors, styles, and sizes in our coolest collection. Shop your favorites online at Beyoung from the amazing collection of Oversized T shirts for men at the best price starting from just Rs.209.</p>
               <ProductFetcher productData={OTshirtProduct} selectedColor={selectedColor} selectedSize={selectedSize}  selectedPriceOrder={selectedPriceOrder}/>

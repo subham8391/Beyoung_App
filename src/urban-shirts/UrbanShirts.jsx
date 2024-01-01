@@ -73,7 +73,7 @@ function UrbanShirts() {
               </div>
             </div>
           )}
-            <div className="product-sec">
+            <div className="product-sec" style={{ width: windowWidth <= 760 ? '100%' : '75%' }}>
               <h2>URBAN SHIRTS</h2>
               <ProductFetcher productData={UrbanShirtProduct} selectedColor={selectedColor} selectedSize={selectedSize}  selectedPriceOrder={selectedPriceOrder}/>
             </div>

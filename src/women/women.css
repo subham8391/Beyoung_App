@@ -118,7 +118,7 @@ width: 100%;
 /*women pages css */
 
 
-.pages-section{
+/* .pages-section{
     width: 100%;
     padding-top: 6.875rem;
     height: auto;
@@ -143,10 +143,28 @@ width: 100%;
     align-items: center;
     padding: 30px 20px 0 20px;
     gap: 20px;
-}
+} */
 
-@media (max-width: 760px) {
+@media screen and (max-width: 1200px) {
+    .women-section{
+        width: 100%;
+        padding-top: 5.56rem;
+        height: auto;
+    }
+    .women-page-container{
+        padding: 20px 10px 0 10px;
+    }
+    .women-banner{
+        padding-bottom: 0;
+    }
+}
+@media screen and (max-width: 760px) {
     .fil-sec {
       display: none;
+    }
+    .women-section{
+        width: 100%;
+        padding-top: 5.16rem; 
+        height: auto;
     }
   }

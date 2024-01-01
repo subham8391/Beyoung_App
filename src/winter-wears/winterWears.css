@@ -62,3 +62,32 @@ width: 100%;
     padding: 10px 0 10px 0;
     cursor: pointer;
 }
+
+@media screen and (max-width: 1200px) {
+    .winter-w-section{
+        width: 100%;
+        padding-top: 5.56rem;
+        height: auto;
+    }
+    .winter-w-container{
+        padding: 0 10px 0 10px;
+    }
+    .winter-w-banner{
+        padding-bottom: 10px;
+    }
+
+}
+@media screen and (max-width: 760px) {
+    .fil-sec {
+      display: none;
+    }
+    .product-sec h2{
+        font-size: 18px;
+    }
+    .winter-w-section{
+        width: 100%;
+        padding-top: 5.16rem; 
+        height: auto;
+    }
+    
+  }

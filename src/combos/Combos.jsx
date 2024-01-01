@@ -71,7 +71,7 @@ function Combos() {
             </div>
         </div>
       )}
-        <div className="product-sec">
+        <div className="product-sec" style={{ width: windowWidth <= 760 ? '100%' : '75%' }}>
           <h2>COMBOS (UNISEX)</h2>
           <p>Combo T Shirts - Buy T Shirt Combos Online in India at Low Price. Latest Collection of Plain and Printed Combo T shirts For Mens Online at Beyoung. ✓ Pack of 3 & 4 Combo T-shirts ✓Big Discounts ✓Free Shipping ✓COD.</p>
          <ProductFetcher productData={ComboProduct} selectedBrand={selectedBrand} selectedPriceOrder={selectedPriceOrder} selectCategary={selectCategary}/>

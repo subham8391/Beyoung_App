@@ -70,7 +70,39 @@
     gap: 20px;
     padding: 10px 20px 20px 20px;
 }
-.bb-feb-filter h2{
-    
+.bb-feb-filter h2{ 
     border-bottom: 3px solid rgb(146, 0, 191);
 }
+
+@media screen and (max-width: 1200px) {
+    .bb-feb-section{
+        width: 100%;
+        padding-top: 5.56rem;
+        height: auto;
+    }
+    .bb-feb-container{
+        padding: 0 10px 0 10px;
+    }
+    .bb-feb-filter{
+        gap: 10px;
+        padding: 10px 10px 10px 10px;
+    }
+
+}
+@media screen and (max-width: 760px) {
+    .fil-sec {
+      display: none;
+    }
+    .product-sec h2{
+        font-size: 18px;
+    }
+    .bb-feb-section{
+        width: 100%;
+        padding-top: 5.16rem; 
+        height: auto;
+    }
+    .bb-feb-filter h2{ 
+        font-size: 18px;
+        border-bottom: 3px solid rgb(146, 0, 191);
+    }
+  }
