@@ -50,6 +50,7 @@
     width: 100%;
     display: flex;
     flex-direction: column;
+    
   }
   
   .tab-item {
@@ -107,6 +108,7 @@
   .MyADrop-section{
     background-color: #ffffff;
     position: absolute;
+    z-index: 2;
     top: 35%;
     right: 2%;
     width: 15%;
@@ -140,6 +142,10 @@
     flex-direction: column;
     border-bottom: 1px solid lightgray;
     text-transform: none;
+}
+.a-detail h3,.a-detail p{
+  overflow: hidden;
+  width: 100%;
 }
 
 /* wishlist */
@@ -392,4 +398,78 @@ transition: transform 0.5s ease;
 }
 .address-container img{
   height: 400px;
+}
+
+
+
+@media screen and (max-width: 1200px) {
+  .myaccount-section {
+    width: 100%;
+    padding-top: 5.56rem;
+    height: auto;
+  }
+  .tab-header {
+    display: none;
+  }
+  .tab-content {
+    padding:0 0px 0px 0px;
+    flex-grow: 1;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+  }
+  .order-product-container{
+    padding-left: 0;
+    
+  }
+}
+@media screen and (max-width: 760px) {
+  .myaccount-section {
+    width: 100%;
+    padding-top: 5.16rem; 
+    height: auto;
+  }
+  .MyADrop-section{
+    width: 30%;
+}
+
+.order-date-time hr{
+  width: 32%;
+}
+
+.order-date-time h4{
+  font-size: 12px;
+}
+.overall-order-details{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  
+}
+.o-id{
+  font-size: 12px;
+}
+
+.view-order-product{
+  width: 100%;
+}
+.order-product-details{
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  width: 100%;
+  padding: 10px;
+}
+.order-pro-details {
+width: 100%;
+}
+
+.order-shipment-details{
+width: 100%;
+
+}
+
 }

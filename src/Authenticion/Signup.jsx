@@ -33,7 +33,7 @@ function Signup() {
 
       if (signupResult) {
         console.log('Signup successful');
-        navigate('/login'); // Redirect to the login page after successful signup
+        navigate('/login'); 
       } else {
         console.error('Signup failed');
         setError('This user is already registered');
@@ -100,7 +100,7 @@ function Signup() {
               required
             />
             <span className="checkbox-text">
-              By proceeding you agree to our Terms of Services & Privacy Policy.
+               Agree to our Terms of Services & Privacy Policy.
             </span>
             </div>
           </div>
