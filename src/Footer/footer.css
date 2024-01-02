@@ -96,4 +96,11 @@
     .app-links a img{
         height: 30px;
     }
+    .social-link{
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+        height: 20px;
+        width: 100%;
+    }
 }

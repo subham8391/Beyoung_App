@@ -338,4 +338,19 @@
     .auth-btn{
       font-size: 12px;
     }
+
+    .searchbar-section{
+      width: 50%;
+      padding: 5px;
+    }
+      .search-bar input[type='search']{
+        padding: 3px;
+      }
+      .searchResult-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+        }
+        .search-product {
+          width: 225px; 
+          }
   }

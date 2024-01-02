@@ -478,7 +478,7 @@
     padding: 0;
   }
   .checkout-header {
-    height: 10vh;
+    height: 6vh;
   }
   .ch-left {
     width: 50%;
@@ -519,5 +519,8 @@
   }
   .pa-content {
     width: 100%;
+  }
+  .progress-bar {
+    height: 8vh;
   }
 }
