@@ -368,7 +368,7 @@
   width: 100%;
 }
 .carousel-container {
-  height: 70vh;
+  height: 40vh;
 }
 .product-details-container{
   display: flex;
@@ -400,8 +400,8 @@
 }
 }
 
-@media screen and (max-width: 490px){
+/* @media screen and (max-width: 490px){
   .carousel-container {
     height: 40vh;
   }
-}
+} */
