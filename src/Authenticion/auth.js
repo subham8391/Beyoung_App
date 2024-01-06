@@ -66,7 +66,7 @@ const Auth = {
       // Function to handle user logout
       logout: () => {
         try {
-          // Clear the JWT token (and user data) from storage (e.g., cookies)
+          // Clear the JWT token (and user data) from storage 
           sessionStorage.removeItem('authToken');
           sessionStorage.removeItem('userInfoN');
           sessionStorage.removeItem('userInfoE');

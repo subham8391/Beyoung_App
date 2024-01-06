@@ -2,9 +2,13 @@ import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { FaCartShopping } from "react-icons/fa6";
 import Auth from '../../Authenticion/auth';
-function AddToCart({id,size,qty,disabled}) {
+import Snackbar from '@mui/material/Snackbar';
+import MuiAlert from '@mui/material/Alert';
+function AddToCart({id,size,qty}) {
     const [isInAddToCart, setIsInAddToCart] = useState(false);
     const navigate = useNavigate();
+    const [showAlert, setShowAlert] = useState(false);
+  const [alertMessage, setAlertMessage] = useState('');
     useEffect(() => {
         const fetchContent = async () => {
           try {
@@ -44,6 +48,11 @@ function AddToCart({id,size,qty,disabled}) {
                 navigate('/login');
                 return;
               }
+              if (!size) {
+                setShowAlert(true);
+                setAlertMessage('Please select a size');
+                return;
+              }
           const response = await fetch(
             `https://academics.newtonschool.co/api/v1/ecommerce/cart/${id}`,
             {
@@ -62,15 +71,36 @@ function AddToCart({id,size,qty,disabled}) {
     
           if (response.ok) {
             setIsInAddToCart((prevIsInWishlist) => !prevIsInWishlist);
+            setShowAlert(true);
+            setAlertMessage('Product added to cart!');
+            
           }
         } catch (error) {
           console.error('Error adding to wishlist', error);
         }
       };
-    
+      const handleCloseAlert = () => {
+        setShowAlert(false); 
+      };
       return (
-        <div className={`add-to-cart-btn ${disabled ? 'disabled' : ''}`} onClick={disabled ? null : handleAddTOCart}>
-            <FaCartShopping /> ADD TO CART </div>
+        <>
+        <div className={`add-to-cart-btn ${!size ? 'disabled' : ''}`} onClick={handleAddTOCart}>
+        <FaCartShopping /> ADD TO CART
+      </div>
+            <Snackbar
+        open={showAlert}
+        autoHideDuration={1000}
+        onClose={handleCloseAlert}
+        anchorOrigin={{
+          vertical: 'bottom',
+          horizontal: 'right',
+        }}
+      >
+        <MuiAlert onClose={handleCloseAlert} severity={isInAddToCart ? 'success' : 'error'} sx={{ width: '100%' }}>
+          {alertMessage}
+        </MuiAlert>
+      </Snackbar>
+        </>
       );
 }
 

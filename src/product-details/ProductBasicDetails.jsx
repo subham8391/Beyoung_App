@@ -56,8 +56,8 @@ function ProductBasicDetails({ product }) {
                             </select>
                         </div>
                         <div className="p-action-btn">
-                            <AddToCart id={product._id} size={selectedSize} qty={selectedQty} disabled={!isSizeSelected}/>
-                            <BuyNow id={product._id} size={selectedSize} qty={selectedQty} disabled={!isSizeSelected}/>
+                            <AddToCart id={product._id} size={selectedSize} qty={selectedQty} />
+                            <BuyNow id={product._id} size={selectedSize} qty={selectedQty} />
                             
                         </div>
                         <h4>DELIVERY OPTIONS</h4>

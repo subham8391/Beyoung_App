@@ -31,10 +31,8 @@ function Cart({ handleStepChange }) {
         }
 
         const data = await response.json();
-        const priceData = data;
-        const content = data.data.items;
-        setPriceData(priceData);
-        setContentData(content);
+        setPriceData(data);
+        setContentData(data.data.items);
         setLoading(false);
       } catch (error) {
         console.error('Error Fetching Data');
@@ -43,7 +41,7 @@ function Cart({ handleStepChange }) {
     };
 
     fetchContent();
-  }, [priceData]);
+  }, []);
 
   const removeFromcart = async (id) => {
     try {
@@ -62,6 +60,19 @@ function Cart({ handleStepChange }) {
       if (response.ok) {
         const updatedContent = contentData.filter(item => item.product._id !== id);
         setContentData(updatedContent);
+        const updatedResponse = await fetch('https://academics.newtonschool.co/api/v1/ecommerce/cart', {
+        method: 'GET',
+        headers: {
+          Authorization: `Bearer ${sessionStorage.getItem('authToken')}`,
+          'projectID': 'mmvz5wuhf8k7',
+        },
+      });
+
+      if (updatedResponse.ok) {
+        const updatedData = await updatedResponse.json();
+        setPriceData(updatedData);
+        setContentData(updatedData.data.items);
+      }
       }
     } catch (error) {
       console.error('Error removing from cart', error);

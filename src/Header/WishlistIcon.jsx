@@ -36,7 +36,7 @@ function WishlistIcon() {
           {isAuthenticated && (
             <Link to='/myaccount/wishlist' className="ncr-icon">
               <AiOutlineHeart />
-              <p>{contentData.results}</p>
+              {/* <p>{contentData.results}</p> */}
             </Link>
           )}
           {!isAuthenticated && (

@@ -7,7 +7,9 @@
  font-family: 'Heebo', sans-serif;
 }
 
-
+.disappire{
+    display: none;
+}
 .pages-section{
     width: 100%;
     padding-top: 6.875rem;

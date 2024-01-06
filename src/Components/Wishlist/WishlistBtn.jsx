@@ -2,12 +2,14 @@ import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { FaHeart } from 'react-icons/fa';
 import Auth from '../../Authenticion/auth';
+import Snackbar from '@mui/material/Snackbar';
+import MuiAlert from '@mui/material/Alert';
 import './wishlistbtn.css';
 
 function WishlistBtn({ id }) {
   const [isInWishlist, setIsInWishlist] = useState(false);
   const navigate = useNavigate();
-
+  const [showAlert, setShowAlert] = useState(false);
   useEffect(() => {
     const fetchContent = async () => {
       try {
@@ -59,7 +61,7 @@ function WishlistBtn({ id }) {
         : 'https://academics.newtonschool.co/api/v1/ecommerce/wishlist';
 
       const method = isInWishlist ? 'DELETE' : 'PATCH';
-      console.log(isInWishlist);
+      // console.log(isInWishlist);
       const response = await fetch(api, {
         method,
         headers: {
@@ -72,6 +74,7 @@ function WishlistBtn({ id }) {
 
       if (response.ok) {
         setIsInWishlist((prevIsInWishlist) => !prevIsInWishlist);
+        setShowAlert(true);
       } 
     } catch (error) {
       console.error(
@@ -82,11 +85,25 @@ function WishlistBtn({ id }) {
       );
     }
   };
-
+  const handleAlertClose = () => {
+    setShowAlert(false); 
+  };
   return (
+    <>
     <div className="wishlist-btn-container" onClick={handleWishlistClick}>
       <FaHeart color={isInWishlist ? 'yellow' : 'gray'} />
     </div>
+    <Snackbar
+        open={showAlert}
+        autoHideDuration={1000} 
+        onClose={handleAlertClose}
+        anchorOrigin={{ vertical: 'bottom', horizontal: 'right' }}
+      >
+        <MuiAlert onClose={handleAlertClose} severity={isInWishlist ? 'success' : 'error'} sx={{ width: '100%' }}>
+          Product {isInWishlist ? 'added to' : 'removed from'} wishlist
+        </MuiAlert>
+      </Snackbar>
+    </>
   );
 }
 
