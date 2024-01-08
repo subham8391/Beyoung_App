@@ -28,12 +28,9 @@ function WishlistBtn({ id }) {
         }
 
         const data = await response.json();
-        // console.log(data);
-        // console.log(id)
         const content = data.data.items;
 
         const isPresent = content.filter(item => item.products._id === id)
-        // console.log(isPresent,'is present')
         if (isPresent.length > 0) {
           setIsInWishlist(true);
         }
@@ -61,7 +58,6 @@ function WishlistBtn({ id }) {
         : 'https://academics.newtonschool.co/api/v1/ecommerce/wishlist';
 
       const method = isInWishlist ? 'DELETE' : 'PATCH';
-      // console.log(isInWishlist);
       const response = await fetch(api, {
         method,
         headers: {
