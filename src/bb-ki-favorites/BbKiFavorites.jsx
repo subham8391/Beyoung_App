@@ -57,6 +57,7 @@ function BbKiFavorites() {
         <div className="bb-feb-filter">
         <h2>LOVED BY BB</h2>
          <BBFevouriteFilter selectCategary={selectCategary} onCategoryChange={handleSelectCategory}/>
+         
        </div>
         <div className="bb-feb-container">
         {windowWidth <= 760 ? null : (

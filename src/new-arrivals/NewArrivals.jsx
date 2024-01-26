@@ -53,6 +53,7 @@ function NewArrivals() {
       <div className="combo-categori-filter">
          <NewArrivalFilter selectCategary={selectCategary} onCategoryChange={handleSelectCategory}/>
       </div>
+      
         <div className="newarrival-page-container">
         {windowWidth <= 760 ? null : (
           <div className="fil-sec">

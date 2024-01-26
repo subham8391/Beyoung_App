@@ -36,7 +36,7 @@ function CartIcon() {
           {isAuthenticated && (
             <Link to='/checkout' className="ncr-icon">
               <AiOutlineShoppingCart />
-              {/* <p>{contentData.results}</p> */}
+              <p></p>
             </Link>
           )}
           {!isAuthenticated && (

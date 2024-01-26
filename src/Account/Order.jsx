@@ -1,6 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
-import { IoCloseSharp } from "react-icons/io5";
 
 function Order() {
   const [contentData, setContentData] = useState([]);
@@ -24,8 +22,11 @@ function Order() {
 
         const data = await response.json();
         const orders = data.data; 
-        setContentData(orders); 
-        setLoading(false);
+        // Sort the orders based on createdAt in descending order
+      orders.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
+      
+      setContentData(orders);
+      setLoading(false);
       } catch (error) {
         console.error('Error Fetching Data');
         setLoading(false);
@@ -50,11 +51,11 @@ function Order() {
           <div className="order-products" key={index}>
             <div className="order-date-time">
               <hr />
-              <h4>{order.createdAt}</h4>
+              <h4>{new Date(order.createdAt).toLocaleString()}</h4>
               <hr />
             </div>
             <div className="o-id">
-              <span>order:</span><span># {order.order._id}</span>
+              <span>order:</span><span># {order.order._id.slice(-5)}</span>
             </div>
             <div className="order-product" >
 

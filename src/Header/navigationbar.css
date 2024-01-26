@@ -121,10 +121,10 @@
     cursor: pointer;
   }
   .ncr-icon p{
-    background-color: #fffc33;
+    background-color: #ffd500;
     border-radius: 50%;
-    height: 15px;
-    width: 15px;
+    height: 8px;
+    width: 8px;
     display: flex;
     justify-content: center;
     align-items: center;
