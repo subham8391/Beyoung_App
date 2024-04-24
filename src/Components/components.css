@@ -249,6 +249,18 @@
   transition: transform 0.5s ease;
 }
 
+.loading-container{
+  width: 100%;
+  height :auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+.loading-container img{
+  height: 100px;
+  width: 100px;
+}
 
 /* @media screen and (max-width: 1200px) {
   .home-section{

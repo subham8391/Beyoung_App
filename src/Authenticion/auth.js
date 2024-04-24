@@ -44,15 +44,14 @@ const Auth = {
               appType: 'ecommerce',
             }),
           });
-    
+      
           if (!response.ok) {
             throw new Error('Authentication failed');
           }
-    
+      
           const data = await response.json();
-          const { token, data: loginData } = data;
-          const { name: userName } = loginData;
-          const { email: userEmail } = loginData;
+          const { token, data: { user } } = data; // Destructure `user` directly
+          const { name: userName, email: userEmail } = user; // Access `name` and `email` from `user`
           sessionStorage.setItem("authToken", token);
           sessionStorage.setItem("userInfoN", userName);
           sessionStorage.setItem("userInfoE", userEmail);
@@ -62,6 +61,7 @@ const Auth = {
           throw error; 
         }
       },
+      
        
       // Function to handle user logout
       logout: () => {

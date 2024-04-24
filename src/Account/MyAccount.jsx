@@ -10,6 +10,7 @@ function MyAccount() {
     useEffect(() => {
         const storedUserName = sessionStorage.getItem('userInfoN');
         // Update the state with the retrieved name & email
+        console.log(storedUserName);
         if (storedUserName) {
             setUserName(storedUserName);
         }

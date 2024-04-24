@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import loading from '../image/focus_looding.gif';
 import './components.css';
 
 const ProductFetcher = ({ selectCategary,productData,selectedColor,selectedSize,selectedBrand,selectedPriceOrder}) => {
   const [products, setProducts] = useState([]);
-
+  const [loadingProducts, setLoadingProducts] = useState(true);
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -69,8 +70,10 @@ const ProductFetcher = ({ selectCategary,productData,selectedColor,selectedSize,
         }
 
         setProducts(filteredProducts);
+        setLoadingProducts(false);
       } catch (error) {
         console.error('Error fetching data:', error);
+        setLoadingProducts(false);
       }
     };
 
@@ -80,7 +83,12 @@ const ProductFetcher = ({ selectCategary,productData,selectedColor,selectedSize,
   return (
     <div className="product-section">
       <div className="product-container">
-        {products.map((item) => (
+      {loadingProducts ? (
+          <div className="loading-container">
+            <img src={loading} alt="Loading..." />
+          </div>
+        ) : (
+        products.map((item) => (
           <div className="product" key={item._id}>
             <Link to={`/details/${item.name}/${item._id}`}>
             <div className="product-img">
@@ -93,7 +101,7 @@ const ProductFetcher = ({ selectCategary,productData,selectedColor,selectedSize,
             </div>
             </Link>
           </div>
-        ))}
+        )))}
       </div>
     </div>
   );

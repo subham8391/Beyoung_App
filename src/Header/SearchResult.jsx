@@ -11,7 +11,7 @@ function SearchResult() {
   useEffect(() => {
     const fetchSearchResults = async () => {
       try {
-        const url = `https://academics.newtonschool.co/api/v1/ecommerce/clothes/products?search={"brand":"${query}"}`;
+        const url = `https://academics.newtonschool.co/api/v1/ecommerce/clothes/products?search={"name":"${query}"}`;
         const response = await fetch(url, {
           method: 'GET',
           headers: {
