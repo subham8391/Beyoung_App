@@ -3,7 +3,10 @@ import { Link } from 'react-router-dom'
 import { womenDropdownData } from '../ConstentData';
 import dimg from '../image/drop-img.png'
 import './women.css'
-function WomenDropdown() {
+function WomenDropdown({onClose}) {
+  const handleLinkClick = () => {
+    onClose(); // Call the onClose function to close the dropdown
+  };
   return (
     <div className='womend-section'>
       <div className="womend-container">
@@ -12,7 +15,7 @@ function WomenDropdown() {
           <div className="d-content" key={index}>
             <h3>{data.title}</h3>
             {data.items.map((dcon,index)=>(
-              <Link key={index} to={`/women/${dcon.subCategory}`}>{dcon.heading}</Link>
+              <Link key={index} to={`/women/${dcon.subCategory}`} onClick={handleLinkClick}>{dcon.heading}</Link>
             ))}
           </div>
         ))}

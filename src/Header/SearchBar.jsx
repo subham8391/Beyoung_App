@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 
-function SearchBar() {
+function SearchBar({onClose}) {
   const [searchQuery, setSearchQuery] = useState('');
   const navigate = useNavigate();
 
@@ -12,11 +12,13 @@ function SearchBar() {
 
   const handleSearch = () => {
     navigate(`/search?q=${searchQuery}`);
+    onClose();
   };
 
   const handleKeyDown = (e) => {
     if (e.key === 'Enter') {
       navigate(`/search?q=${searchQuery}`);
+      onClose();
     }
   };
 

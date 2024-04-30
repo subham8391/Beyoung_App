@@ -37,11 +37,7 @@ function NavigationBar() {
 
 
   const handleSearchToggle = () => {
-    if (isSearchBarOpen) {
-      setIsSearchBarOpen(false);
-    } else {
-      setIsSearchBarOpen(true);
-    }
+      setIsSearchBarOpen(!isSearchBarOpen);
   };
   const isAuthenticated = Auth.isAuthenticated();
   const location = useLocation();
@@ -94,11 +90,11 @@ function NavigationBar() {
                   <ul>
                     <li onMouseEnter={handleMenDropdownToggle} onMouseLeave={handleMenDropdownToggle}>
                       <Link to="/mens-clothing">MEN</Link>
-                      {isMenDropdownOpen && <MenDropdown />}
+                      {isMenDropdownOpen && <MenDropdown  onClose={handleMenDropdownToggle}/>}
                     </li>
                     <li onMouseEnter={handleWomenDropdownToggle} onMouseLeave={handleWomenDropdownToggle}>
                       <Link to="/womens-clothing">WOMEN</Link>
-                      {isWomenDropdownOpen && <WomenDropdown />}
+                      {isWomenDropdownOpen && <WomenDropdown onClose={handleWomenDropdownToggle}/>}
                     </li>
                     <li>
                       <Link to="/combo-products">COMBOS</Link>
@@ -111,7 +107,7 @@ function NavigationBar() {
                     </li>
                     <li onMouseEnter={handleNewArrivalDropdownToggle} onMouseLeave={handleNewArrivalDropdownToggle}>
                       <span>NEW ARRIVALS</span>
-                      {isNewArrivalDropdownOpen && <NewArrivalDropdown />}
+                      {isNewArrivalDropdownOpen && <NewArrivalDropdown onClose={handleNewArrivalDropdownToggle}/>}
                     </li>
                   </ul>
                 </nav>
@@ -123,7 +119,7 @@ function NavigationBar() {
               </div>
             </div>
           </div>
-          {isSearchBarOpen && <SearchBar />}
+          {isSearchBarOpen && <SearchBar onClose={handleSearchToggle}/>}
         </div>
       )}
     </>
