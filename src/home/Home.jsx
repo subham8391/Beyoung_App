@@ -33,8 +33,8 @@ function Home() {
               <DiscountCarousel DisCoop={HomeData[0].DisCoopimages} />
             </div>
             <div className="home-duo-img">
-              <div className="duo-item"><img src={du1} alt="" /></div>
-              <div className="duo-item"><img src={du2} alt="" /></div>
+              <Link to='/new-arrival' className="duo-item"><img src={du1} alt="" /></Link>
+              <Link to='/bb-ke-favorites' className="duo-item"><img src={du2} alt="" /></Link>
             </div>
             <div className="hot-deals">
               <div className="hed-lin">

@@ -84,6 +84,9 @@
     cursor: pointer;
     width: 100%;
     padding: 5px 10px 5px 0;
+    
+}
+.brand_aria p{
     white-space: nowrap;
     text-overflow: ellipsis;
     overflow-x:hidden;

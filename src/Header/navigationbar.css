@@ -240,11 +240,13 @@
     height: 80px;
     line-height: 30px;
     font-weight: normal;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    overflow-x:hidden;
+  
     }
-    
+    .search-product-details p{
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow-x:hidden;
+    }
     .search-product-img img:hover {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transform: scale(1.5);

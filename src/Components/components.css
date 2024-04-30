@@ -210,7 +210,7 @@
 
 .product {
   position: relative;
-  width: 290px;
+  width: 280px;
   height: 450px;
   display: flex;
   flex-direction: column;
@@ -238,11 +238,13 @@
   height: 100px;
   margin-top: 10px;
   font-weight: bold;
-  white-space: nowrap;
+ 
+}
+.product-details p{
+   white-space: nowrap;
   text-overflow: ellipsis;
   overflow-x:hidden;
 }
-
 .product-img img:hover {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transform: scale(1.5);
