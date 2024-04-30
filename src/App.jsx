@@ -30,6 +30,7 @@ import CAddress from './Components/Checkout/CAddress';
 import Payment from './Components/Checkout/Payment';
 import SearchResult from './Header/SearchResult';
 import CommingSoon from './CommingSoon/CommingSoon';
+import BestSelling from './men/BestSelling';
 import './App.css'
 
 function App() {
@@ -56,6 +57,7 @@ function App() {
             <Route path='/urban-shirt' element={<UrbanShirts />} />
             <Route path='/tracksuit-pants' element={<TracksuitPants />} />
             <Route path='/oversize-tshirts' element={<OverSizeTshirt />} />
+            <Route path='/BestSelling' element={<BestSelling />}/>
             <Route path='/details/:name/:id' element={<ProductDetails />} />
             <Route path="/myaccount" element={<PrivateRoute> <MyAccount /> </PrivateRoute>} >
               <Route path="/myaccount/order" element={<PrivateRoute> <Order /> </PrivateRoute>} />

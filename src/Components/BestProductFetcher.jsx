@@ -3,51 +3,45 @@ import { Link } from 'react-router-dom';
 import loading from '../image/focus_looding.gif';
 import './components.css';
 
-const ProductFetcher = ({ selectCategary, productData, selectedColor, selectedSize, selectedBrand, selectedPriceOrder }) => {
-  const [products, setProducts] = useState([]);
+function BestProductFetcher({ selectCategary, productData, selectedColor, selectedSize, selectedBrand, selectedPriceOrder }) {
+    const [products, setProducts] = useState([]);
   const [loadingProducts, setLoadingProducts] = useState(true);
+  
   useEffect(() => {
     const fetchData = async () => {
       try {
         const { gender, sellerTag, subCategory, brand } = productData[0];
+        
         let filter = {
           gender,
           sellerTag,
           subCategory,
           brand,
         };
+
         if (selectCategary) {
-          filter = {
-            ...filter,
-            subCategory: selectCategary,
-          };
+          filter.subCategory = selectCategary;
         }
+
         if (selectedColor) {
-          filter = {
-            ...filter,
-            color: selectedColor,
-          };
+          filter.color = selectedColor;
         }
+
         if (selectedSize) {
-          filter = {
-            ...filter,
-            size: selectedSize,
-          };
+          filter.size = selectedSize;
         }
+
         if (selectedBrand) {
-          filter = {
-            ...filter,
-            brand: selectedBrand,
-          };
+          filter.brand = selectedBrand;
         }
-        // Adjusted API endpoint to include the ratings filter
+
         const apiEndpoint = 'https://academics.newtonschool.co/api/v1/ecommerce/clothes/products';
-        const filterQueryString = `?filter=${JSON.stringify(filter)}&limit=300&ratings[gte]=.0`; // Filter for ratings greater than or equal to 3.0
+        const filterQueryString = `?filter=${encodeURIComponent(JSON.stringify(filter))}&limit=300`;
         const response = await fetch(`${apiEndpoint}${filterQueryString}`, {
-          method: 'get',
-          headers: new Headers({
+          method: 'GET',
+          headers: {
             projectId: 'mmvz5wuhf8k7',
-          }),
+          },
         });
 
         if (!response.ok) {
@@ -55,17 +49,8 @@ const ProductFetcher = ({ selectCategary, productData, selectedColor, selectedSi
         }
 
         const data = await response.json();
-        let filteredProducts = data.data;
-
-        if (selectedPriceOrder) {
-          filteredProducts = filteredProducts.sort((a, b) => {
-            const priceA = a.price;
-            const priceB = b.price;
-
-            return selectedPriceOrder === 'Price : Low to High' ? priceA - priceB : priceB - priceA;
-          });
-        }
-
+        // Filter products based on ratings greater than 3.5
+        const filteredProducts = data.data.filter(product => product.ratings >= 3.5);
         setProducts(filteredProducts);
         setLoadingProducts(false);
       } catch (error) {
@@ -103,6 +88,6 @@ const ProductFetcher = ({ selectCategary, productData, selectedColor, selectedSi
       </div>
     </div>
   );
-};
+}
 
-export default ProductFetcher;
+export default BestProductFetcher

@@ -27,7 +27,7 @@ function HOtDealsCarousel({hotDealData}) {
       <SplideSlide>
         <div className="splide_slide">
           <div className="window">
-            <Link to='/'>
+            <Link to='/bb-ke-favorites'>
               <img src={hotDealData[0]} alt="Image 0" />
             </Link>
           </div>
@@ -36,10 +36,10 @@ function HOtDealsCarousel({hotDealData}) {
       <SplideSlide>
         <div className="splide_slide">
           <div className="windows">
-            <Link to='/'>
+            <Link to='/men/tshirt'>
               <img src={hotDealData[1]} alt="Image 2" />
             </Link>
-            <Link to='/'>
+            <Link to='/women/tshirt'>
               <img src={hotDealData[2]} alt="Image 3" />
             </Link>
           </div>
@@ -48,7 +48,7 @@ function HOtDealsCarousel({hotDealData}) {
       <SplideSlide>
         <div className="splide_slide">
           <div className="window">
-            <Link to='/'>
+            <Link to='/winter-wears'>
               <img src={hotDealData[3]} alt="Image 4" />
             </Link>
           </div>
@@ -57,10 +57,10 @@ function HOtDealsCarousel({hotDealData}) {
       <SplideSlide>
         <div className="splide_slide">
           <div className="windows">
-            <Link to='/'>
+            <Link to='/men/shorts'>
               <img src={hotDealData[4]} alt="Image 5" />
             </Link>
-            <Link to='/'>
+            <Link to='/men/pyjamas'>
               <img src={hotDealData[5]} alt="Image 6" />
             </Link>
           </div>
@@ -69,7 +69,7 @@ function HOtDealsCarousel({hotDealData}) {
       <SplideSlide>
         <div className="splide_slide">
           <div className="window">
-            <Link to='/'>
+            <Link to='/urban-shirt'>
               <img src={hotDealData[6]} alt="Image 7" />
             </Link>
           </div>
@@ -78,10 +78,10 @@ function HOtDealsCarousel({hotDealData}) {
       <SplideSlide>
         <div className="splide_slide">
           <div className="windows">
-            <Link to='/'>
+            <Link to='/oversize-tshirts'>
               <img src={hotDealData[7]} alt="Image 8" />
             </Link>
-            <Link to='/'>
+            <Link to='/men/sweater'>
               <img src={hotDealData[8]} alt="Image 9" />
             </Link>
           </div>
@@ -90,7 +90,7 @@ function HOtDealsCarousel({hotDealData}) {
       <SplideSlide>
         <div className="splide_slide">
           <div className="window">
-            <Link to='/'>
+            <Link to='/tracksuit-pants'>
               <img src={hotDealData[9]} alt="Image 1" />
             </Link>
           </div>

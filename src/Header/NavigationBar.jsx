@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AiOutlineSearch, AiOutlineHeart, AiOutlineShoppingCart } from 'react-icons/ai';
 import { SlLocationPin } from 'react-icons/sl';
+import Beyoung from '../assets/beyoung.png'
 import MenDropdown from '../men/MenDropdown';
 import WomenDropdown from '../women/WomenDropdown';
 import NewArrivalDropdown from '../new-arrivals/NewArrivalDropdown';
@@ -86,7 +87,7 @@ function NavigationBar() {
                 {isSightDropdownOpen && <SightDropdown onClose={handleSightDropdownToggle} />}
                 <div className="logo">
                   <Link to="/">
-                    <h2>BEYOUNG</h2>
+                    <img src={Beyoung} alt="" />
                   </Link>
                 </div>
                 <nav>

@@ -157,11 +157,11 @@ export const HomeData=[
   {HotDealimages: [hotd1, hotd2, hotd3, hotd4, hotd5, hotd6, hotd7,hotd8,hotd9,hotd10]},
   {NewArrivalData:{apiEndpoint:'https://academics.newtonschool.co/api/v1/ecommerce/clothes/products',sellerTag: "new arrival",subCategory: "shirt",gender: "Men"}},
   {TShartsData:[tsimg,{timg:tsimg1,heading:'Classic Polo'},{timg:tsimg2,heading:'Plus Size T-Shirts'},{timg:tsimg3,heading:'Full Sleeve T-Shirts'},{timg:tsimg4,heading:'Activewear'},{timg:tsimg5,heading:'Polos'},{timg:tsimg6,heading:'Plain T-Shirts'},{timg:tsimg7,heading:'Printed T-Shirts'},{timg:tsimg8,heading:'Oversized T-Shirts'}]},
-  {ShartsData:[shirts1,shirts2,shirts3]},
+  {ShartsData:[{img:shirts1,sight:'men/shirt'},{img:shirts2,sight:'urban-shirt'},{img:shirts3,sight:'men/shirt'}]},
   {BottomWareData:{apiEndpoint:'https://academics.newtonschool.co/api/v1/ecommerce/clothes/products',subCategory: "trouser",gender: "Men"}},
   {WomenData:{apiEndpoint:'https://academics.newtonschool.co/api/v1/ecommerce/clothes/products',gender: "Women",sellerTag: "new arrival",subCategory: "shirt"}},
   {Reviewimg:[rs1,rs2,rs3,rs4,rs5,rs6,rs7]},
-  {ShopTheLook:[stl1,stl2,stl3,stl4,]},
+  {ShopTheLook:[{img:stl1,sight:'men/tshirt'},{img:stl2,sight:'men/shirt'},{img:stl3,sight:'men/kurta'},{img:stl4,sight:'men/shorts'}]},
   {SPCollectionData:{apiEndpoint:'https://academics.newtonschool.co/api/v1/ecommerce/clothes/products',gender: "Men",sellerTag: "top rated"}},
   {TrandingStyleData:{apiEndpoint:'https://academics.newtonschool.co/api/v1/ecommerce/clothes/products',gender: "Men",sellerTag: "trending"}},
   {FeaturedOnimages:[foi1,foi2,foi3,foi4,foi5]},
@@ -201,6 +201,10 @@ export const OTshirtProduct=[{subCategory:'tshirt'}]
 //new arrival data
 
 export const NewArrivalProduct=[{sellerTag: "new arrival"}]
+
+//Best Shalling product
+
+export const BestShellingProduct=[{apiEndpoint:'https://academics.newtonschool.co/api/v1/ecommerce/clothes/products'}];
 
 //product details data
 

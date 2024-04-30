@@ -55,7 +55,7 @@ function Home() {
               <div className="bsp-container">
                 <div className="bsp-head">
                   <h2 className='hd-head'>BEST SELLING PRODUCT</h2>
-                  <Link to='/viewBestShell'>ViewAll</Link>
+                  <Link to='/BestSelling'>ViewAll</Link>
                 </div>
                 <div className="bsp-body">
                   <img src={bspi1} alt="" />
@@ -80,14 +80,14 @@ function Home() {
             <div className="hed-lin">
               <div className="bsp-head">
                 <h2 className='hd-head'>SHIRTS</h2>
-                <Link to='/viewAllShirts'>ViewAll</Link>
+                <Link to='/men/shirt'>ViewAll</Link>
               </div>
               <p className='tag-line'>Formal To Casual Styles</p>
             </div>
             <div className="shirts-aria">
               {HomeData[4].ShartsData.map((pro, index) => (
-                <Link key={index} to='/shirts'>
-                  <img src={pro} alt="shirt-img" />
+                <Link key={index} to={pro.sight}>
+                  <img src={pro.img} alt="shirt-img" />
                 </Link>
               ))}
             </div>
@@ -131,9 +131,9 @@ function Home() {
             </div>
             <div className="shirts-aria">
               {HomeData[8].ShopTheLook.map((pro, index) => (
-                <Link key={index} to='/shirts'>
-                  <img src={pro} alt="shirt-img" />
-                </Link>
+                <Link key={index} to={pro.sight}>
+                <img src={pro.img} alt="shirt-img" />
+              </Link>
               ))}
             </div>
           </div>

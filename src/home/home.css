@@ -19,11 +19,11 @@
     width: 100%;
 }
 .dis-coop-sec{
-    padding: 30px 20px 0 20px;
+    padding: 30px 45px 0 45px;
 }
 .home-duo-img{
     width: 100%;
-    padding: 30px 20px 0 20px;
+    padding: 30px 45px 0 45px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -43,7 +43,7 @@
 
 .hot-deals{
     width: 100%;
-    padding: 30px 20px 0 20px;
+    padding: 30px 45px 0 45px;
 }
 .hd-head{
     border-left: 5px solid rgb(255, 221, 0);
@@ -57,12 +57,12 @@
 }
 .new-arrivals{
     width: 100%;
-    padding: 30px 20px 0 20px;
+    padding: 30px 45px 0 45px;
 }
 
 .home-banner{
     width: 100%;
-    padding: 30px 20px 0 20px;
+    padding: 30px 45px 0 45px;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -74,7 +74,7 @@
 }
 .bsp-sec{
     width: 100%;
-    padding: 30px 20px 0 20px;
+    padding: 30px 45px 0 45px;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -82,7 +82,7 @@
 }
 .bsp-container{
     width: 100%;
-    padding: 30px 20px 20px 20px;
+    padding: 30px 45px 20px 45px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -125,7 +125,7 @@
 
 .shirts-container{
     width: 100%;
-    padding: 30px 20px 0 20px;
+    padding: 30px 45px 0 45px;
 }
 
 .shirts-aria{
@@ -147,7 +147,7 @@
 
 .bottomwear-container{
     width: 100%;
-    padding: 30px 20px 0 20px;
+    padding: 30px 45px 0 45px;
 }
 .bottomwear-img{
     display: flex;
@@ -164,11 +164,11 @@
 
 .women-container{
     width: 100%;
-    padding: 30px 20px 0 20px;
+    padding: 30px 45px 0 45px;
 }
 .review-by-customer{
     width: 100%;
-    padding: 30px 20px 0 20px;
+    padding: 30px 45px 0 45px;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -206,20 +206,20 @@
 
 .shopl-container{
     width: 100%;
-    padding: 40px 20px 0 20px;
+    padding: 40px 45px 0 45px;
 }
 
 .shop-by-collection{
     width: 100%;
-    padding: 30px 20px 0 20px;
+    padding: 30px 45px 0 45px;
 }
 .tranding-section{
     width: 100%;
-    padding: 30px 20px 0 20px;
+    padding: 30px 45px 0 45px;
 }
 .featured-on-secton{
     width: 100%;
-    padding: 30px 20px 0 20px;
+    padding: 30px 45px 0 45px;
 }
 .featured-on-head{
     display: flex;

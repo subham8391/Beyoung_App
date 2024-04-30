@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
+import { Link } from 'react-router-dom';
 import './components.css'
 function ProductCarousel({ productContent }) {
   const [items, setItems] = useState([]);
@@ -49,12 +50,14 @@ function ProductCarousel({ productContent }) {
       <Slider {...settings}>
         {items.map((item, index) => (
           <div key={index} className='product-card'>
+            <Link to={`/details/${item.name}/${item._id}`}>
             <div className="product-card-img">
             <img src={item.displayImage} alt={item.name} />
             </div>
             <div className="product-card-title">
             <h3>{item.name}</h3>
             </div>
+            </Link>
           </div>
         ))}
       </Slider>
