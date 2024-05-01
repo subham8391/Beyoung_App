@@ -36,7 +36,10 @@ function ProductDetails() {
         };
         fetchProduct();
     }, [id]);
-
+    useEffect(() => {
+    
+        window.scrollTo(0, 0);
+      }, []);
     return (
         <div className="select-product-section">
             <div className="select-product-container">

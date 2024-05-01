@@ -64,86 +64,11 @@ width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: center;
-    align-items: center;
+    align-items: start;
     padding: 30px 45px 0 45px;
     gap: 20px;
 }
-.fil-sec{
-    width: 25%;
-    height: 200vh;
-    color: black;
-    /* background-color: aqua; */
-    display: flex;
-}
-.product-sec{
-    display: block;
-    width: 75%;
-    /* background-color: antiquewhite; */
-    height: 200vh;
-    overflow: scroll;
-}
-.product-sec::-webkit-scrollbar {
-    display: none;
-    }
-    .fil-sec::-webkit-scrollbar {
-        display: none;
-    }
-    .product-sec{
-        width: 75%;
-        /* background-color: antiquewhite; */
-        height: 200vh;
-        overflow: scroll;
-    }
-    .product-sec::-webkit-scrollbar {
-        display: none;
-    }
-    .col-filter{
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-    }
-    .open-filter-btn{
-        font-size: 18px;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-        width: 100%;
-        border-bottom: 1px dashed black;
-        padding: 10px 0 10px 0;
-        cursor: pointer;
-    }
 
-
-/*women pages css */
-
-
-/* .pages-section{
-    width: 100%;
-    padding-top: 6.875rem;
-    height: auto;
-}
-.pages-banner{
-    width: 100%;
-    height: auto;
-    padding-bottom:20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.pages-banner img{
-width: 100%;
-}
-.pages-page-container{
-    width: 100%;
-    height: auto;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    padding: 30px 20px 0 20px;
-    gap: 20px;
-} */
 
 @media screen and (max-width: 1200px) {
     .women-section{
@@ -159,9 +84,6 @@ width: 100%;
     }
 }
 @media screen and (max-width: 760px) {
-    .fil-sec {
-      display: none;
-    }
     .women-section{
         width: 100%;
         padding-top: 5.16rem; 

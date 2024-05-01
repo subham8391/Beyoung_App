@@ -47,6 +47,10 @@ function NewArrivals() {
   const handlePriceOrderChange = (order) => {
     setSelectedPriceOrder(order === selectedPriceOrder ? null : order);
   };
+  useEffect(() => {
+    
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <>
       <div className="newarrival-section">

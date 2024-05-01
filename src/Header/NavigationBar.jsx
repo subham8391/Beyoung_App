@@ -89,11 +89,11 @@ function NavigationBar() {
                 <nav>
                   <ul>
                     <li onMouseEnter={handleMenDropdownToggle} onMouseLeave={handleMenDropdownToggle}>
-                      <Link to="/mens-clothing">MEN</Link>
+                      <Link to="/mens-clothing" onClick={handleMenDropdownToggle}>MEN</Link>
                       {isMenDropdownOpen && <MenDropdown  onClose={handleMenDropdownToggle}/>}
                     </li>
                     <li onMouseEnter={handleWomenDropdownToggle} onMouseLeave={handleWomenDropdownToggle}>
-                      <Link to="/womens-clothing">WOMEN</Link>
+                      <Link to="/womens-clothing" onClick={handleWomenDropdownToggle}>WOMEN</Link>
                       {isWomenDropdownOpen && <WomenDropdown onClose={handleWomenDropdownToggle}/>}
                     </li>
                     <li>

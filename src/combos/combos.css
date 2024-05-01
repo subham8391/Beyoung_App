@@ -1,4 +1,4 @@
-/* women section */
+/* combo section */
 
 .combo-section{
     width: 100%;
@@ -22,45 +22,11 @@ width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: center;
-    align-items: center;
+    align-items: start;
     padding: 30px 45px 0 45px;
     gap: 20px;
 }
-.fil-sec{
-    width: 25%;
-    height: 200vh;
-    color: black;
-    display: flex;
-}
-.product-sec{
-    width: 75%;
-    height: 200vh;
-    overflow: scroll;
-}
-.product-sec::-webkit-scrollbar {
-    display: none;
-}
 
-.fil-sec::-webkit-scrollbar {
-    display: none;
-}
-
-.col-filter{
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-}
-.open-filter-btn{
-    font-size: 18px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    border-bottom: 1px dashed black;
-    padding: 10px 0 10px 0;
-    cursor: pointer;
-}
 .combo-categori-filter{
     width: 100%;
     display: flex;
@@ -83,9 +49,7 @@ width: 100%;
     }
 }
 @media screen and (max-width: 760px) {
-    .fil-sec {
-      display: none;
-    }
+   
     .combo-section{
         width: 100%;
         padding-top: 5.16rem; 
