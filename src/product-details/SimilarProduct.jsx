@@ -16,9 +16,9 @@ function SimilarProduct({ subCategory,gender,brand }) {
 
         const response = await fetch(`https://academics.newtonschool.co/api/v1/ecommerce/clothes/products${filterQueryString}`, {
           method: 'GET',
-          headers: {
+          headers:new Headers({
             'projectId': 'mmvz5wuhf8k7',
-          },
+          }),
         });
 
         if (!response.ok) {
@@ -36,6 +36,7 @@ function SimilarProduct({ subCategory,gender,brand }) {
     fetchData();
   }, [subCategory]);
 
+  
   return (
     <div className="sm-product-section">
       <div className="sm-product-container">

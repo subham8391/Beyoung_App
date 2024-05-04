@@ -52,7 +52,10 @@ function BestSelling() {
   const handlePriceOrderChange = (order) => {
     setSelectedPriceOrder(order === selectedPriceOrder ? null : order);
   };
-
+  useEffect(() => {
+    
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <>
       <div className="men-section">
@@ -87,8 +90,8 @@ function BestSelling() {
           </div>
           )}
           <div className="product-sec" style={{ width: windowWidth <= 760 ? '100%' : '75%' }}>
-            <h2>MENS CLOTHING</h2>
-            <p>Mens Clothing is all about being stylish and comfortable all day long. Beyoung understands the same and provides you with a handsome range of Clothing For Men out there. Scroll below to get a look at it.</p>
+            <h2>BEST SELLING</h2>
+            <p>Clothing is all about being stylish and comfortable all day long. Beyoung understands the same and provides you with a handsome range of Clothing For Men-Women out there. Scroll below to get a look at it.</p>
             <BestProductFetcher productData={BestShellingProduct} selectedColor={selectedColor} selectedSize={selectedSize} selectedBrand={selectedBrand} selectedPriceOrder={selectedPriceOrder} />
           </div>
         </div>

@@ -44,7 +44,7 @@ function WishlistBtn({ id }) {
     };
 
     fetchContent();
-  }, []);
+  }, [id]);
 
   const handleWishlistClick = async () => {
     try {

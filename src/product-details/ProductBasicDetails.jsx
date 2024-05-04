@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState,useEffect } from 'react';
 import { FaTruck } from "react-icons/fa";
 import { BsCashCoin } from "react-icons/bs";
 import AddToCart from '../Components/Checkout/AddToCart';
@@ -11,6 +11,12 @@ function ProductBasicDetails({ product }) {
 
     const qty = Array.from({ length: 10 }, (_, index) => index + 1);
     const size_order = ['S', 'M', 'L', 'XL', 'XXL'];
+
+    useEffect(() => {
+        // Reset selected size and quantity when a new product is rendered
+        setSelectedSize('');
+        setSelectedQty(1);
+    }, [product]); // Trigger effect when product changes
    
     const handleSizeChange = (size) => {
         setSelectedSize(size);

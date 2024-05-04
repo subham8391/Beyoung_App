@@ -39,7 +39,7 @@ function ProductDetails() {
     useEffect(() => {
     
         window.scrollTo(0, 0);
-      }, []);
+      }, [id]);
     return (
         <div className="select-product-section">
             <div className="select-product-container">
