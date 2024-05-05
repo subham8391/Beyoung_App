@@ -6,13 +6,14 @@ import Cart from './Cart';
 import CAddress from './CAddress';
 import Payment from './Payment';
 import { Stepper, Step, StepLabel } from '@mui/material';
+import Beyoung from '../../assets/beyoung2.png'
 import './checkout.css'
 function CheckOut() {
     const [activeStep, setActiveStep] = useState(0);
     const steps = ['Cart', 'Address', 'Payment'];
     const handleStepChange = (step) => {
         setActiveStep(step);
-      };
+    };
     return (
         <>
             <div className="checkout-section">
@@ -21,7 +22,7 @@ function CheckOut() {
                         <div className="ch-left">
                             <div className="logo">
                                 <Link to="/">
-                                    <h1>BEYOUNG</h1>
+                                    <img src={Beyoung} alt="" />
                                 </Link>
                             </div>
                         </div>
@@ -43,8 +44,8 @@ function CheckOut() {
                         <div className="checkout-content">
                             {/* Render content based on activeStep */}
                             {activeStep === 0 && <Cart handleStepChange={handleStepChange} />}
-                            {activeStep === 1 && <CAddress handleStepChange={handleStepChange}/>}
-                            {activeStep === 2 && <Payment handleStepChange={handleStepChange}/>}
+                            {activeStep === 1 && <CAddress handleStepChange={handleStepChange} />}
+                            {activeStep === 2 && <Payment handleStepChange={handleStepChange} />}
                         </div>
                     </div>
                     <div className="checkout-footer">

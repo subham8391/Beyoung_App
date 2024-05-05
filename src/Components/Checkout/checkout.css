@@ -451,6 +451,23 @@
   align-items: center;
 }
 
+/*Payment*/
+
+.payment-container{
+  width: 90%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  padding: 20px;
+  border-radius: 10px;
+}
+.form-row{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
 @media screen and (max-width: 1200px) {
   .cart-top-left {
     width: 30%;

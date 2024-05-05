@@ -1,9 +1,9 @@
-
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import EmptyCart from '../../image/Empty_cart.png'
-import Coup from '../../image/coupon.png'
-import './checkout.css'
+import EmptyCart from '../../image/Empty_cart.png';
+import Coup from '../../image/coupon.png';
+import './checkout.css';
+
 function Cart({ handleStepChange }) {
   const [contentData, setContentData] = useState([]);
   const [priceData, setPriceData] = useState([]);
@@ -11,7 +11,23 @@ function Cart({ handleStepChange }) {
   const [loading, setLoading] = useState(true);
 
   const handleCheckout = () => {
-    handleStepChange(1); 
+    // Save price details into an object
+    const priceDetails = {
+      totalItems: priceData.results,
+      totalPriceWithGST: totalPriceWithGST.toFixed(2),
+      discountAmount: discountAmount,
+      shippingFee: ShippingFee,
+      totalAmount: TotalAmmount.toFixed(2)
+    };
+
+    // Convert priceDetails object to a JSON string
+    const priceDetailsString = JSON.stringify(priceDetails);
+
+    // Save the string into session storage
+    sessionStorage.setItem('priceDetails', priceDetailsString);
+
+    // Proceed to the next step
+    handleStepChange(1);
   };
 
   useEffect(() => {
@@ -159,17 +175,17 @@ function Cart({ handleStepChange }) {
           <div className="pdc-child pdc-data"><span>Cart Total</span><span>₹{TotalAmmount}</span></div>
         </div>
         <div className="ta-conterner">
-        <div className="tac-child"><h3>Total Ammount</h3><h3>₹{TotalAmmount}</h3></div>
-        <div className="tac-save"><span>You Saved ₹{discountAmount} on this order</span></div>
-        {!isCartEmpty && (
-          <div className="steper-btn" onClick={handleCheckout}>
-            <h3>CHECKOUT SECURELY</h3>
-          </div>
-        )}
+          <div className="tac-child"><h3>Total Ammount</h3><h3>₹{TotalAmmount}</h3></div>
+          <div className="tac-save"><span>You Saved ₹{discountAmount} on this order</span></div>
+          {!isCartEmpty && (
+            <div className="steper-btn" onClick={handleCheckout}>
+              <h3>CHECKOUT SECURELY</h3>
+            </div>
+          )}
         </div>
       </div>
     </>
   )
 }
 
-export default Cart
+export default Cart;
