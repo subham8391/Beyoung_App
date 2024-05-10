@@ -46,5 +46,8 @@ width: 100%;
         padding-top: 5.16rem; 
         height: auto;
     }
+    .track-suit-page-container{
+        padding: 0 10px 0 10px;
+    }
    
   }

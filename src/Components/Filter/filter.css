@@ -293,4 +293,9 @@
         flex-wrap: wrap;
         gap: 10px;
     }
+    .newarrival-f-optionn p{
+        text-transform: uppercase;
+        font-size: 13px;
+        font-weight: bolder;
+      }
   }

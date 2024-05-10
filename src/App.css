@@ -20,9 +20,7 @@
 } */
 .product-sec{
     width: 75%;
-    /* background-color: antiquewhite; */
     height: auto;
-    /* overflow: scroll; */
 }
 .product-sec::-webkit-scrollbar {
     display: none;
@@ -83,8 +81,18 @@ width: 100%;
         padding-top: 5.56rem;
         height: auto;
     }
+    .fil-sec {
+        display: none;
+      }
+      .product-sec{
+        width: 100%;
+        height: auto;
+    }
 }
 @media screen and (max-width: 767px) {
+    .pages-page-container{
+        padding: 10px 10px 0 10px;
+    }
     .product-sec h2{
         font-size: 18px;
     }
@@ -96,5 +104,9 @@ width: 100%;
     .fil-sec {
         display: none;
       }
+      .product-sec{
+        width: 100%;
+        height: auto;
+    }
   }
 

@@ -89,7 +89,7 @@ function Men() {
             </div>
           </div>
           )}
-          <div className="product-sec" style={{ width: windowWidth <= 760 ? '100%' : '75%' }}>
+          <div className="product-sec" >
             <h2>MENS CLOTHING</h2>
             <p>Mens Clothing is all about being stylish and comfortable all day long. Beyoung understands the same and provides you with a handsome range of Clothing For Men out there. Scroll below to get a look at it.</p>
             <ProductFetcher productData={MenProduct} selectedColor={selectedColor} selectedSize={selectedSize} selectedBrand={selectedBrand} selectedPriceOrder={selectedPriceOrder} />

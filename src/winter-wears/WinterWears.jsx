@@ -77,7 +77,7 @@ function WinterWears() {
             </div>
           </div>
         )}
-          <div className="product-sec" style={{ width: windowWidth <= 760 ? '100%' : '75%' }}>
+          <div className="product-sec" >
             <h2>WINTER WEAR</h2>
             
             <ProductFetcher productData={WinterWearsProduct} selectedColor={selectedColor} selectedSize={selectedSize} selectedPriceOrder={selectedPriceOrder} />

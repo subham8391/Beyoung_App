@@ -344,6 +344,9 @@
   .navi-container-bottom{
     padding: 5px;
   }
+  .navig-container-left {
+    gap: 10px; 
+  }
   .navig-container-left nav{
     display: none; 
   }

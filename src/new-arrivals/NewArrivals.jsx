@@ -82,7 +82,7 @@ function NewArrivals() {
             </div>
           </div>
         )}
-          <div className="product-sec" style={{ width: windowWidth <= 760 ? '100%' : '75%' }}>
+          <div className="product-sec">
             <h2>NEW ARRIVAL</h2>
             <ProductFetcher productData={NewArrivalProduct} selectedColor={selectedColor} selectedSize={selectedSize}  selectedPriceOrder={selectedPriceOrder} selectCategary={selectCategary}/>
           </div>

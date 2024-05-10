@@ -46,5 +46,7 @@ width: 100%;
         padding-top: 5.16rem; 
         height: auto;
     }
-   
+    .u-shirt-page-container{
+        padding: 0 10px 0 10px;
+    }
   }

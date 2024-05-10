@@ -50,6 +50,9 @@
         padding-top: 5.16rem; 
         height: auto;
     }
+    .bb-feb-container{
+        padding: 0 10px 0 10px;
+    }
     .bb-feb-filter h2{ 
         font-size: 18px;
         border-bottom: 3px solid rgb(146, 0, 191);
