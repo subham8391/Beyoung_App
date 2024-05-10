@@ -233,7 +233,7 @@
     background-color: #F8EB27;
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (min-width: 768px) and (max-width: 1024px) {
     .home-section{
         width: 100%;
         padding-top: 5.56rem;
@@ -244,8 +244,26 @@
         height: auto;
     }
     
+    .review-by-customer{
+        width: 100%;
+        padding: 10px 10px 0 10px;
+        height: 30vh;
+    }
+    .review-thumbnel a{
+        position: relative;
+        bottom: 50px;
+        font-size: 12px;
+    }
+    .featured-on-head h2{
+        font-size: 20px;
+    }
+
 }
-@media screen and (max-width: 760px) {
+@media screen and (max-width: 767px) {
+    .home-top-img{
+        width: 100%;
+        height: 200px;
+    }
     .home-section{
         padding-top: 5.16rem;   
     }
@@ -272,7 +290,13 @@
         padding: 10px 10px 0 10px; 
     }
     .bsp-sec{
-        padding: 10px 10px 0 10px;
+        padding: 0;
+    }
+    .bsp-container{
+        padding: 20px 20px 20px 20px;
+    }
+    .bsp-head .hd-head{
+        font-size: 18px;
     }
     .hb-2{
         margin-top: 10px;
@@ -319,5 +343,8 @@
         width: 32%;
         height: 5px;
         background-color: #F8EB27;
+    }
+    .featured-on-head h2{
+        font-size: 18px;
     }
 }

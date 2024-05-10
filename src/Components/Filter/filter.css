@@ -234,7 +234,7 @@
     border: 2px solid rgb(0, 255, 195);
   }
 
-  @media screen and (max-width: 1200px) {
+  @media screen and (min-width: 768px) and (max-width: 1024px){
     .sub-c-optionn{
         height: 70px;
         width: 70px;
@@ -265,7 +265,7 @@
         font-weight: bolder;
       }
 }
-@media screen and (max-width: 760px) {
+@media screen and (max-width: 767px) {
     .sub-c-optionn{
         height: 60px;
         width: 60px;

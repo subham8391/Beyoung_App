@@ -339,7 +339,7 @@
 }
 
 
-@media screen and (max-width: 1200px) {
+@media screen and (min-width: 768px) and (max-width: 1024px) {
   .select-product-section{
       width: 100%;
       padding-top: 5.56rem;
@@ -351,7 +351,7 @@
  
 
 }
-@media screen and (max-width: 760px) {
+@media screen and (max-width: 767px) {
 
   .select-product-section{
       width: 100%;

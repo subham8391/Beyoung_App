@@ -35,7 +35,7 @@ width: 100%;
     align-items: center;
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (min-width: 768px) and (max-width: 1024px) {
     .combo-section{
         width: 100%;
         padding-top: 5.56rem;
@@ -48,7 +48,7 @@ width: 100%;
         padding-bottom: 0;
     }
 }
-@media screen and (max-width: 760px) {
+@media screen and (max-width: 767px) {
    
     .combo-section{
         width: 100%;

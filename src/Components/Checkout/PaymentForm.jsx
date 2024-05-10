@@ -1,19 +1,27 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import SuccessPay from '../../assets/success.jpg'
 const PaymentForm = ({ handleCheckout }) => {
   // State to hold form input values
   const [cardNumber, setCardNumber] = useState('');
   const [cardName, setCardName] = useState('');
   const [expiry, setExpiry] = useState('');
   const [cvv, setCvv] = useState('');
-  const navigate = useNavigate();
+  const [showSuccessModal, setShowSuccessModal] = useState(false);
+  // const navigate = useNavigate();
   // Function to handle form submission
   const handleSubmit = (e) => {
     e.preventDefault();
     // You can add your logic to handle payment submission here
     console.log('Payment submitted!');
-    handleCheckout();
     sessionStorage.removeItem('priceDetails');
+    setShowSuccessModal(true); // Show success modal
+    setTimeout(() => {
+      setShowSuccessModal(false); 
+      setTimeout(() => {
+        handleCheckout(); // Activate handleCheckout after hiding modal
+      }, 1000);
+    }, 1000);
   };
 
   // Function to handle changes in expiry input
@@ -55,6 +63,7 @@ const handleCVVChange = (e) => {
             value={cardNumber}
             onChange={handleCardNumberChange}
             placeholder="1234 5678 9012 3456"
+            maxLength="16"
             required
           />
         </div>
@@ -97,6 +106,12 @@ const handleCVVChange = (e) => {
         </div>
         <button type="submit">Pay Now</button>
       </form>
+      {showSuccessModal && (
+        <div className="success-modal">
+          <img src={SuccessPay} alt="" />
+          <p>Payment successfully done!</p>
+        </div>
+      )}
     </div>
   );
 };

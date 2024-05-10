@@ -29,7 +29,7 @@
     border-bottom: 3px solid rgb(146, 0, 191);
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (min-width: 768px) and (max-width: 1024px) {
     .bb-feb-section{
         width: 100%;
         padding-top: 5.56rem;
@@ -44,7 +44,7 @@
     }
 
 }
-@media screen and (max-width: 760px) {
+@media screen and (max-width: 767px) {
     .bb-feb-section{
         width: 100%;
         padding-top: 5.16rem; 

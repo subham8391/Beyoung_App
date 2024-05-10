@@ -315,7 +315,7 @@
       cursor: pointer;
     }
 
-    @media screen and (max-width: 1200px) {
+    @media screen and (min-width: 768px) and (max-width: 1024px) {
       .navi-container-top{
         padding: 10px 5px;
     }
@@ -337,7 +337,27 @@
       font-size: 20px;
     }
   }
-  @media screen and (max-width: 760px) {
+  @media screen and (max-width: 767px) {
+    .navi-container-top{
+      padding: 10px 5px;
+  }
+  .navi-container-bottom{
+    padding: 5px;
+  }
+  .navig-container-left nav{
+    display: none; 
+  }
+  .ncr-icon{
+    height: 30px;
+    width: 30px;
+  }
+  .sight-bar{
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+  }
     .track-order-sec{
       font-size: 15px;
     }

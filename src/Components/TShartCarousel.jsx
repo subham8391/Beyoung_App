@@ -34,7 +34,7 @@ function TShartCarousel({ tShartData }) {
       }}
     >
       {/* First Slide - Static */}
-      <SplideSlide className='dig-slid'>
+      <SplideSlide className='big-slid'>
         <div className="b-window">
           <Link className='bw-link' to='/combo-products'>
             <img src={tShartData[0]} alt="Image 0" />

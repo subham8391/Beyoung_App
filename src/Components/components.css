@@ -124,7 +124,8 @@
   padding-left: 10px;
 }
 
-.dig-slid{
+/*T-shirt Crousal*/
+.big-slid{
   width: 45% !important;
 }
 .b-window{
@@ -153,6 +154,8 @@
   justify-content: center;
   align-items: center;
 }
+
+
 .sw-link{
   height: 48vh;
   width: 100%;
@@ -264,18 +267,70 @@
   width: 100px;
 }
 
-/* @media screen and (max-width: 1200px) {
-  .home-section{
-      width: 100%;
-      padding-top: 5.56rem;
-      height: auto;
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .splide_slide {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
   }
-  .home-top-img{
-      width: 100%;
-      height: auto;
+  .window {
+    width: auto;
+    height: 40vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
-} */
-@media screen and (max-width: 768px) {
+  .window img {
+    height: 40vh;
+    width: 100%;
+  }
+  .windows {
+    width: auto;
+    height: 40vh;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+  }
+  .windows img {
+    height: 19.5vh;
+    width: 100%;
+  }
+
+  .big-slid{
+    width: 45% !important;
+  }
+  .b-window{
+    height: 50vh;
+    width: auto;
+    display: flex;
+    justify-content:start;
+    align-items: center;
+  }
+  .bw-link{
+    height: 50vh;
+    width: 100%;
+  }
+  .bw-link img {
+    height: 100%;
+    width: 100%;
+  }
+  .small-slid{
+    width: 25% !important;
+  }
+  .s-windows {
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+  }
+}
+@media screen and (max-width: 767px) {
   .splide__slide img {
     cursor: pointer;
     width: 100%;
@@ -283,16 +338,16 @@
     border-radius: 10px;
   }
   .window {
-    height: 26vh;
+    height: 30vh;
   }
   .window img {
-    height: 26vh;
+    height: 30vh;
   }
   .windows {
-    height: 26vh;
+    height: 30vh;
   }
   .windows img {
-    height: 12vh;
+    height: 14.5vh;
     width: 100%;
   }
   .product-card {
@@ -314,7 +369,7 @@
   }
 
   
-.dig-slid{
+.big-slid{
   width: 75% !important;
 }
 .b-window{

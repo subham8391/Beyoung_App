@@ -26,7 +26,7 @@ width: 100%;
     padding: 30px 45px 0 45px;
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (min-width: 768px) and (max-width: 1024px) {
     .winter-w-section{
         width: 100%;
         padding-top: 5.56rem;
@@ -40,7 +40,7 @@ width: 100%;
     }
 
 }
-@media screen and (max-width: 760px) {
+@media screen and (max-width: 767px) {
     .winter-w-section{
         width: 100%;
         padding-top: 5.16rem; 
