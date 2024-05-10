@@ -440,9 +440,25 @@ transition: transform 0.5s ease;
   .MyADrop-section{
     width: 30%;
 }
-
+.order-product-container{
+  padding-left: 0;
+  
+}
+.tab-header {
+  display: none;
+}
+.tab-content {
+  padding:0 0px 0px 0px;
+  flex-grow: 1;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  
+}
 .order-date-time hr{
-  width: 35%;
+  width: 20%;
 }
 
 .order-date-time h4{
@@ -471,7 +487,9 @@ transition: transform 0.5s ease;
 .order-pro-details {
 width: 100%;
 }
-
+.order-pro-details h4{
+  text-wrap: wrap;
+}
 .order-shipment-details{
 width: 100%;
 
@@ -497,8 +515,8 @@ width: 100%;
   
   .wishlist-product {
   position: relative;
-  width: 225px;
-  height: 330px;
+  width: 180px;
+  height: 300px;
   display: flex;
   flex-direction: column;
   border: 1px solid #e0e0e0; 
@@ -509,4 +527,7 @@ width: 100%;
     width: 100%;
     font-size: 18px;
   }
+  .wishlist-product-img {
+    height: 220px;
+    }
 }

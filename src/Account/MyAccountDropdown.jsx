@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import { IoIosArrowForward } from "react-icons/io";
 import { MyAccountDropdownData } from '../ConstentData'
 import Auth from '../Authenticion/auth'
-function MyAccountDropdown() {
+function MyAccountDropdown({onClose}) {
     const UserName = sessionStorage.getItem('userInfoN');
     const UserEmail=sessionStorage.getItem('userInfoE')
     const isAuthenticated = Auth.isAuthenticated();
@@ -18,7 +18,7 @@ function MyAccountDropdown() {
                 <p>{UserEmail}</p>
             </div>
             {MyAccountDropdownData.map((data,index)=>(
-              <Link key={index} to={`${data.path}`}>{data.heading} <IoIosArrowForward /></Link>
+              <Link key={index} to={`${data.path}`} onClick={onClose}>{data.heading} <IoIosArrowForward /></Link>
             ))}
           </div>
         </div>

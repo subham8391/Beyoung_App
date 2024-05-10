@@ -7,12 +7,12 @@ function ProductAllDetails({product}) {
         <div className="product-details-container">
             <div className="product-highlight">
                 <h4>Product Highlights</h4>
-                <h4>Type - {product.type}</h4>
-                <h4>Fabric - {product.fabric}</h4>
+                {/* <h4>Type - {product.type}</h4>
+                <h4>Fabric - {product.fabric}</h4> */}
                 <h4>Brand - {product.brand}</h4>
                 <h4>Category - {product.category}</h4>
                 <h4>SubCategory - {product.subCategory}</h4>
-                <h4>Theme - {product.theme}</h4>
+                {/* <h4>Theme - {product.theme}</h4> */}
                 <h4>SellerTag - {product.sellerTag}</h4>
                 <h4>Gender - {product.gender}</h4>
                 <h4>CreatedAt - {product.createdAt}</h4>

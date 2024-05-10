@@ -20,6 +20,8 @@ function ProductImgCarousel({product}) {
                     <div className="big-screen">
                         <img src={product.images[currentSlide]} alt={`Image ${currentSlide + 1}`} />
                     </div>
+
+                    
                 </div>
             )}
         </>

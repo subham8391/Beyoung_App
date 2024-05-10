@@ -61,7 +61,7 @@ function NavigationBar() {
                 {isAuthenticated ? (
                   <>
                     <div className="auth-btn" onMouseEnter={handleAccountDropdownToggle} onMouseLeave={handleAccountDropdownToggle}>My Account
-                      {isAccountDropdownOpen && <MyAccountDropdown />}
+                      {isAccountDropdownOpen && <MyAccountDropdown  onClose={handleAccountDropdownToggle}/>}
                     </div>
                     <hr className="diveder" />
                     <div className="auth-btn" onClick={handleLogout}>Logout</div>
