@@ -557,10 +557,13 @@
     height: 6vh;
   }
   .ch-left {
-    width: 50%;
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   .ch-right {
-    width: 50%;
+    width: 60%;
 
   }
   .se-icon {
