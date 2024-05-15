@@ -4,9 +4,11 @@ import { FaHeart } from 'react-icons/fa';
 import Auth from '../../Authenticion/auth';
 import Snackbar from '@mui/material/Snackbar';
 import MuiAlert from '@mui/material/Alert';
+import { useWishlist } from '../../context/WishlistProvider';
 import './wishlistbtn.css';
 
 function WishlistBtn({ id }) {
+  const { setWishlistCount } = useWishlist();
   const [isInWishlist, setIsInWishlist] = useState(false);
   const navigate = useNavigate();
   const [showAlert, setShowAlert] = useState(false);
@@ -71,6 +73,22 @@ function WishlistBtn({ id }) {
       if (response.ok) {
         setIsInWishlist((prevIsInWishlist) => !prevIsInWishlist);
         setShowAlert(true);
+
+        // Fetch the updated wishlist count
+        const updatedResponse = await fetch(`https://academics.newtonschool.co/api/v1/ecommerce/wishlist`, {
+          method: 'GET',
+          headers: {
+            Authorization: `Bearer ${sessionStorage.getItem('authToken')}`,
+            projectID: 'mmvz5wuhf8k7',
+          },
+        });
+        
+        if (updatedResponse.ok) {
+          const updatedData = await updatedResponse.json();
+          const updatedContent = updatedData.data.items;
+          setWishlistCount(updatedContent.length); // Update the context with the new count
+        }
+
       } 
     } catch (error) {
       console.error(

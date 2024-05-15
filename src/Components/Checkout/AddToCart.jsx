@@ -4,7 +4,9 @@ import { FaCartShopping } from "react-icons/fa6";
 import Auth from '../../Authenticion/auth';
 import Snackbar from '@mui/material/Snackbar';
 import MuiAlert from '@mui/material/Alert';
+import { useCart } from '../../context/CartProvider';
 function AddToCart({id,size,qty}) {
+  const { setCartCount } = useCart(); 
     const [isInAddToCart, setIsInAddToCart] = useState(false);
     const navigate = useNavigate();
     const [showAlert, setShowAlert] = useState(false);
@@ -40,7 +42,7 @@ function AddToCart({id,size,qty}) {
         };
     
         fetchContent();
-      }, []);
+      }, [id]);
     
       const handleAddTOCart = async () => {
         try {
@@ -73,7 +75,19 @@ function AddToCart({id,size,qty}) {
             setIsInAddToCart((prevIsInWishlist) => !prevIsInWishlist);
             setShowAlert(true);
             setAlertMessage('Product added to cart!');
-            
+            // Fetch the updated cart count
+        const updatedResponse = await fetch(`https://academics.newtonschool.co/api/v1/ecommerce/cart`, {
+          method: 'GET',
+          headers: {
+            Authorization: `Bearer ${sessionStorage.getItem('authToken')}`,
+            projectID: 'mmvz5wuhf8k7',
+          },
+        });
+
+        if (updatedResponse.ok) {
+          const updatedData = await updatedResponse.json();
+          setCartCount(updatedData.data.items.length); // Update the context with the new count
+        }
           }
         } catch (error) {
           console.error('Error adding to wishlist', error);

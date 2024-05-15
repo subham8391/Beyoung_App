@@ -50,7 +50,7 @@ function NavigationBar() {
 
   return (
     <>
-      {!(path === '/login' || path === '/signup' || path === '/checkout' || path === '/checkout/cart' || path === '/checkout/shipping' || path === '/checkout/payment') && (
+      {!(path === '/login' || path === '/signup' || path === '/checkout' || path === '/checkout/cart' || path === '/checkout/shipping' || path === '/checkout/payment' || path === '/myaccount' || path === '/myaccount/order' || path === '/myaccount/address' || path === '/myaccount/profile' || path === '/myaccount/wishlist' || path === '/myaccount/coupons' || path === '/myaccount/tickets') && (
         <div className="navigation-sec">
           <div className="navi-container">
             <div className="navi-container-top">

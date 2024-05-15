@@ -2,8 +2,9 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom'
 import {AiOutlineShoppingCart } from 'react-icons/ai';
 import Auth from '../Authenticion/auth';
+import { useCart } from '../context/CartProvider';
 function CartIcon() {
-    const [contentData, setContentData] = useState(0);
+  const { cartCount, setCartCount } = useCart();
     const isAuthenticated = Auth.isAuthenticated();
     useEffect(() => {
         const fetchContent = async () => {
@@ -22,21 +23,20 @@ function CartIcon() {
             }
     
             const data = await response.json();
-            const content = data;
-            setContentData(content);
+            setCartCount(data.data.items.length);
           } catch (error) {
             console.error('Error Fetching Data');
           }
         };
     
         fetchContent();
-      }, []);
+      }, [setCartCount]);
       return (
         <div>
           {isAuthenticated && (
             <Link to='/checkout' className="ncr-icon">
               <AiOutlineShoppingCart />
-              <p>{contentData.results}</p>
+              <p>{cartCount}</p>
             </Link>
           )}
           {!isAuthenticated && (

@@ -2,8 +2,9 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom'
 import {AiOutlineHeart} from 'react-icons/ai';
 import Auth from '../Authenticion/auth';
+import { useWishlist } from '../context/WishlistProvider';
 function WishlistIcon() {
-    const [contentData, setContentData] = useState(0);
+  const { wishlistCount, setWishlistCount } = useWishlist();
     const isAuthenticated = Auth.isAuthenticated();
     useEffect(() => {
         const fetchContent = async () => {
@@ -22,21 +23,21 @@ function WishlistIcon() {
             }
     
             const data = await response.json();
-            const content = data;
-            setContentData(content);
+            const content = data.data.items;
+            setWishlistCount(content.length);
           } catch (error) {
             console.error('Error Fetching Data');
           }
         };
     
         fetchContent();
-      }, []);
+      }, [setWishlistCount]);
   return (
     <div>
           {isAuthenticated && (
             <Link to='/myaccount/wishlist' className="ncr-icon">
               <AiOutlineHeart />
-              <p>{contentData.results}</p>
+              <p>{wishlistCount}</p>
             </Link>
           )}
           {!isAuthenticated && (

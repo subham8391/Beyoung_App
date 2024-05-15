@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { IoCloseSharp } from "react-icons/io5";
+import { useWishlist } from '../context/WishlistProvider';
 function Wishlist() {
+  const { updateWishlistCount } = useWishlist();
   const [contentData, setContentData] = useState([]);
   const [loading, setLoading] = useState(true);
 
@@ -51,6 +53,7 @@ function Wishlist() {
       if (response.ok) {
         const updatedContent = contentData.filter(item => item.products._id !== id);
         setContentData(updatedContent);
+        updateWishlistCount();
       }
     } catch (error) {
       console.error('Error removing from wishlist', error);
