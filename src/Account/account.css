@@ -127,27 +127,7 @@
     margin-top: 10px;
   }
 
-  .profile-picture {
-    width: 100px;
-    height: 100px;
-    background-color: rgb(0, 0, 0); 
-    border-radius: 50%; 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    
-  }
-  .profile-letter{
-    font-size: 50px;
-    font-weight: initial; 
-    text-transform: uppercase;
-    color: #ffffff;
-  }
-  .u-name{
-    font-size: 25px;
-    text-transform: uppercase;
-   
-  }
+
 
   .MyADrop-section{
     background-color: #ffffff;
@@ -391,6 +371,7 @@ transition: transform 0.5s ease;
 /* profile */
 
 .profile-details{
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -401,13 +382,13 @@ transition: transform 0.5s ease;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
 }
 .profile-picture {
-  width: 100px;
-  height: 100px;
+  width: 6.25rem;
+  height: 6.25rem;
   border-radius: 50%; 
   display: flex;
   justify-content: center;
   align-items: center;
-  
+  background-color: black;
 }
 .profile-letter{
   font-size: 50px;
@@ -561,19 +542,8 @@ width: 100%;
 width: 100%;
 
 }
-.profile-details{
-  flex-direction: row;
-  gap: 20px;
-}
-.profile-picture {
-  width: 150px;
-  height: 100px;
-  border-radius: 50%; 
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  
-}
+
+
 
 .wishlist-product-container {
   grid-template-columns: repeat(2, 1fr);
