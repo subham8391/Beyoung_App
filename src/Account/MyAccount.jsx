@@ -57,38 +57,38 @@ function MyAccount() {
         <>
             <div className="myaccount-section">
                 <div className="myaccount-header">
-                <div className="navi-container-top">
-              <div className="track-order-sec">
-                <SlLocationPin /> <span>TRACK YOUR ORDER</span>
-              </div>
-              <div className="auth-sec">
-                {isAuthenticated ? (
-                  <>
-                    <div className="auth-btn" onMouseEnter={handleAccountDropdownToggle} onMouseLeave={handleAccountDropdownToggle}>My Account
-                      {isAccountDropdownOpen && <MyAccountDropdown  onClose={handleAccountDropdownToggle}/>}
+                    <div className="navi-container-top">
+                        <div className="track-order-sec">
+                            <SlLocationPin /> <span>TRACK YOUR ORDER</span>
+                        </div>
+                        <div className="auth-sec">
+                            {isAuthenticated ? (
+                                <>
+                                    <div className="auth-btn" onMouseEnter={handleAccountDropdownToggle} onMouseLeave={handleAccountDropdownToggle}>My Account
+                                        {isAccountDropdownOpen && <MyAccountDropdown onClose={handleAccountDropdownToggle} />}
+                                    </div>
+                                    <hr className="diveder" />
+                                    <div className="auth-btn" onClick={handleLogout}>Logout</div>
+                                </>
+                            ) : (
+                                <>
+                                    <Link to='/login' className="auth-btn">LogIn</Link>
+                                    <hr className="diveder" />
+                                    <Link to='/signup' className="auth-btn">SignUp</Link>
+                                </>
+                            )}
+                        </div>
                     </div>
-                    <hr className="diveder" />
-                    <div className="auth-btn" onClick={handleLogout}>Logout</div>
-                  </>
-                ) : (
-                  <>
-                    <Link to='/login' className="auth-btn">LogIn</Link>
-                    <hr className="diveder" />
-                    <Link to='/signup' className="auth-btn">SignUp</Link>
-                  </>
-                )}
-              </div>
-            </div>
-                    <div className="checkout-header">
-                        <div className="ch-left">
+                    <div className="ma-header">
+                        <div className="ma-left">
                             <div className="logo">
                                 <Link to="/">
                                     <img src={Beyoung} alt="" />
                                 </Link>
                             </div>
                         </div>
-                        <div className="ch-right">
-                            <div className="se-icon"><TbShieldLockFilled /></div>
+                        <div className="ma-right">
+                            <div className="ma-icon"><TbShieldLockFilled /></div>
                             <h2>100% SECURE ACCOUNT</h2>
                         </div>
                     </div>

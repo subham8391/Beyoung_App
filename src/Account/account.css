@@ -5,7 +5,7 @@
 }
 .myaccount-container{
     width: 100%;
-    padding: 30px 45px 10px 45px;
+    padding:8rem 45px 10px 45px;
     /* height: 100vh; */
     width: 100%;
     display: flex;
@@ -17,8 +17,49 @@
     line-height: 50px;
 }
 .myaccount-header{
-
+  width: 100%;
+ position: fixed;
+ z-index: 7;
 }
+
+.ma-header {
+  width: 100%;
+  height: 13vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  
+}
+.ma-left {
+  width: 65%;
+  height: 100%;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  padding-left: 40px;
+}
+.ma-right {
+  width: 35%;
+  height: 100%;
+  background-color: rgb(225, 225, 225);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.ma-icon {
+  height: 40px;
+  width: 40px;
+  background-color: white;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+}
+
 .tab-header {
     width: 25vw;
     height: 100vh;
@@ -413,7 +454,7 @@ transition: transform 0.5s ease;
 @media screen and (min-width: 768px) and (max-width: 1024px) {
   .myaccount-section {
     width: 100%;
-    padding-top: 5.56rem;
+    /* padding-top: 5.56rem; */
     height: auto;
   }
   .tab-header {
@@ -433,11 +474,34 @@ transition: transform 0.5s ease;
     padding-left: 0;
     
   }
+
+  .ma-header {
+    height: 6vh;
+    
+  }
+  .ma-left {
+    width: 60%;
+    display: flex;
+    
+  }
+  .ma-right {
+    width: 40%;
+
+  }
+  .ma-icon {
+    height: 30px;
+    width: 30px;
+    margin-left: 10px;
+  }
+  .ma-right h2{
+    font-size: 15px;
+
+  }
 }
 @media screen and (max-width: 767px) {
   .myaccount-section {
     width: 100%;
-    padding-top: 5.16rem; 
+    /* padding-top: 5.16rem;  */
     height: auto;
   }
   .MyADrop-section{
@@ -532,5 +596,28 @@ width: 100%;
   }
   .wishlist-product-img {
     height: 220px;
+    }
+
+    .ma-header {
+      height: 6vh;
+      
+    }
+    .ma-left {
+      width: 40%;
+      display: flex;
+      padding-left: 0;
+    }
+    .ma-right {
+      width: 60%;
+  
+    }
+    .ma-icon {
+      height: 30px;
+      width: 30px;
+      margin-left: 10px;
+    }
+    .ma-right h2{
+      font-size: 15px;
+  
     }
 }
